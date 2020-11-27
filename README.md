@@ -31,3 +31,7 @@ const DEF_LNG = -123;
 
 
 
+## Get user location
+```js
+yarn add react-geolocated
+```
