@@ -41,17 +41,15 @@ function App() {
 
   console.log(geolocation);
 
-  const multiPolyline = [
-    [
-      [32.9056256, 35.3107968],
-      [32.9056226, 35.3107268],
-      [32.9026256, 35.3102968],
-    ],
-    [
-      [32.9056356, 35.3103968],
-      [32.9056326, 35.3107238],
-      [32.9026356, 35.3102938],
-    ],
+  const PolylineA = [
+    [32.9056356, 35.3103968],
+    [32.9016356, 35.3109938],
+    [32.9096326, 35.3117238],
+  ];
+  const PolylineB = [
+    [32.9056356, 35.3103968],
+    [32.9026356, 35.3102938],
+    [32.9056326, 35.3107238],
   ];
 
   const limeOptions = { color: "lime" };
@@ -76,7 +74,8 @@ function App() {
             </Marker>
           )}
           )
-          <Polyline pathOptions={limeOptions} positions={multiPolyline} />
+          <Polyline pathOptions={limeOptions} positions={PolylineA} />
+          <Polyline pathOptions={purpleOptions} positions={PolylineB} />
         </MapContainer>
       </div>
     </>
