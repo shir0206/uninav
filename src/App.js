@@ -6,7 +6,13 @@ import {
   maximumAge,
   timeout,
 } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Polyline,
+} from "react-leaflet";
 import { useGeolocation } from "./useGeolocation";
 import { iconPerson } from "./iconPerson";
 import "./App.css";
@@ -35,6 +41,22 @@ function App() {
 
   console.log(geolocation);
 
+  const multiPolyline = [
+    [
+      [32.9056256, 35.3107968],
+      [32.9056226, 35.3107268],
+      [32.9026256, 35.3102968],
+    ],
+    [
+      [32.9056356, 35.3103968],
+      [32.9056326, 35.3107238],
+      [32.9026356, 35.3102938],
+    ],
+  ];
+
+  const limeOptions = { color: "lime" };
+  const purpleOptions = { color: "purple" };
+
   return (
     <>
       <Locate
@@ -54,6 +76,7 @@ function App() {
             </Marker>
           )}
           )
+          <Polyline pathOptions={limeOptions} positions={multiPolyline} />
         </MapContainer>
       </div>
     </>
