@@ -1,13 +1,5 @@
-import {
-  useEffect,
-  useState,
-  callback,
-  enableHighAccuracy,
-  maximumAge,
-  timeout,
-} from "react";
+import { useState } from "react";
 
-import { iconPerson } from "./iconPerson";
 import "./App.css";
 import { Locate } from "./components/Locate";
 import { Map } from "./components/Map";
@@ -31,7 +23,12 @@ function App() {
         setLocate={setLocate}
         setIsDragged={setIsDragged}
       ></Locate>
-      <Map locate={locate}></Map>
+      <Map
+        locate={locate}
+        setIsDragged={setIsDragged}
+        isDragged={isDragged}
+        displayPoiType={displayPoiType}
+      ></Map>
     </>
   );
 }
