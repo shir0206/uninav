@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useGeolocation } from "../useGeolocation";
+import { CurrentPosition } from "./CurrentPosition";
 
 import "./map.css";
 import {
@@ -12,6 +13,10 @@ import {
   useMapEvent,
   useMap,
 } from "react-leaflet";
+
+import L from "leaflet";
+
+import icon from "../icons/marker.svg";
 
 // import { Routes } from "./Routes";
 // import { POIs } from "./POIs";
@@ -63,7 +68,10 @@ function FindLocation() {
 
 function ChangeView({ center, zoom }) {
   const map = useMap();
-  map.setView(center, zoom);
+
+  if (center.lat && center.lng && zoom) {
+    map.setView(center, zoom);
+  }
   return null;
 }
 export const Map = (props) => {
@@ -83,8 +91,8 @@ export const Map = (props) => {
 
     const map = useMapEvent("dblclick", () => {
       setCenter({
-        lat: 50.5,
-        lng: 30.5,
+        lat: 32.760803,
+        lng: 35.020159,
       });
 
       console.log("seCenter");
@@ -119,6 +127,34 @@ export const Map = (props) => {
   // the MapContainer element can be accessed by child components using one of
   // the provided hooks or the MapConsumer component.
 
+  const myIcon = new L.Icon({
+    iconUrl: icon,
+    iconRetinaUrl: icon,
+    iconAnchor: null,
+    popupAnchor: [0, -15],
+    shadowUrl: null,
+    shadowSize: null,
+    shadowAnchor: null,
+    iconSize: new L.Point(30, 45),
+    className: "leaflet-div-icon",
+  });
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log("shir useEffect");
+
+    if (
+      props.locate &&
+      geolocation.latitude !== null &&
+      geolocation.longitude !== null
+    ) {
+    }
+    setCenter({
+      lat: geolocation.latitude,
+      lng: geolocation.longitude,
+    });
+  }, [props.locate]); // Only re-run the effect if locate true
+
   return (
     <MapContainer
       center={[center.lat, center.lng]}
@@ -135,7 +171,10 @@ export const Map = (props) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
       />
       {props.locate && (
-        <Marker position={[geolocation.latitude, geolocation.longitude]}>
+        <Marker
+          position={[geolocation.latitude, geolocation.longitude]}
+          icon={myIcon}
+        >
           <Popup>HI~!!!!</Popup>
         </Marker>
       )}
