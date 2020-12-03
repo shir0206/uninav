@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.6cd2ff0f.chunk.css",
-    "main.js": "/uninav/static/js/main.d6f34315.chunk.js",
-    "main.js.map": "/uninav/static/js/main.d6f34315.chunk.js.map",
+    "main.css": "/uninav/static/css/main.32c0dcf3.chunk.css",
+    "main.js": "/uninav/static/js/main.001fd842.chunk.js",
+    "main.js.map": "/uninav/static/js/main.001fd842.chunk.js.map",
     "runtime-main.js": "/uninav/static/js/runtime-main.632361a9.js",
     "runtime-main.js.map": "/uninav/static/js/runtime-main.632361a9.js.map",
-    "static/js/2.0306adde.chunk.js": "/uninav/static/js/2.0306adde.chunk.js",
-    "static/js/2.0306adde.chunk.js.map": "/uninav/static/js/2.0306adde.chunk.js.map",
+    "static/js/2.87134549.chunk.js": "/uninav/static/js/2.87134549.chunk.js",
+    "static/js/2.87134549.chunk.js.map": "/uninav/static/js/2.87134549.chunk.js.map",
     "static/js/3.678a44a6.chunk.js": "/uninav/static/js/3.678a44a6.chunk.js",
     "static/js/3.678a44a6.chunk.js.map": "/uninav/static/js/3.678a44a6.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.6cd2ff0f.chunk.css.map": "/uninav/static/css/main.6cd2ff0f.chunk.css.map",
-    "static/js/2.0306adde.chunk.js.LICENSE.txt": "/uninav/static/js/2.0306adde.chunk.js.LICENSE.txt"
+    "static/css/main.32c0dcf3.chunk.css.map": "/uninav/static/css/main.32c0dcf3.chunk.css.map",
+    "static/js/2.87134549.chunk.js.LICENSE.txt": "/uninav/static/js/2.87134549.chunk.js.LICENSE.txt",
+    "static/media/marker.218b2e3e.svg": "/uninav/static/media/marker.218b2e3e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.632361a9.js",
-    "static/js/2.0306adde.chunk.js",
-    "static/css/main.6cd2ff0f.chunk.css",
-    "static/js/main.d6f34315.chunk.js"
+    "static/js/2.87134549.chunk.js",
+    "static/css/main.32c0dcf3.chunk.css",
+    "static/js/main.001fd842.chunk.js"
   ]
 }
