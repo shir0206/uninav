@@ -4,6 +4,8 @@ import "./allPOIs.css";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
+import getPOIImageDB from "./constants";
+
 import areaIcon from "../icons/area.svg";
 import artIcon from "../icons/art.svg";
 import benchIcon from "../icons/bench.svg";
@@ -46,10 +48,6 @@ export const AllPOIs = (props) => {
     return myIcon;
   }
 
-
-
-
-
   return (
     <>
       {props.pois.map(
@@ -75,8 +73,8 @@ export const AllPOIs = (props) => {
                   <p>{poi.desc}</p>
                   {poi.img && (
                     <img
-                      src={require("../images/" + poi.img + ".jpeg")}
-                      alt="uni"
+                      src={getPOIImageDB(poi.img)}
+                      alt={poi.desc}
                       width="100px"
                       height="100px"
                     ></img>
