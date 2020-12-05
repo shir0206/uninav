@@ -146,7 +146,7 @@ export default [
   {
     id: "19",
     location: { lat: 32.7584172500081, lng: 35.0217915407385 },
-    type: "statue",
+    type: "art",
     name: "19",
     img: "7",
     desc: "פסל, אמא אוהבת",
@@ -154,7 +154,7 @@ export default [
   {
     id: "20",
     location: { lat: 32.7591997275392, lng: 35.0221845259047 },
-    type: "statue",
+    type: "art",
     name: "20",
     img: "8",
     desc: "פסל אנג׳לה קליין ללא כותרת  2013",
@@ -162,7 +162,7 @@ export default [
   {
     id: "21",
     location: { lat: 32.7596161969653, lng: 35.0209926221255 },
-    type: "statue",
+    type: "art",
     name: "21",
     img: "9",
     desc: "פסל גדעון גכטמן מסתם 1998",
@@ -170,7 +170,7 @@ export default [
   {
     id: "22",
     location: { lat: 32.7589039896424, lng: 35.0218407900494 },
-    type: "statue",
+    type: "art",
     name: "22",
     img: "10",
     desc: "פסל יעקב דורצין כנף 2013",
@@ -178,7 +178,7 @@ export default [
   {
     id: "23",
     location: { lat: 32.7599114081362, lng: 35.0224348891075 },
-    type: "statue",
+    type: "art",
     name: "23",
     img: "11",
     desc: "פסל עץ הכסף",
@@ -186,7 +186,7 @@ export default [
   {
     id: "24",
     location: { lat: 32.7601157794675, lng: 35.0220610669045 },
-    type: "statue",
+    type: "art",
     name: "24",
     img: "12",
     desc: "פסל רוית משלי פלטפורמה לדראג קווין מזרחי",
@@ -194,7 +194,7 @@ export default [
   {
     id: "25",
     location: { lat: 32.7593874652566, lng: 35.0220849350983 },
-    type: "statue",
+    type: "art",
     name: "25",
     img: "13",
     desc: "פסל שלי רייכמן מגבות 2014",
@@ -203,7 +203,7 @@ export default [
   {
     id: "26",
     location: { lat: 32.763738, lng: 35.017436 },
-    type: "statue",
+    type: "art",
     name: "26",
     img: "14",
     desc: "פסל אורי קצנשטיין, ילד, 2013",
@@ -211,7 +211,7 @@ export default [
   {
     id: "27",
     location: { lat: 32.763762, lng: 35.017315 },
-    type: "statue",
+    type: "art",
     name: "27",
     img: "15",
     desc: "פסל מנשה קדישמן, ראש, 2007",
@@ -219,7 +219,7 @@ export default [
   {
     id: "28",
     location: { lat: 32.76339, lng: 35.016977 },
-    type: "statue",
+    type: "art",
     name: "28",
     img: "16",
     desc: "פסל גיל שחר, דג, 2013",
@@ -227,7 +227,7 @@ export default [
   {
     id: "29",
     location: { lat: 32.763336, lng: 35.016794 },
-    type: "statue",
+    type: "art",
     name: "29",
     img: "17",
     desc: "פסל אלוני, אלפא, 2015",
@@ -235,7 +235,7 @@ export default [
   {
     id: "30",
     location: { lat: 32.763632, lng: 35.01768 },
-    type: "statue",
+    type: "art",
     name: "30",
     img: "18",
     desc: "פסל פיליפ רנצר, דמות, 2013",
@@ -243,7 +243,7 @@ export default [
   {
     id: "31",
     location: { lat: 32.761819, lng: 35.019967 },
-    type: "statue",
+    type: "art",
     name: "31",
     img: "19",
     desc: "פסל משולם, ראש עגל, 2015",
@@ -251,7 +251,7 @@ export default [
   {
     id: "32",
     location: { lat: 32.761858, lng: 35.019629 },
-    type: "statue",
+    type: "art",
     name: "32",
     img: "20",
     desc: "פסל גולומבק, נייר טואלט, 2013",
@@ -259,7 +259,7 @@ export default [
   {
     id: "33",
     location: { lat: 32.76143, lng: 35.019007 },
-    type: "statue",
+    type: "art",
     name: "33",
     img: "21",
     desc: "פסל היימן, מבנה, 1988",
@@ -267,7 +267,7 @@ export default [
   {
     id: "34",
     location: { lat: 32.762226, lng: 35.017881 },
-    type: "statue",
+    type: "art",
     name: "34",
     img: "22",
     desc: "פסל דומיני, צמח אבן, 2013",
@@ -275,7 +275,7 @@ export default [
   {
     id: "35",
     location: { lat: 32.758938, lng: 35.020916 },
-    type: "statue",
+    type: "art",
     name: "35",
     img: "32",
     desc: "פסל נזריאן, מורשת, 2009",

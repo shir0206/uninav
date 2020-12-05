@@ -18,14 +18,15 @@ import L from "leaflet";
 
 import icon from "../icons/marker.svg";
 
+import mapPOIs from "./../mapPOIs/mapPOIs";
+
 import { AllRoutes } from "./AllRoutes";
-// import { POIs } from "./POIs";
+import { AllPOIs } from "./AllPOIs";
 // import { UserLocationTimer } from "./UserLocationTimer";
 
 // import { InfoRoute } from "./InfoRoute";
 // import { InfoPOI } from "./InfoPOI";
 
-// import mapPOIs from "./../mapPOIs/mapPOIs";
 // import mapStyles from "./../mapStyles/mapStyles";
 
 function FindLocation() {
@@ -75,8 +76,17 @@ function ChangeView({ center, zoom }) {
   return null;
 }
 export const Map = (props) => {
-  // const [pois, setPois] = useState(mapPOIs);
-  // const [markers, setMarkers] = useState([]);
+  const [pois, setPois] = useState(mapPOIs);
+  const [markers, setMarkers] = useState([]);
+  const [displayPoiType, setDisplayPoiType] = useState({
+    area: true,
+    art: true,
+    bench: false,
+    history: true,
+    lookout: true,
+    table: false,
+  });
+
   // const [userLocationCoords, setUserLocationCoords] = useState(null);
   // const [selected, setSelected] = useState(null);
   // const [selectedRoute, setSelectedRoute] = useState(null);
@@ -158,6 +168,11 @@ export const Map = (props) => {
         }}
       />
       <AllRoutes />
+      <AllPOIs
+        markers={markers}
+        pois={pois}
+        displayPoiType={displayPoiType}
+      ></AllPOIs>
       <FindLocation />
       <NewCenter />
       <ChangeView center={[center.lat, center.lng]} zoom={18} />
