@@ -46,6 +46,10 @@ export const AllPOIs = (props) => {
     return myIcon;
   }
 
+
+
+
+
   return (
     <>
       {props.pois.map(
@@ -61,7 +65,24 @@ export const AllPOIs = (props) => {
                 },
               }}
             >
-              <Popup>HI~!!!! {poi.id}</Popup>
+              <Popup>
+                HI~!!!! {poi.id}
+                <div>
+                  <h2>
+                    <span role="img" aria-label="bear"></span>
+                    {poi.desc}
+                  </h2>
+                  <p>{poi.desc}</p>
+                  {poi.img && (
+                    <img
+                      src={require("../images/" + poi.img + ".jpeg")}
+                      alt="uni"
+                      width="100px"
+                      height="100px"
+                    ></img>
+                  )}
+                </div>
+              </Popup>
             </Marker>
           )
       )}
