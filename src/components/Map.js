@@ -18,7 +18,7 @@ import L from "leaflet";
 
 import icon from "../icons/marker.svg";
 
-// import { Routes } from "./Routes";
+import { AllRoutes } from "./AllRoutes";
 // import { POIs } from "./POIs";
 // import { UserLocationTimer } from "./UserLocationTimer";
 
@@ -107,20 +107,6 @@ export const Map = (props) => {
 
   console.log("geolocation: ", geolocation);
 
-  const PolylineA = [
-    [32.9056356, 35.3103968],
-    [32.9016356, 35.3109938],
-    [32.9096326, 35.3117238],
-  ];
-  const PolylineB = [
-    [32.9056356, 35.3103968],
-    [32.9026356, 35.3102938],
-    [32.9056326, 35.3107238],
-  ];
-
-  const limeOptions = { color: "lime" };
-  const purpleOptions = { color: "purple" };
-
   //Except for its children, MapContainer props are immutable:
   // changing them after they have been set a first time will have no effect
   // on the Map instance or its container. The Leaflet Map instance created by
@@ -139,22 +125,6 @@ export const Map = (props) => {
     className: "leaflet-div-icon",
   });
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    console.log("shir useEffect");
-
-    if (
-      props.locate &&
-      geolocation.latitude !== null &&
-      geolocation.longitude !== null
-    ) {
-    }
-    setCenter({
-      lat: geolocation.latitude,
-      lng: geolocation.longitude,
-    });
-  }, [props.locate]); // Only re-run the effect if locate true
-
   return (
     <MapContainer
       center={[center.lat, center.lng]}
@@ -170,7 +140,7 @@ export const Map = (props) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
       />
-      {props.locate && (
+      {props.locate && !geolocation.error && (
         <Marker
           position={[geolocation.latitude, geolocation.longitude]}
           icon={myIcon}
@@ -187,28 +157,7 @@ export const Map = (props) => {
           },
         }}
       />
-      <Polyline
-        pathOptions={limeOptions}
-        positions={PolylineA}
-        eventHandlers={{
-          click: () => {
-            console.log("Polyline A clicked");
-          },
-        }}
-      >
-        <Popup>HI!!!!!!!1111~!!!!</Popup>
-      </Polyline>
-      <Polyline
-        pathOptions={purpleOptions}
-        positions={PolylineB}
-        eventHandlers={{
-          click: () => {
-            console.log("Polyline B clicked");
-          },
-        }}
-      >
-        <Popup>HI!!!!!!!12222~!!!!</Popup>
-      </Polyline>
+      <AllRoutes />
       <FindLocation />
       <NewCenter />
       <ChangeView center={[center.lat, center.lng]} zoom={18} />
