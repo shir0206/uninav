@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Popup, Polyline } from "react-leaflet";
-
-import "./locate.css";
 
 export const AllRoutes = (props) => {
   const routeA = [
