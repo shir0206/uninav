@@ -1,0 +1,32 @@
+.settings-button {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  width: 3rem;
+  background: none;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.settings {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.75);
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.save {
+  position: absolute;
+  bottom: 1rem;
+  left: 4rem;
+  width: 3rem;
+  background: none;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+}

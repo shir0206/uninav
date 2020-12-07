@@ -52,7 +52,7 @@ export const AllPOIs = (props) => {
     <>
       {props.pois.map(
         (poi) =>
-          props.displayPoiType[poi.type] && (
+          props.displayPOITypes[poi.type] && (
             <Marker
               key={poi.id}
               position={[poi.location.lat, poi.location.lng]}

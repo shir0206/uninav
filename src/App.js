@@ -2,12 +2,13 @@ import { useState } from "react";
 
 import "./App.css";
 import { Locate } from "./components/Locate";
+import { Settings } from "./components/Settings";
 import { Map } from "./components/Map";
 
 function App() {
   const [isDragged, setIsDragged] = useState(false);
   const [locate, setLocate] = useState(false);
-  const [displayPoiType, setDisplayPoiType] = useState({
+  const [displayPOITypes, setDisplayPOITypes] = useState({
     bench: false,
     area: true,
     table: false,
@@ -23,11 +24,16 @@ function App() {
         setLocate={setLocate}
         setIsDragged={setIsDragged}
       ></Locate>
+      <Settings
+        displayPOITypes={displayPOITypes}
+        setDisplayPOITypes={setDisplayPOITypes}
+      ></Settings>
+
       <Map
         locate={locate}
         setIsDragged={setIsDragged}
         isDragged={isDragged}
-        displayPoiType={displayPoiType}
+        displayPOITypes={displayPOITypes}
       ></Map>
     </>
   );

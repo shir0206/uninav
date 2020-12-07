@@ -78,14 +78,6 @@ function ChangeView({ center, zoom }) {
 export const Map = (props) => {
   const [pois, setPois] = useState(mapPOIs);
   const [markers, setMarkers] = useState([]);
-  const [displayPoiType, setDisplayPoiType] = useState({
-    area: true,
-    art: true,
-    bench: false,
-    history: true,
-    lookout: true,
-    table: false,
-  });
 
   // const [userLocationCoords, setUserLocationCoords] = useState(null);
   // const [selected, setSelected] = useState(null);
@@ -171,7 +163,7 @@ export const Map = (props) => {
       <AllPOIs
         markers={markers}
         pois={pois}
-        displayPoiType={displayPoiType}
+        displayPOITypes={props.displayPOITypes}
       ></AllPOIs>
       <FindLocation />
       <NewCenter />
