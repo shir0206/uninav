@@ -15,7 +15,7 @@ import {
 
 import L from "leaflet";
 
-import icon from "../icons/marker.svg";
+import currPositionIcon from "../icons/currPosition.svg";
 
 import mapPOIs from "./../mapPOIs/mapPOIs";
 
@@ -72,9 +72,6 @@ export const Map = (props) => {
   const [pois, setPois] = useState(mapPOIs);
   const [markers, setMarkers] = useState([]);
 
-  // const [userLocationCoords, setUserLocationCoords] = useState(null);
-  // const [selected, setSelected] = useState(null);
-  // const [selectedRoute, setSelectedRoute] = useState(null);
   const [center, setCenter] = useState({
     lat: 32.760803,
     lng: 35.020159,
@@ -83,7 +80,6 @@ export const Map = (props) => {
   function NewCenter() {
     //Hook attaching a single event handler to the map instance
     //and returning the instance in any descendant of a MapContainer.
-
     const map = useMapEvent("dblclick", () => {
       setCenter({
         lat: 32.760803,
@@ -108,9 +104,9 @@ export const Map = (props) => {
   // the MapContainer element can be accessed by child components using one of
   // the provided hooks or the MapConsumer component.
 
-  const myIcon = new L.Icon({
-    iconUrl: icon,
-    iconRetinaUrl: icon,
+  const currPosition = new L.Icon({
+    iconUrl: currPositionIcon,
+    iconRetinaUrl: currPositionIcon,
     iconAnchor: null,
     popupAnchor: [0, -15],
     shadowUrl: null,
@@ -153,7 +149,7 @@ export const Map = (props) => {
       {props.locate && !geolocation.error && (
         <Marker
           position={[geolocation.latitude, geolocation.longitude]}
-          icon={myIcon}
+          icon={currPosition}
         >
           <Popup>HI~!!!!</Popup>
         </Marker>
