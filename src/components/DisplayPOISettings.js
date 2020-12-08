@@ -6,7 +6,7 @@ import artIcon from "../icons/art.svg";
 import benchIcon from "../icons/bench.svg";
 import historyIcon from "../icons/history.svg";
 import tableIcon from "../icons/table.svg";
-import markerIcon from "../icons/marker.svg";
+import lookoutIcon from "../icons/lookout.svg";
 
 export const DisplayPOISettings = (props) => {
 
@@ -53,7 +53,7 @@ export const DisplayPOISettings = (props) => {
       name: "lookout",
       key: "lookout",
       label: "תצפית",
-      icon: markerIcon,
+      icon: lookoutIcon,
     },
     {
       name: "history",

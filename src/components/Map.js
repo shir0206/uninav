@@ -8,7 +8,6 @@ import {
   TileLayer,
   Marker,
   Popup,
-  Polyline,
   useMapEvents,
   useMapEvent,
   useMap,
@@ -127,6 +126,21 @@ export const Map = (props) => {
     className: "leaflet-div-icon",
   });
 
+  const overlay1 = [
+    [-180, -180],
+    [180, 180],
+  ];
+
+  const overlay = [
+    [20, 20],
+    [40, 40],
+  ];
+
+  const overlayOptions = {
+    color: "white",
+    fillColor: "white",
+    fillOpacity: 0.6,
+  };
   return (
     <MapContainer
       center={[center.lat, center.lng]}
@@ -152,7 +166,7 @@ export const Map = (props) => {
       )}
       )
       <Marker
-        position={[50.5, 30.5]}
+        position={[32.760803, 35.020159]}
         eventHandlers={{
           click: () => {
             console.log("marker clicked");

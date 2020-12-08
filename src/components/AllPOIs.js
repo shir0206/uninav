@@ -12,6 +12,7 @@ import benchIcon from "../icons/bench.svg";
 import historyIcon from "../icons/history.svg";
 import tableIcon from "../icons/table.svg";
 import markerIcon from "../icons/marker.svg";
+import lookoutIcon from "../icons/lookout.svg";
 
 export const AllPOIs = (props) => {
   function getIconType(type) {
@@ -26,6 +27,8 @@ export const AllPOIs = (props) => {
         return historyIcon;
       case "table":
         return tableIcon;
+      case "lookout":
+        return lookoutIcon;
     }
     return markerIcon;
   }
