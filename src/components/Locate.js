@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./locate.css";
+import locateIcon from "../icons/locate.svg";
 
 export const Locate = (props) => {
   return (
@@ -11,10 +12,7 @@ export const Locate = (props) => {
         console.log("Locate", "false");
       }}
     >
-      <img
-        src="https://www.flaticon.com/svg/static/icons/svg/744/744848.svg"
-        alt="compass-locate me"
-      ></img>
+      <img src={locateIcon} alt="compass-locate me"></img>
     </button>
   );
 };

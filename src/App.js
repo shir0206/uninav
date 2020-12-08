@@ -12,7 +12,7 @@ function App() {
     bench: false,
     area: true,
     table: false,
-    statue: true,
+    art: true,
     lookout: true,
     history: true,
   });

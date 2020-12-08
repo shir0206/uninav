@@ -1,7 +1,7 @@
 .settings-button {
   position: absolute;
-  top: 1rem;
-  right: 4rem;
+  top: 5rem;
+  right: 1rem;
   width: 3rem;
   background: none;
   border: none;
@@ -12,7 +12,7 @@
 .settings {
   position: absolute;
   width: 80%;
-  height: 80%;
+  height: 50%;
   background: rgba(255, 255, 255, 0.75);
   top: 50%;
   left: 50%;

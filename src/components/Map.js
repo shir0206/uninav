@@ -21,12 +21,6 @@ import mapPOIs from "./../mapPOIs/mapPOIs";
 
 import { AllRoutes } from "./AllRoutes";
 import { AllPOIs } from "./AllPOIs";
-// import { UserLocationTimer } from "./UserLocationTimer";
-
-// import { InfoRoute } from "./InfoRoute";
-// import { InfoPOI } from "./InfoPOI";
-
-// import mapStyles from "./../mapStyles/mapStyles";
 
 function FindLocation() {
   //Hook attaching the provided LeafletEventHandlerFnMap event handlers to the map instance
@@ -165,14 +159,6 @@ export const Map = (props) => {
         </Marker>
       )}
       )
-      <Marker
-        position={[32.760803, 35.020159]}
-        eventHandlers={{
-          click: () => {
-            console.log("marker clicked");
-          },
-        }}
-      />
       <AllRoutes />
       <AllPOIs
         markers={markers}

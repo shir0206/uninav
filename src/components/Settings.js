@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./settings.css";
+
 import { DisplayPOISettings } from "./DisplayPOISettings";
+
+import settingsIcon from "../icons/settings.svg";
 
 export const Settings = (props) => {
   const [openSettings, setOpenSettings] = useState(false);
@@ -13,10 +16,7 @@ export const Settings = (props) => {
           setOpenSettings(true);
         }}
       >
-        <img
-          src="https://www.flaticon.com/svg/static/icons/svg/945/945147.svg"
-          alt="settings"
-        ></img>
+        <img src={settingsIcon} alt="settings"></img>
       </button>
 
       {openSettings && (
