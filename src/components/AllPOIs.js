@@ -4,6 +4,8 @@ import "./allPOIs.css";
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
+import { POIPopupContent } from "./POIPopupContent";
+
 import getPOIImageDB from "./constants";
 
 import areaIcon from "../icons/area.svg";
@@ -67,22 +69,10 @@ export const AllPOIs = (props) => {
               }}
             >
               <Popup>
-                HI~!!!! {poi.id}
-                <div>
-                  <h2>
-                    <span role="img" aria-label="bear"></span>
-                    {poi.desc}
-                  </h2>
-                  <p>{poi.desc}</p>
-                  {poi.img && (
-                    <img
-                      src={getPOIImageDB(poi.img)}
-                      alt={poi.desc}
-                      width="100px"
-                      height="100px"
-                    ></img>
-                  )}
-                </div>
+                <POIPopupContent
+                  poi={poi}
+                  getIconType={getIconType}
+                ></POIPopupContent>
               </Popup>
             </Marker>
           )

@@ -43,9 +43,6 @@ function App() {
   return (
     <>
       <div className="geolocationContainer">
-        <header>
-          <h1>HTML Geolocation API with React Hooks</h1>
-        </header>
         <p>Current position:</p>
         <Location location={currentLocation} error={currentError} />
 
