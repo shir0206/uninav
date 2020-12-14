@@ -36,7 +36,7 @@ function App() {
     // Cancel location watch after 3sec
     setTimeout(() => {
       cancelLocationWatch();
-      setIsWatchForLocation(false);
+      setIsWatchForLocation(true);
     }, 3000);
   }, [location, cancelLocationWatch]);
 
