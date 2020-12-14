@@ -1,102 +1,100 @@
-
 .leaflet-popup-content-wrapper {
-    padding: 0;
-    text-align: right;
-  }
-  .leaflet-popup-content {
-    margin: 0;
-    width: 40vw;
-    height: 40vh;
-  }
-  .poi-img {
-    width: 100%;
-    display: block;
-    border-radius: 12px 12px 0px 0px;
-    object-fit: cover;
-    height: 20vh;
-  }
-  
-  .poi-hr {
-    margin: 0px;
-    padding: 0;
-  }
-  .poi-img-hr-top {
-    opacity: 0.1;
-    border-top: 1px solid rgba(5, 16, 24, 0.1);
-    border-bottom: 1px solid rgba(5, 16, 24, 0.2);
-    border-width: 0;
-  }
-  
-  .leaflet-container a.leaflet-popup-close-button {
-    background: rgba(50, 67, 78, 0.2);
-    background: #c3c3c3;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    color: #fff;
-    margin: 4px 0 0 4px;
-    padding: 2px;
-    left: 0;
-  }
-  
-  .poi-type {
-    margin: 0.5em 1em 0.5em 0em;
-  }
-  
-  .poi-hr-desc {
-    display: inline;
-    margin: 0 1em 0 0;
-    border: 2px solid rgb(5, 16, 24);
-    background: rgb(5, 16, 24);
-  }
-  
-  .poi-name {
-    margin: 0 0.65em 0 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #24323b;
-  }
-  .poi-desc {
-    margin: 0 0.6em 0 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    color: #24323b;
-  }
-  
-  .poi-content {
-    display: flex;
-    flex-direction: row;
-    direction: rtl;
-    margin: 0.5em 0 0 0;
-  }
-  
-  .poi-hr-type-area {
-    border: 2px solid #a8ba34;
-    background: #a8ba34;
-  }
-  
-  .poi-hr-type-art {
-    border: 2px solid #5f2e98;
-    background: #5f2e98;
-  }
-  .poi-hr-type-bench {
-    border: 2px solid #369864;
-    background: #369864;
-  }
-  .poi-hr-type-history {
-    border: 2px solid #2a6ea9;
-    background: #2a6ea9;
-  }
-  .poi-hr-type-table {
-    border: 2px solid #e48040;
-    background: #e48040;
-  }
-  .poi-hr-type-lookout {
-    border: 2px solid #af1066;
-    background: #af1066;
-  }
-  
+  padding: 0;
+  text-align: right;
+}
+.leaflet-popup-content {
+  margin: 0;
+  width: 40vw;
+  height: 40vh;
+}
+.poi-img {
+  width: 100%;
+  display: block;
+  border-radius: 12px 12px 0px 0px;
+  object-fit: cover;
+  height: 20vh;
+}
+
+.poi-hr {
+  margin: 0px;
+  padding: 0;
+}
+.poi-img-hr-top {
+  opacity: 0.1;
+  border-top: 1px solid rgba(5, 16, 24, 0.1);
+  border-bottom: 1px solid rgba(5, 16, 24, 0.2);
+  border-width: 0;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  background: rgba(50, 67, 78, 0.2);
+  background: #c3c3c3;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  color: #fff;
+  margin: 4px 0 0 4px;
+  padding: 2px;
+  left: 0;
+}
+
+.poi-type {
+  margin: 0.5em 1em 0.5em 0em;
+}
+
+.poi-hr-desc {
+  display: inline;
+  margin: 0 1em 0 0;
+  border: 1px solid rgb(5, 16, 24);
+  background: rgb(5, 16, 24);
+}
+
+.poi-name {
+  margin: 0 0.65em 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #24323b;
+}
+.poi-desc {
+  margin: 0 0.6em 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #24323b;
+}
+
+.poi-content {
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  margin: 0.5em 0 0 0;
+}
+
+.poi-hr-type-area {
+  border-color: #a8ba34;
+  background: #a8ba34;
+}
+
+.poi-hr-type-art {
+  border-color: #5f2e98;
+  background: #5f2e98;
+}
+.poi-hr-type-bench {
+  border-color: #369864;
+  background: #369864;
+}
+.poi-hr-type-history {
+  border-color: #2a6ea9;
+  background: #2a6ea9;
+}
+.poi-hr-type-table {
+  border-color: #e48040;
+  background: #e48040;
+}
+.poi-hr-type-lookout {
+  border-color: #af1066;
+  background: #af1066;
+}
