@@ -5,6 +5,8 @@ import { Locate } from "./components/Locate";
 import { Settings } from "./components/Settings";
 import { Map } from "./components/Map";
 
+import getAlert from "./alerts/alerts";
+
 import useCurrentLocation from "./hooks/useCurrentLocation";
 import useWatchLocation from "./hooks/useWatchLocation";
 import { geolocationOptions } from "./constants/geolocationOptions";
@@ -32,26 +34,22 @@ function App() {
 
   useEffect(() => {
     if (!location) return;
-    // cancelLocationWatchTimeout()
+    handleCancelLocationWatch();
   }, [location, cancelLocationWatch]);
 
-  function cancelLocationWatchTimeout() {
-    // Cancel location watch after 10sec
+  function handleCancelLocationWatch() {
+    // const cancelLocationMsg =
+    //   "הפסקנו לעקוב אחרי המיקום שלך " + isWatchinForLocation.toString();
 
-    const duration = 10000;
-
-    setTimeout(() => {
-      cancelLocationWatch();
-      setIsWatchForLocation(true);
-    }, duration);
+    cancelLocationWatch();
+    setIsWatchForLocation(false);
+    // alert(cancelLocationMsg);
+    getAlert("cancelLocationWatch");
   }
 
   return (
     <>
       <div className="geolocationContainer">
-        <p>Current position:</p>
-        <Location location={currentLocation} error={currentError} />
-
         <p>Watch position: (Status: {isWatchinForLocation.toString()})</p>
         <Location location={location} error={error} />
       </div>
