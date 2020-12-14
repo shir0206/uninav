@@ -32,13 +32,19 @@ function App() {
 
   useEffect(() => {
     if (!location) return;
+    // cancelLocationWatchTimeout()
+  }, [location, cancelLocationWatch]);
 
-    // Cancel location watch after 3sec
+  function cancelLocationWatchTimeout() {
+    // Cancel location watch after 10sec
+
+    const duration = 10000;
+
     setTimeout(() => {
       cancelLocationWatch();
       setIsWatchForLocation(true);
-    }, 10000);
-  }, [location, cancelLocationWatch]);
+    }, duration);
+  }
 
   return (
     <>
