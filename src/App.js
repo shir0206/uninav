@@ -34,7 +34,7 @@ function App() {
 
   useEffect(() => {
     if (!location) return;
-    handleCancelLocationWatch();
+    //handleCancelLocationWatch();
   }, [location, cancelLocationWatch]);
 
   function handleCancelLocationWatch() {
