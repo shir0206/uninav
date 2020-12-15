@@ -24,24 +24,21 @@ function App() {
     history: true,
   });
 
-  //const { location, cancelLocationWatch, error } = useWatchLocation(geolocationOptions);
-
   const currLocationOptions = useWatchLocation(geolocationOptions);
 
   const [isWatchinForLocation, setIsWatchForLocation] = useState(true);
 
   useEffect(() => {
     if (!currLocationOptions.location) return;
-    //handleCancelLocationWatch();
+
+    if (isDragged) {
+      handleCancelLocationWatch();
+    }
   }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
 
   function handleCancelLocationWatch() {
-    // const cancelLocationMsg =
-    //   "הפסקנו לעקוב אחרי המיקום שלך " + isWatchinForLocation.toString();
-
     currLocationOptions.cancelLocationWatch();
     setIsWatchForLocation(false);
-    // alert(cancelLocationMsg);
     getAlert("cancelLocationWatch");
   }
 

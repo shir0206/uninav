@@ -31,6 +31,11 @@ function FindLocation() {
     },
     move: () => {
       console.log("move");
+      props.setIsDragged(true);
+    },
+    moveend: () => {
+      console.log("moveend");
+      props.setIsDragged(true);
     },
     unload: () => {
       console.log("unload");
@@ -41,9 +46,7 @@ function FindLocation() {
     zoom: () => {
       console.log("zoom");
     },
-    moveend: () => {
-      console.log("moveend");
-    },
+
     locationfound: (location) => {
       console.log("location found:", location);
     },
