@@ -56,6 +56,7 @@ function App() {
         locate={locate}
         setLocate={setLocate}
         setIsDragged={setIsDragged}
+        setIsWatchForLocation={setIsWatchForLocation}
       ></Locate>
       <Settings
         displayPOITypes={displayPOITypes}

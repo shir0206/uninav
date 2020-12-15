@@ -10,6 +10,7 @@ export const Locate = (props) => {
       onClick={() => {
         props.setLocate(true);
         props.setIsDragged(false);
+        props.setIsWatchForLocation(true);
         getAlert("startLocationWatch");
         console.log("Locate", "false");
       }}
