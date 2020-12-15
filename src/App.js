@@ -24,24 +24,22 @@ function App() {
     history: true,
   });
 
-  const { location: currentLocation, error: currentError } = useCurrentLocation(
-    geolocationOptions
-  );
-  const { location, cancelLocationWatch, error } = useWatchLocation(
-    geolocationOptions
-  );
+  //const { location, cancelLocationWatch, error } = useWatchLocation(geolocationOptions);
+
+  const currLocationOptions = useWatchLocation(geolocationOptions);
+
   const [isWatchinForLocation, setIsWatchForLocation] = useState(true);
 
   useEffect(() => {
-    if (!location) return;
+    if (!currLocationOptions.location) return;
     //handleCancelLocationWatch();
-  }, [location, cancelLocationWatch]);
+  }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
 
   function handleCancelLocationWatch() {
     // const cancelLocationMsg =
     //   "הפסקנו לעקוב אחרי המיקום שלך " + isWatchinForLocation.toString();
 
-    cancelLocationWatch();
+    currLocationOptions.cancelLocationWatch();
     setIsWatchForLocation(false);
     // alert(cancelLocationMsg);
     getAlert("cancelLocationWatch");
@@ -51,7 +49,10 @@ function App() {
     <>
       <div className="geolocationContainer">
         <p>Watch position: (Status: {isWatchinForLocation.toString()})</p>
-        <Location location={location} error={error} />
+        <Location
+          location={currLocationOptions.location}
+          error={currLocationOptions.error}
+        />
       </div>
 
       <Locate
