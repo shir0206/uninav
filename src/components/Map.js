@@ -22,7 +22,7 @@ import mapPOIs from "./../mapPOIs/mapPOIs";
 import { AllRoutes } from "./AllRoutes";
 import { AllPOIs } from "./AllPOIs";
 
-function FindLocation() {
+function HandleMapEvents(props) {
   //Hook attaching the provided LeafletEventHandlerFnMap event handlers to the map instance
   //and returning the instance in any descendant of a MapContainer.
   const map = useMapEvents({
@@ -31,11 +31,13 @@ function FindLocation() {
     },
     move: () => {
       console.log("move");
-      props.setIsDragged(true);
+      // props.setIsDragged(true);
     },
     moveend: () => {
       console.log("moveend");
-      props.setIsDragged(true);
+      if (props.isDragged != null && !props.isDragged) {
+        props.setIsDragged(true);
+      }
     },
     unload: () => {
       console.log("unload");
@@ -164,8 +166,11 @@ export const Map = (props) => {
         pois={pois}
         displayPOITypes={props.displayPOITypes}
       ></AllPOIs>
-      <FindLocation />
-      <NewCenter />
+      <HandleMapEvents
+        isDragged={props.isDragged}
+        setIsDragged={props.setIsDragged}
+      />
+      <HandleMapEvents />
       <ChangeView center={[center.lat, center.lng]} zoom={18} />
     </MapContainer>
   );

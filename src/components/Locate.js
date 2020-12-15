@@ -1,6 +1,7 @@
 import React from "react";
 import "./locate.css";
 import locateIcon from "../icons/locate.svg";
+import getAlert from "../alerts/alerts";
 
 export const Locate = (props) => {
   return (
@@ -9,6 +10,7 @@ export const Locate = (props) => {
       onClick={() => {
         props.setLocate(true);
         props.setIsDragged(false);
+        getAlert("startLocationWatch");
         console.log("Locate", "false");
       }}
     >

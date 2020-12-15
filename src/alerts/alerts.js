@@ -1,7 +1,11 @@
 export default function getAlert(alert) {
   const allAlerts = {
+    startLocationWatch: {
+      id: 1000,
+      msg: "התחלנו לעקוב אחרי המיקום שלך",
+    },
     cancelLocationWatch: {
-      id: 100,
+      id: 1001,
       msg: "הפסקנו לעקוב אחרי המיקום שלך",
     },
   };
