@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 
 import "./App.css";
-import { Locate } from "./components/Locate";
+import { LocateUser } from "./components/LocateUser";
 import { Settings } from "./components/Settings";
 import { Map } from "./components/Map";
 
-import getAlert from "./alerts/alerts";
-
-import useWatchLocation from "./hooks/useWatchLocation";
-import { geolocationOptions } from "./constants/geolocationOptions";
-import Location from "./components/Location";
-
 function App() {
+  const [isLocateUser, setIsLocateUser] = useState(true);
+
   const [isDragged, setIsDragged] = useState(false);
   const [locate, setLocate] = useState(false);
   const [displayPOITypes, setDisplayPOITypes] = useState({
@@ -23,49 +19,17 @@ function App() {
     history: true,
   });
 
-  const currLocationOptions = useWatchLocation(geolocationOptions);
-
-  const [isWatchinForLocation, setIsWatchForLocation] = useState(true);
-
-  useEffect(() => {
-    if (!currLocationOptions.location) return;
-
-    if (isDragged) {
-      handleCancelLocationWatch();
-    }
-  }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
-
-  function handleCancelLocationWatch() {
-    currLocationOptions.cancelLocationWatch();
-    setIsWatchForLocation(false);
-    getAlert("cancelLocationWatch");
-  }
-
   return (
     <>
-      <div className="geolocationContainer">
-        <p>Watch position: (Status: {isWatchinForLocation.toString()})</p>
-        <Location
-          location={currLocationOptions.location}
-          error={currLocationOptions.error}
-        />
-      </div>
-
-      <Locate
-        locate={locate}
-        setLocate={setLocate}
-        setIsDragged={setIsDragged}
-        setIsWatchForLocation={setIsWatchForLocation}
-      ></Locate>
+      <LocateUser setIsLocateUser={setIsLocateUser}></LocateUser>
       <Settings
         displayPOITypes={displayPOITypes}
         setDisplayPOITypes={setDisplayPOITypes}
       ></Settings>
 
       <Map
-        locate={locate}
-        setIsDragged={setIsDragged}
-        isDragged={isDragged}
+        setIsLocateUser={setIsLocateUser}
+        isLocateUser={isLocateUser}
         displayPOITypes={displayPOITypes}
       ></Map>
     </>

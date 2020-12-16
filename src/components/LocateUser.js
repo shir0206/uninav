@@ -1,18 +1,15 @@
 import React from "react";
-import "./locate.css";
+import "./locateUser.css";
 import locateIcon from "../icons/locate.svg";
 import getAlert from "../alerts/alerts";
 
-export const Locate = (props) => {
+export const LocateUser = (props) => {
   return (
     <button
       className="locate"
       onClick={() => {
-        props.setLocate(true);
-        props.setIsDragged(false);
-        props.setIsWatchForLocation(true);
+        props.setIsLocateUser(true);
         getAlert("startLocationWatch");
-        console.log("Locate", "false");
       }}
     >
       <img src={locateIcon} alt="compass-locate me"></img>

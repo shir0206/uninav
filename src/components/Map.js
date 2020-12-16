@@ -1,26 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useGeolocation } from "../useGeolocation";
-import { CurrentPosition } from "./CurrentPosition";
 
 import "./map.css";
 import {
   MapContainer,
   TileLayer,
-  Marker,
-  Popup,
   useMapEvents,
   useMapEvent,
   useMap,
 } from "react-leaflet";
 
-import L from "leaflet";
-
-import currPositionIcon from "../icons/currPosition.svg";
-
 import mapPOIs from "./../mapPOIs/mapPOIs";
 
 import { AllRoutes } from "./AllRoutes";
 import { AllPOIs } from "./AllPOIs";
+
+import { CurrUserPosition } from "./CurrUserPosition";
+
+import useWatchLocation from "../hooks/useWatchLocation";
+import { geolocationOptions } from "../constants/geolocationOptions";
+
+import getAlert from "../alerts/alerts";
 
 function HandleMapEvents(props) {
   //Hook attaching the provided LeafletEventHandlerFnMap event handlers to the map instance
@@ -35,8 +35,12 @@ function HandleMapEvents(props) {
     },
     moveend: () => {
       console.log("moveend");
-      if (props.isDragged != null && !props.isDragged) {
-        props.setIsDragged(true);
+      // if (props.isDragged != null && !props.isDragged) {
+      //   props.setIsDragged(true);
+      // }
+
+      if (props.isLocateUser != null && props.isLocateUser) {
+        props.setIsLocateUser(false);
       }
     },
     unload: () => {
@@ -109,18 +113,6 @@ export const Map = (props) => {
   // the MapContainer element can be accessed by child components using one of
   // the provided hooks or the MapConsumer component.
 
-  const currPosition = new L.Icon({
-    iconUrl: currPositionIcon,
-    iconRetinaUrl: currPositionIcon,
-    iconAnchor: null,
-    popupAnchor: [0, -15],
-    shadowUrl: null,
-    shadowSize: null,
-    shadowAnchor: null,
-    iconSize: new L.Point(30, 45),
-    className: "leaflet-div-icon",
-  });
-
   const overlay1 = [
     [-180, -180],
     [180, 180],
@@ -136,6 +128,23 @@ export const Map = (props) => {
     fillColor: "white",
     fillOpacity: 0.6,
   };
+
+  const currLocationOptions = useWatchLocation(geolocationOptions);
+
+  useEffect(() => {
+    if (!currLocationOptions.location) return;
+
+    if (!props.isLocateUser) {
+      handleCancelLocationWatch();
+    }
+  }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
+
+  function handleCancelLocationWatch() {
+    currLocationOptions.cancelLocationWatch();
+    props.setIsLocateUser(false);
+    getAlert("cancelLocationWatch");
+  }
+
   return (
     <MapContainer
       center={[center.lat, center.lng]}
@@ -151,15 +160,13 @@ export const Map = (props) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
       />
-      {props.locate && !geolocation.error && (
-        <Marker
-          position={[geolocation.latitude, geolocation.longitude]}
-          icon={currPosition}
-        >
-          <Popup>HI~!!!!</Popup>
-        </Marker>
-      )}
-      )
+
+      <CurrUserPosition
+        isLocateUser={props.isLocateUser}
+        location={currLocationOptions.location}
+        error={currLocationOptions.error}
+      ></CurrUserPosition>
+
       <AllRoutes />
       <AllPOIs
         markers={markers}
@@ -167,8 +174,8 @@ export const Map = (props) => {
         displayPOITypes={props.displayPOITypes}
       ></AllPOIs>
       <HandleMapEvents
-        isDragged={props.isDragged}
-        setIsDragged={props.setIsDragged}
+        isLocateUser={props.isLocateUser}
+        setIsLocateUser={props.setIsLocateUser}
       />
       <HandleMapEvents />
       <ChangeView center={[center.lat, center.lng]} zoom={18} />
