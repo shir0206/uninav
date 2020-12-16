@@ -22,10 +22,18 @@ export const CurrUserPosition = (props) => {
   return (
     <>
       {props.location ? (
-        <Marker
-          position={[props.location.latitude, props.location.longitude]}
-          icon={currPosition}
-        ></Marker>
+        <div>
+          <div className="location-console">
+            Latitude: {props.location.latitude}
+            Longitude:
+            {props.location.longitude}
+          </div>
+
+          <Marker
+            position={[props.location.latitude, props.location.longitude]}
+            icon={currPosition}
+          ></Marker>
+        </div>
       ) : (
         <p>Loading...</p>
       )}

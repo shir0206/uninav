@@ -18,3 +18,7 @@
 .leaflet-control-container {
   display: none;
 }
+
+.location-console {
+  z-index: 999999;
+}
