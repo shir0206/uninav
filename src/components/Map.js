@@ -41,6 +41,7 @@ function HandleMapEvents(props) {
 
       if (props.isLocateUser != null && props.isLocateUser) {
         props.setIsLocateUser(false);
+        props.handleCancelLocationWatch();
       }
     },
     unload: () => {
@@ -134,9 +135,9 @@ export const Map = (props) => {
   useEffect(() => {
     if (!currLocationOptions.location) return;
 
-    if (!props.isLocateUser) {
-      handleCancelLocationWatch();
-    }
+    // if (props.isLocateUser) {
+    //   handleCancelLocationWatch();
+    // }
   }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
 
   function handleCancelLocationWatch() {
@@ -176,6 +177,7 @@ export const Map = (props) => {
       <HandleMapEvents
         isLocateUser={props.isLocateUser}
         setIsLocateUser={props.setIsLocateUser}
+        handleCancelLocationWatch={handleCancelLocationWatch}
       />
       <HandleMapEvents />
       <ChangeView center={[center.lat, center.lng]} zoom={18} />
