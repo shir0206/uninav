@@ -25,24 +25,20 @@ const useWatchLocation = (options = {}) => {
 
   // Clears the watch instance based on the saved watch id
   const cancelLocationWatch = () => {
-    const { geolocation } = navigator;
-
-    if (locationWatchId.current && geolocation) {
-      geolocation.clearWatch(locationWatchId.current);
+    if (locationWatchId.current && navigator.geolocation) {
+      navigator.geolocation.clearWatch(locationWatchId.current);
     }
   };
 
   useEffect(() => {
-    const { geolocation } = navigator;
-
     // If the geolocation is not defined in the used browser we handle it as an error
-    if (!geolocation) {
+    if (!navigator.geolocation) {
       setError("Geolocation is not supported.");
       return;
     }
 
     // Start to watch the location with the Geolocation API
-    locationWatchId.current = geolocation.watchPosition(
+    locationWatchId.current = navigator.geolocation.watchPosition(
       handleSuccess,
       handleError,
       options
