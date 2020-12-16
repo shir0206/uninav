@@ -28,10 +28,7 @@ function App() {
   const [isWatchinForLocation, setIsWatchForLocation] = useState(true);
 
   useEffect(() => {
-    if (!currLocationOptions.location) {
-      getAlert("enableLocationWatch");
-      return;
-    }
+    if (!currLocationOptions.location) return;
 
     if (isDragged) {
       handleCancelLocationWatch();
