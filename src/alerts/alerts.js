@@ -8,6 +8,10 @@ export default function getAlert(alert) {
       id: 1001,
       msg: "הפסקנו לעקוב אחרי המיקום שלך",
     },
+    enableLocationWatch: {
+      id: 1002,
+      msg: "אפשר בבקשה להדליק את הGPS?",
+    },
   };
 
   const alertMsg = (

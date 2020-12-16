@@ -7,7 +7,6 @@ import { Map } from "./components/Map";
 
 import getAlert from "./alerts/alerts";
 
-import useCurrentLocation from "./hooks/useCurrentLocation";
 import useWatchLocation from "./hooks/useWatchLocation";
 import { geolocationOptions } from "./constants/geolocationOptions";
 import Location from "./components/Location";
@@ -29,7 +28,10 @@ function App() {
   const [isWatchinForLocation, setIsWatchForLocation] = useState(true);
 
   useEffect(() => {
-    if (!currLocationOptions.location) return;
+    if (!currLocationOptions.location) {
+      getAlert(enableLocationWatch);
+      return;
+    }
 
     if (isDragged) {
       handleCancelLocationWatch();
