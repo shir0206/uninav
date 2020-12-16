@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     if (!currLocationOptions.location) {
-      getAlert(enableLocationWatch);
+      getAlert("enableLocationWatch");
       return;
     }
 
