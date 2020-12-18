@@ -130,7 +130,10 @@ export const Map = (props) => {
     fillOpacity: 0.6,
   };
 
-  const currLocationOptions = useWatchLocation(geolocationOptions);
+  const currLocationOptions = useWatchLocation(
+    props.isLocateUser,
+    geolocationOptions
+  );
 
   useEffect(() => {
     if (!currLocationOptions.location) return;

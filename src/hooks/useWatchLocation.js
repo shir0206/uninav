@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 import getString from "../strings/strings";
 
-const useWatchLocation = (options = {}) => {
+const useWatchLocation = (isLocateUser, options = {}) => {
   // store location in state
   const [location, setLocation] = useState();
 
@@ -62,9 +62,11 @@ const useWatchLocation = (options = {}) => {
       options
     );
 
+    console.log("useEffect starrted yay dennis go go go my love");
+
     // Clear the location watch instance when React unmounts the used component
     return cancelLocationWatch;
-  }, [options]);
+  }, [isLocateUser, options]);
 
   return { location, cancelLocationWatch, error };
 };
