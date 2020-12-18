@@ -49,6 +49,8 @@ const useWatchLocation = (isLocateUser, options = {}) => {
   };
 
   useEffect(() => {
+    if (!isLocateUser) return;
+
     // If the geolocation is not defined in the used browser we handle it as an error
     if (!navigator.geolocation) {
       setError(getString("GEOLOCATION_NOT_SUPPORTED"));
@@ -62,7 +64,7 @@ const useWatchLocation = (isLocateUser, options = {}) => {
       options
     );
 
-    console.log("useEffect starrted yay dennis go go go my love");
+    console.log("updating user location");
 
     // Clear the location watch instance when React unmounts the used component
     return cancelLocationWatch;
