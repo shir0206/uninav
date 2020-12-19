@@ -12,9 +12,9 @@ export const HandleMapEvents = (props) => {
     move: () => {
       console.log("move");
     },
-    moveend: () => {
-      console.log("moveend");
-      if (props.isLocateUser != null && props.isLocateUser) {
+    dragend: () => {
+      console.log("dragend");
+      if (map.dragging && props.isLocateUser != null && props.isLocateUser) {
         props.setIsLocateUser(false);
         props.handleCancelLocationWatch();
       }

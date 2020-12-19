@@ -99,7 +99,6 @@ export const Map = (props) => {
             lng: currLocationOptions.location.longitude,
           }}
           zoom={zoom}
-          setIsLocateUser={props.setIsLocateUser}
         />
       )}
     </MapContainer>
