@@ -23,8 +23,7 @@ import getAlert from "../alerts/alerts";
 export const Map = (props) => {
   const [pois, setPois] = useState(mapPOIs);
   const [markers, setMarkers] = useState([]);
-
-
+  const [isFollowDistancedUser, setIsFollowDistancedUser] = useState(null);
 
   const currLocationOptions = useWatchLocation(
     props.isLocateUser,
@@ -82,6 +81,8 @@ export const Map = (props) => {
             lng: currLocationOptions.location.longitude,
           }}
           zoom={mapZoom}
+          isFollowDistancedUser={isFollowDistancedUser}
+          setIsFollowDistancedUser={setIsFollowDistancedUser}
         />
       )}
     </MapContainer>
