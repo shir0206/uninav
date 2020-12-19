@@ -15,18 +15,14 @@ import { CurrUserPosition } from "./CurrUserPosition";
 
 import useWatchLocation from "../hooks/useWatchLocation";
 import { geolocationOptions } from "../constants/geolocationOptions";
+import { mapCenter } from "../constants/mapCenter";
+import { mapZoom } from "../constants/mapZoom";
 
 import getAlert from "../alerts/alerts";
 
 export const Map = (props) => {
   const [pois, setPois] = useState(mapPOIs);
   const [markers, setMarkers] = useState([]);
-
-  const [center, setCenter] = useState({
-    lat: 32.760803,
-    lng: 35.020159,
-  });
-  const [zoom, setZoom] = useState(18);
 
   const geolocation = useGeolocation({
     enableHighAccuracy: true,
@@ -59,8 +55,8 @@ export const Map = (props) => {
 
   return (
     <MapContainer
-      center={[center.lat, center.lng]}
-      zoom={zoom}
+      center={[mapCenter.lat, mapCenter.lng]}
+      zoom={mapZoom}
       whenCreated={() => {
         console.log("created");
       }}
@@ -77,8 +73,6 @@ export const Map = (props) => {
         isLocateUser={props.isLocateUser}
         location={currLocationOptions.location}
         error={currLocationOptions.error}
-        setCenter={setCenter}
-        center={center}
       ></CurrUserPosition>
 
       <AllRoutes />
@@ -99,7 +93,7 @@ export const Map = (props) => {
             lat: currLocationOptions.location.latitude,
             lng: currLocationOptions.location.longitude,
           }}
-          zoom={zoom}
+          zoom={mapZoom}
         />
       )}
     </MapContainer>
