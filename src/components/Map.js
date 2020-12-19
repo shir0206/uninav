@@ -91,6 +91,7 @@ export const Map = (props) => {
         isLocateUser={props.isLocateUser}
         setIsLocateUser={props.setIsLocateUser}
         handleCancelLocationWatch={handleCancelLocationWatch}
+        error={currLocationOptions.error}
       />
       {currLocationOptions.location && props.isLocateUser && (
         <ChangeMapView
