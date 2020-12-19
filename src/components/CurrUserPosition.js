@@ -5,8 +5,6 @@ import { Marker } from "react-leaflet";
 import currPositionIcon from "../icons/currPosition.svg";
 
 export const CurrUserPosition = (props) => {
-  //if (!props.isLocateUser) return null;
-
   const currPosition = new L.Icon({
     iconUrl: currPositionIcon,
     iconRetinaUrl: currPositionIcon,

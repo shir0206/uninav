@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useGeolocation } from "../useGeolocation";
 
 import "./map.css";
-import { MapContainer, TileLayer, useMapEvent } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 
 import mapPOIs from "./../mapPOIs/mapPOIs";
 
@@ -49,10 +49,6 @@ export const Map = (props) => {
 
   useEffect(() => {
     if (!currLocationOptions.location) return;
-
-    // if (props.isLocateUser) {
-    //   handleCancelLocationWatch();
-    // }
   }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
 
   function handleCancelLocationWatch() {
@@ -81,6 +77,8 @@ export const Map = (props) => {
         isLocateUser={props.isLocateUser}
         location={currLocationOptions.location}
         error={currLocationOptions.error}
+        setCenter={setCenter}
+        center={center}
       ></CurrUserPosition>
 
       <AllRoutes />
@@ -94,7 +92,16 @@ export const Map = (props) => {
         setIsLocateUser={props.setIsLocateUser}
         handleCancelLocationWatch={handleCancelLocationWatch}
       />
-      <ChangeMapView center={[center.lat, center.lng]} zoom={zoom} />
+      {currLocationOptions.location && props.isLocateUser && (
+        <ChangeMapView
+          center={{
+            lat: currLocationOptions.location.latitude,
+            lng: currLocationOptions.location.longitude,
+          }}
+          zoom={zoom}
+          setIsLocateUser={props.setIsLocateUser}
+        />
+      )}
     </MapContainer>
   );
 };

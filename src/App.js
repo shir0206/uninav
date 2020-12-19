@@ -8,8 +8,6 @@ import { Map } from "./components/Map";
 function App() {
   const [isLocateUser, setIsLocateUser] = useState(true);
 
-  const [isDragged, setIsDragged] = useState(false);
-  const [locate, setLocate] = useState(false);
   const [displayPOITypes, setDisplayPOITypes] = useState({
     bench: false,
     area: true,
