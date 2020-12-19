@@ -24,19 +24,7 @@ export const Map = (props) => {
   const [pois, setPois] = useState(mapPOIs);
   const [markers, setMarkers] = useState([]);
 
-  const geolocation = useGeolocation({
-    enableHighAccuracy: true,
-    maximumAge: 15000,
-    timeout: 12000,
-  });
 
-  console.log("geolocation: ", geolocation);
-
-  //Except for its children, MapContainer props are immutable:
-  // changing them after they have been set a first time will have no effect
-  // on the Map instance or its container. The Leaflet Map instance created by
-  // the MapContainer element can be accessed by child components using one of
-  // the provided hooks or the MapConsumer component.
 
   const currLocationOptions = useWatchLocation(
     props.isLocateUser,
