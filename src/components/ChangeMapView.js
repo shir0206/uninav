@@ -19,7 +19,9 @@ export const ChangeMapView = ({
   const map = useMap();
 
   function measureDistance() {
-    if (isFollowDistancedUser != null) return;
+    if (isFollowDistancedUser != null) {
+      return isFollowDistancedUser;
+    }
 
     const centerLatLng = L.latLng(mapCenter.lat, mapCenter.lng);
     const currPositionLatLng = L.latLng(center.lat, center.lng);
