@@ -2,6 +2,7 @@ import React from "react";
 import "./locateUser.css";
 import locateIcon from "../icons/locate.svg";
 import getAlert from "../alerts/alerts";
+import LocateSVG from "../icons/LocateSVG.js";
 
 export const LocateUser = (props) => {
   return (
@@ -12,7 +13,7 @@ export const LocateUser = (props) => {
         getAlert("startLocationWatch");
       }}
     >
-      <img src={locateIcon} alt="compass-locate me"></img>
+      <LocateSVG></LocateSVG>
     </button>
   );
 };
