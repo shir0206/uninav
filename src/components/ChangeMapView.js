@@ -46,13 +46,18 @@ export const ChangeMapView = ({
     return true;
   }
 
-  console.log("ChangeMapView", center, " ", zoom);
-  if (center.lat && center.lng && zoom) {
-    if (!measureDistance()) {
-      return null;
-    }
+  useEffect(() => {
+    setTimeout(() => {
+      console.log("ChangeMapView", center, " ", zoom);
+      if (center.lat && center.lng && zoom) {
+        if (!measureDistance()) {
+          return null;
+        }
 
-    map.flyTo(center, zoom);
-  }
+        map.flyTo(center, zoom);
+      }
+    }, 8000);
+  }, []);
+
   return null;
 };
