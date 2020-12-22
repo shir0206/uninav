@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useMap } from "react-leaflet";
 import { mapCenter } from "../constants/mapCenter";
 import L from "leaflet";
+import { geoPropTypes } from "react-geolocated";
 
 export const ChangeMapView = ({
   center,
   zoom,
-  isFollowDistancedUser,
-  setIsFollowDistancedUser,
+  isFirstRender,
+  setIsFirstRender,
 }) => {
   // Except for its children, MapContainer props are immutable:
   // changing them after they have been set a first time will have no effect
@@ -17,11 +18,21 @@ export const ChangeMapView = ({
   // the provided hooks or the MapConsumer component.
 
   const map = useMap();
+  const [showContent, setShowContent] = useState(!isFirstRender);
+
+  useEffect(() => {
+    let timeOut;
+    if (isFirstRender) {
+      timeOut = setTimeout(() => {
+        setShowContent(true);
+        setIsFirstRender(false);
+      }, 8000);
+    }
+    return () => clearTimeout(timeOut);
+  }, [isFirstRender]);
 
   function measureDistance() {
-    if (isFollowDistancedUser != null) {
-      return isFollowDistancedUser;
-    }
+    if (isFirstRender === false) return false;
 
     const centerLatLng = L.latLng(mapCenter.lat, mapCenter.lng);
     const currPositionLatLng = L.latLng(center.lat, center.lng);
@@ -37,27 +48,19 @@ export const ChangeMapView = ({
     );
 
     if (distance > 1000) {
-      const result = window.confirm(
+      const isFollowDistancedUser = window.confirm(
         "You're too far away! Wanna me to follow you?"
       );
-      setIsFollowDistancedUser(result);
-      return result;
+      return isFollowDistancedUser;
     }
-    return true;
+    return false;
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      console.log("ChangeMapView", center, " ", zoom);
-      if (center.lat && center.lng && zoom) {
-        if (!measureDistance()) {
-          return null;
-        }
-
-        map.flyTo(center, zoom);
-      }
-    }, 8000);
-  }, []);
+  if (showContent && center.lat && center.lng && zoom) {
+    if (measureDistance()) {
+      map.flyTo(center, zoom);
+    }
+  }
 
   return null;
 };
