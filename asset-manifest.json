@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.fadf63cc.chunk.css",
+    "main.css": "/uninav/static/css/main.31d8f2af.chunk.css",
     "main.js": "/uninav/static/js/main.51efc3bc.chunk.js",
     "main.js.map": "/uninav/static/js/main.51efc3bc.chunk.js.map",
     "runtime-main.js": "/uninav/static/js/runtime-main.684afa7b.js",
@@ -10,7 +10,7 @@
     "static/js/3.9c9d7f9d.chunk.js": "/uninav/static/js/3.9c9d7f9d.chunk.js",
     "static/js/3.9c9d7f9d.chunk.js.map": "/uninav/static/js/3.9c9d7f9d.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.fadf63cc.chunk.css.map": "/uninav/static/css/main.fadf63cc.chunk.css.map",
+    "static/css/main.31d8f2af.chunk.css.map": "/uninav/static/css/main.31d8f2af.chunk.css.map",
     "static/js/2.fa96eac6.chunk.js.LICENSE.txt": "/uninav/static/js/2.fa96eac6.chunk.js.LICENSE.txt",
     "static/media/1.72125605.jpeg": "/uninav/static/media/1.72125605.jpeg",
     "static/media/10.aea759ec.jpeg": "/uninav/static/media/10.aea759ec.jpeg",
@@ -58,7 +58,7 @@
   "entrypoints": [
     "static/js/runtime-main.684afa7b.js",
     "static/js/2.fa96eac6.chunk.js",
-    "static/css/main.fadf63cc.chunk.css",
+    "static/css/main.31d8f2af.chunk.css",
     "static/js/main.51efc3bc.chunk.js"
   ]
 }
