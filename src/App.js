@@ -5,6 +5,7 @@ import "./styles/colors.css";
 import { SplashScreen } from "./components/SplashScreen";
 import { LocateUser } from "./components/LocateUser";
 import { Settings } from "./components/Settings";
+import { Menu } from "./components/Menu";
 import { Map } from "./components/Map";
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
             displayPOITypes={displayPOITypes}
             setDisplayPOITypes={setDisplayPOITypes}
           ></Settings>
+
+          <Menu></Menu>
         </>
       )}
 

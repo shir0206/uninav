@@ -28,7 +28,19 @@ export default function getString(string) {
       en: "Geolocation is not supported.",
       iw: "נתוני מיקום אינם נתמכים.",
     },
+    SCAN_BTN: {
+      en: "Scan",
+      iw: "סריקה",
+    },
+    ROUTES_BTN: {
+      en: "Routes",
+      iw: "מסלולים",
+    },
+    POIS_BTN: {
+      en: "POIs",
+      iw: "נקודות עניין",
+    },
   };
 
-  return (allStrings[string])[lang];
+  return allStrings[string][lang];
 }

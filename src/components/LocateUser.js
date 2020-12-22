@@ -1,6 +1,5 @@
 import React from "react";
 import "./locateUser.css";
-import locateIcon from "../icons/locate.svg";
 import getAlert from "../alerts/alerts";
 import LocateSVG from "../icons/LocateSVG.js";
 
