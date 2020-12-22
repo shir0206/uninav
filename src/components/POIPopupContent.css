@@ -74,27 +74,27 @@
 }
 
 .poi-hr-type-area {
-  border-color: #a8ba34;
-  background: #a8ba34;
+  border-color: var(--lemon);
+  background: var(--lemon);
 }
 
 .poi-hr-type-art {
-  border-color: #5f2e98;
-  background: #5f2e98;
+  border-color: var(--purple);
+  background: var(--purple);
 }
 .poi-hr-type-bench {
-  border-color: #369864;
-  background: #369864;
+  border-color: var(--green);
+  background: var(--green);
 }
 .poi-hr-type-history {
-  border-color: #2a6ea9;
-  background: #2a6ea9;
+  border-color: var(--blue);
+  background: var(--blue);
 }
 .poi-hr-type-table {
-  border-color: #e48040;
-  background: #e48040;
+  border-color: var(--orange);
+  background: var(--orange);
 }
 .poi-hr-type-lookout {
-  border-color: #af1066;
-  background: #af1066;
+  border-color: var(--red);
+  background: var(--red);
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import "./App.css";
+import "./styles/colors.css";
 import { LocateUser } from "./components/LocateUser";
 import { Settings } from "./components/Settings";
 import { Map } from "./components/Map";
