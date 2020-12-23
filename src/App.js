@@ -39,12 +39,13 @@ function App() {
       ) : (
         <>
           <LocateUser setIsLocateUser={setIsLocateUser}></LocateUser>
-          <Settings
+
+          <Menu
+            selected={selected}
+            setSelected={setSelected}
             displayPOITypes={displayPOITypes}
             setDisplayPOITypes={setDisplayPOITypes}
-          ></Settings>
-
-          <Menu selected={selected} setSelected={setSelected}></Menu>
+          ></Menu>
         </>
       )}
 
