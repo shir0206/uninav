@@ -40,6 +40,10 @@ export default function getString(string) {
       en: "POIs",
       iw: "נקודות עניין",
     },
+    TOO_FAR: {
+      en: "You're too far away! Wanna me to follow you?",
+      iw: "לא מצאתי אותך באוניברסיטה! לאתר אותך?",
+    },
   };
 
   return allStrings[string][lang];

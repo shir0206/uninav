@@ -4,6 +4,7 @@ import { useMap } from "react-leaflet";
 import { mapCenter } from "../constants/mapCenter";
 import L from "leaflet";
 import { geoPropTypes } from "react-geolocated";
+import getString from "../strings/strings";
 
 export const ChangeMapView = ({
   center,
@@ -48,9 +49,7 @@ export const ChangeMapView = ({
     );
 
     if (distance > 1000) {
-      const isFollowDistancedUser = window.confirm(
-        "You're too far away! Wanna me to follow you?"
-      );
+      const isFollowDistancedUser = window.confirm(getString("TOO_FAR"));
       return isFollowDistancedUser;
     }
     return false;
@@ -59,6 +58,7 @@ export const ChangeMapView = ({
   if (showContent && center.lat && center.lng && zoom) {
     if (measureDistance()) {
       map.flyTo(center, zoom);
+      console.log("update center");
     }
   }
 
