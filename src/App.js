@@ -20,6 +20,12 @@ function App() {
     history: true,
   });
 
+  const [selected, setSelected] = useState({
+    scan: false,
+    routes: false,
+    pois: false,
+  });
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,7 +44,7 @@ function App() {
             setDisplayPOITypes={setDisplayPOITypes}
           ></Settings>
 
-          <Menu></Menu>
+          <Menu selected={selected} setSelected={setSelected}></Menu>
         </>
       )}
 
