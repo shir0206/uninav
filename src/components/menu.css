@@ -9,19 +9,13 @@
   display: flex;
   flex-direction: row;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 1fr;
   gap: 0px 1rem;
   align-items: center;
 
-  display: grid;
-  grid-gap: 1rem 1rem;
   justify-items: center;
-  padding: 0 1rem 0 1rem;
 
   border-top-style: solid;
-  border-top-color: var(--grey_4);
-  border-top-width: 1px;
 
   position: absolute;
   height: 56px;
@@ -30,23 +24,18 @@
   bottom: 0px;
   background: var(--white);
   z-index: 10;
-  display: flex;
   flex-direction: row;
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 10fr 1fr;
   grid-gap: 0px 1rem;
   column-gap: 0px 1rem;
   align-items: center;
   display: grid;
-  /* grid-gap: 1rem 1rem; */
   justify-items: center;
   padding: 0 1rem 0 1rem;
   border-top-style: solid;
   border-top-color: var(--grey_4);
   border-top-width: 1px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 10fr 1fr;
+  grid-template-rows: 50fr 1fr;
 }
 
 .menu-btn {
