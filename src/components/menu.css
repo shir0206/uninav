@@ -27,7 +27,7 @@
   background: none;
   height: 40px;
   outline: 0;
-  cursor: pointer;
+  outline: none;
 }
 
 .menu-btn-title {
