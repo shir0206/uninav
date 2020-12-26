@@ -6,7 +6,7 @@ export default function getString(string) {
   const allStrings = {
     PERMISSION_DENIED: {
       en: "User denied the request for Geolocation.",
-      iw: "לצערנו, לא נתת הרשאות מיקום לאתר.",
+      iw: "לצערנו, לא נמצא המיקום שלך. בבקשה להדליק את ה- GPS או לתת הרשאות מיקום.",
     },
     CHANGE_PERMISSIONS_LINK: {
       en: "XXX",
@@ -43,6 +43,10 @@ export default function getString(string) {
     TOO_FAR: {
       en: "You're too far away! Wanna me to follow you?",
       iw: "לא מצאתי אותך באוניברסיטה! לאתר אותך?",
+    },
+    OK: {
+      en: "OK",
+      iw: "אישור",
     },
   };
 

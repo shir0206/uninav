@@ -3,6 +3,7 @@ import L from "leaflet";
 
 import { Marker } from "react-leaflet";
 import currPositionIcon from "../icons/currPosition.svg";
+import { LocationError } from "./LocationError";
 
 export const CurrUserPosition = (props) => {
   const currPosition = new L.Icon({
@@ -36,7 +37,10 @@ export const CurrUserPosition = (props) => {
         <p>Loading...</p>
       )}
       {props.error && (
-        <p className="errorMessage">Location Error: {props.error}</p>
+        <>
+          <p className="errorMessage">Location Error: {props.error}</p>
+          <LocationError error={props.error}></LocationError>
+        </>
       )}
     </>
   );
