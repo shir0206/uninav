@@ -69,11 +69,14 @@ export const Map = (props) => {
         pois={pois}
         displayPOITypes={props.displayPOITypes}
       ></AllPOIs>
+      
       <HandleMapEvents
         isLocateUser={props.isLocateUser}
         setIsLocateUser={props.setIsLocateUser}
         handleCancelLocationWatch={handleCancelLocationWatch}
         error={currLocationOptions.error}
+        isCenterUserLocation={props.isCenterUserLocation}
+        setIsCenterUserLocation={props.setIsCenterUserLocation}
       />
 
       {currLocationOptions.location && (

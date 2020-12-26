@@ -18,10 +18,10 @@ export const HandleMapEvents = (props) => {
         map.dragging &&
         props.isLocateUser != null &&
         props.isLocateUser &&
+        props.isCenterUserLocation &&
         !props.error
       ) {
-        props.setIsLocateUser(false);
-        props.handleCancelLocationWatch();
+        props.setIsCenterUserLocation(false);
       }
     },
     unload: () => {
