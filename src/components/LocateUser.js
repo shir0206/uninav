@@ -10,6 +10,7 @@ export const LocateUser = (props) => {
       onClick={() => {
         props.setIsLocateUser(true);
         getAlert("startLocationWatch");
+        props.setIsCenterUserLocation(true);
       }}
     >
       <LocateSVG></LocateSVG>

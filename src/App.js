@@ -10,6 +10,7 @@ import { Map } from "./components/Map";
 
 function App() {
   const [isLocateUser, setIsLocateUser] = useState(true);
+  const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
 
   const [displayPOITypes, setDisplayPOITypes] = useState({
     bench: false,
@@ -38,7 +39,10 @@ function App() {
         <SplashScreen />
       ) : (
         <>
-          <LocateUser setIsLocateUser={setIsLocateUser}></LocateUser>
+          <LocateUser
+            setIsLocateUser={setIsLocateUser}
+            setIsCenterUserLocation={setIsCenterUserLocation}
+          ></LocateUser>
 
           <Menu
             selected={selected}
@@ -53,6 +57,8 @@ function App() {
         setIsLocateUser={setIsLocateUser}
         isLocateUser={isLocateUser}
         displayPOITypes={displayPOITypes}
+        isCenterUserLocation={isCenterUserLocation}
+        setIsCenterUserLocation={setIsCenterUserLocation}
       ></Map>
     </>
   );

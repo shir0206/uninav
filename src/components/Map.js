@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useGeolocation } from "../useGeolocation";
 
 import "./map.css";
 import { MapContainer, TileLayer } from "react-leaflet";
@@ -10,6 +9,7 @@ import { AllRoutes } from "./AllRoutes";
 import { AllPOIs } from "./AllPOIs";
 import { HandleMapEvents } from "./HandleMapEvents";
 import { ChangeMapView } from "./ChangeMapView";
+import { CheckCurrUserDistance } from "./CheckCurrUserDistance";
 
 import { CurrUserPosition } from "./CurrUserPosition";
 
@@ -21,9 +21,10 @@ import { mapZoom } from "../constants/mapZoom";
 import getAlert from "../alerts/alerts";
 
 export const Map = (props) => {
-  const [pois, setPois] = useState(mapPOIs);
-  const [markers, setMarkers] = useState([]);
+  const [pois] = useState(mapPOIs);
+  const [markers] = useState([]);
   const [isFirstRender, setIsFirstRender] = useState(true);
+  const [isChangeMapView, setIsChangeMapView] = useState(!isFirstRender);
 
   const currLocationOptions = useWatchLocation(
     props.isLocateUser,
@@ -74,17 +75,31 @@ export const Map = (props) => {
         handleCancelLocationWatch={handleCancelLocationWatch}
         error={currLocationOptions.error}
       />
-      {currLocationOptions.location && props.isLocateUser && (
-        <ChangeMapView
-          center={{
-            lat: currLocationOptions.location.latitude,
-            lng: currLocationOptions.location.longitude,
-          }}
-          zoom={mapZoom}
+
+      {currLocationOptions.location && (
+        <CheckCurrUserDistance
           isFirstRender={isFirstRender}
+          currLocationOptions={currLocationOptions}
+          setIsChangeMapView={setIsChangeMapView}
           setIsFirstRender={setIsFirstRender}
-        />
+          setIsCenterUserLocation={props.setIsCenterUserLocation}
+        ></CheckCurrUserDistance>
       )}
+
+      {isChangeMapView &&
+        props.isCenterUserLocation &&
+        currLocationOptions.location &&
+        props.isLocateUser && (
+          <ChangeMapView
+            center={{
+              lat: currLocationOptions.location.latitude,
+              lng: currLocationOptions.location.longitude,
+            }}
+            zoom={mapZoom}
+            isFirstRender={isFirstRender}
+            setIsFirstRender={setIsFirstRender}
+          />
+        )}
     </MapContainer>
   );
 };
