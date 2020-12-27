@@ -1,42 +1,14 @@
-# :earth_africa: Uninav
+# :earth_africa::round_pushpin: Uninav :pushpin: [*Under development*]
 
-#### Mobile Web application for guided tour, written in `React.JS (hooks)`.
+Mobile Web application for a guided tour at Haifa University campus, written in `React.JS (hooks)`.
 
-https://shir0206.github.io/uninav/
-
-:round_pushpin: Under development 
+The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
 
 
-## Setup & Installations
 
-### Install leaflet react-leaftlet
-```
-yarn add react-leaflet
+**Link**: https://shir0206.github.io/uninav/
 
-yarn add leaflet react react-dom
-```
+**Graphic Design & Mockups**: https://www.figma.com/file/i4jEitjHjXidzxWoLr1G10/sketch_4
 
-### Set defaults
-```js
-const DEF_LAT = 48;
-const DEF_LNG = -123;
-```
+**Wireframes & Drafts**: https://www.figma.com/file/x5Lc72YGd8bGvVQNEadRW4/UniNAV
 
-### Show Map
-```js
-<TileLayer
-    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-/>
-```
-### Add Leftlet
-```html
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-
-```
-
-
-### Get user location
-```js
-yarn add react-geolocated
-```
