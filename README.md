@@ -1,4 +1,4 @@
-# :earth_africa::round_pushpin: Uninav :pushpin: [*Under development*]
+# :earth_africa::round_pushpin: Uninav [*Under development*]
 
 Mobile Web application for a guided tour at Haifa University campus, written in `React.JS (hooks)`.
 
