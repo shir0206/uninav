@@ -4,11 +4,13 @@ Mobile Web application for a guided tour at Haifa University campus, written in 
 
 The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
 
+<br>
 
 
-**Link**: https://shir0206.github.io/uninav/
+:round_pushpin: **Link**: https://shir0206.github.io/uninav/
+<br><br>
 
-**Graphic Design & Mockups**: https://www.figma.com/file/i4jEitjHjXidzxWoLr1G10/sketch_4
+:memo: **Graphic Design & Mockups**: https://www.figma.com/file/i4jEitjHjXidzxWoLr1G10/sketch_4
 
-**Wireframes & Drafts**: https://www.figma.com/file/x5Lc72YGd8bGvVQNEadRW4/UniNAV
+:memo: **Wireframes & Drafts**: https://www.figma.com/file/x5Lc72YGd8bGvVQNEadRW4/UniNAV
 
