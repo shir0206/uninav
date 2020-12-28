@@ -11,7 +11,7 @@ import { Map } from "./components/Map";
 function App() {
   const [isLocateUser, setIsLocateUser] = useState(true);
   const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
-
+  const [isLocationError, setIsLocationError] = useState(false);
   const [displayPOITypes, setDisplayPOITypes] = useState({
     bench: false,
     area: true,
@@ -42,6 +42,7 @@ function App() {
           <LocateUser
             setIsLocateUser={setIsLocateUser}
             setIsCenterUserLocation={setIsCenterUserLocation}
+            isLocationError={isLocationError}
           ></LocateUser>
 
           <Menu
@@ -59,6 +60,7 @@ function App() {
         displayPOITypes={displayPOITypes}
         isCenterUserLocation={isCenterUserLocation}
         setIsCenterUserLocation={setIsCenterUserLocation}
+        setIsLocationError={setIsLocationError}
       ></Map>
     </>
   );

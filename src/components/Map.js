@@ -35,6 +35,12 @@ export const Map = (props) => {
     if (!currLocationOptions.location) return;
   }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
 
+  useEffect(() => {
+    if (currLocationOptions.error) {
+      props.setIsLocationError(true);
+    }
+  }, [currLocationOptions]);
+
   function handleCancelLocationWatch() {
     currLocationOptions.cancelLocationWatch();
     props.setIsLocateUser(false);
@@ -69,7 +75,7 @@ export const Map = (props) => {
         pois={pois}
         displayPOITypes={props.displayPOITypes}
       ></AllPOIs>
-      
+
       <HandleMapEvents
         isLocateUser={props.isLocateUser}
         setIsLocateUser={props.setIsLocateUser}

@@ -4,16 +4,19 @@ import getAlert from "../alerts/alerts";
 import LocateSVG from "../icons/LocateSVG.js";
 
 export const LocateUser = (props) => {
+  const isActive = !props.isLocationError;
+
   return (
     <button
-      className="locate"
+      className="locate-btn"
       onClick={() => {
-        props.setIsLocateUser(true);
-        getAlert("startLocationWatch");
-        props.setIsCenterUserLocation(true);
+        if (isActive) {
+          props.setIsLocateUser(true);
+          props.setIsCenterUserLocation(true);
+        }
       }}
     >
-      <LocateSVG></LocateSVG>
+      <LocateSVG isActive={isActive}></LocateSVG>
     </button>
   );
 };
