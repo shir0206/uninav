@@ -7,6 +7,7 @@ import getString from "../strings/strings";
 import "./settings.css";
 
 import { DisplayPOISettings } from "./DisplayPOISettings";
+import { ToggleButton } from "./ToggleButton";
 
 export const Menu = (props) => {
   const [hideAllPois, setHideAllPois] = useState(false);
@@ -96,6 +97,8 @@ export const Menu = (props) => {
               onChange={handleHideAllPois}
             />
           </div>
+
+          <ToggleButton></ToggleButton>
 
           <button
             className="save"
