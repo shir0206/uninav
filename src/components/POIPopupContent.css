@@ -74,27 +74,27 @@
 }
 
 .poi-hr-type-area {
-  border-color: var(--lemon);
-  background: var(--lemon);
+  border-color: var(--color_poi_area);
+  background: var(--color_poi_area);
 }
 
 .poi-hr-type-art {
-  border-color: var(--purple);
-  background: var(--purple);
+  border-color: var(--color_poi_art);
+  background: var(--color_poi_art);
 }
 .poi-hr-type-bench {
-  border-color: var(--green);
-  background: var(--green);
+  border-color: var(--color_poi_bench);
+  background: var(--color_poi_bench);
 }
 .poi-hr-type-history {
-  border-color: var(--blue);
-  background: var(--blue);
+  border-color: var(--color_poi_history);
+  background: var(--color_poi_history);
 }
 .poi-hr-type-table {
-  border-color: var(--orange);
-  background: var(--orange);
+  border-color: var(--color_poi_table);
+  background: var(--color_poi_table);
 }
 .poi-hr-type-lookout {
-  border-color: var(--red);
-  background: var(--red);
+  border-color: var(--color_poi_lookout);
+  background: var(--color_poi_lookout);
 }

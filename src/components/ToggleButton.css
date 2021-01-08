@@ -1,7 +1,3 @@
-/* :root {
-  --reda: 175, 16, 102;
-} */
-
 .switch {
   position: relative;
   display: inline-block;
@@ -14,24 +10,17 @@
 .switch.off,
 .switch.on {
   border-radius: 25px;
-  /* padding: 5px; */
 }
 
 .switch.off {
   background: #32434e;
   opacity: 0.3;
 }
-.switch.on {
-  background: rgba(175, 16, 102, 0.5);
-  /* background: rgba(var(--reda), 0.5); */
-}
+
 .switch.off:before {
   background-color: #f1f1f1;
 }
-.switch.on:before {
-  background: rgba(175, 16, 102, 1);
-  /* background: rgba(var(--reda), 1); */
-}
+
 .switch.off:before,
 .switch.off:after {
   -webkit-transition: 0.6s;
@@ -51,7 +40,7 @@
   content: "";
   height: 20px;
   width: 20px;
-  left: -3px;
+  left: -1px;
   top: -3px;
   -webkit-transition: 0.6s;
   transition: all 0.6s;
@@ -67,11 +56,65 @@
 }
 
 .switch.on:before {
-  -webkit-transform: translateX(22px);
-  -ms-transform: translateX(22px);
-  transform: translateX(22px);
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
 }
 
 .switch.on:after {
   position: absolute;
+}
+
+.art.switch.on {
+  background: var(--color_opacity_poi_art);
+}
+
+.art.switch.on:before {
+  background: var(--color_poi_art);
+}
+
+.area.switch.on {
+  background: var(--color_opacity_poi_area);
+}
+
+.area.switch.on:before {
+  background: var(--color_poi_area);
+}
+
+.history.switch.on {
+  background: var(--color_opacity_poi_history);
+}
+
+.history.switch.on:before {
+  background: var(--color_poi_history);
+}
+.bench.switch.on {
+  background: var(--color_opacity_poi_bench);
+}
+
+.bench.switch.on:before {
+  background: var(--color_poi_bench);
+}
+.lookout.switch.on {
+  background: var(--color_opacity_poi_lookout);
+}
+
+.lookout.switch.on:before {
+  background: var(--color_poi_lookout);
+}
+
+.table.switch.on {
+  background: var(--color_opacity_poi_table);
+}
+
+.table.switch.on:before {
+  background: var(--color_poi_table);
+}
+
+.hideall.switch.on {
+  background: var(--color_opacity_basic);
+}
+
+.hideall.switch.on:before {
+  background: var(--color_basic);
 }

@@ -52,7 +52,7 @@
   text-transform: capitalize;
 
   /* color/grey/grey_3 */
-  color: var(--grey_3);
+  color: var(--color_basic);
 }
 
 .scan-menu-btn {
@@ -83,6 +83,6 @@
   width: 39px;
   height: 3px;
   bottom: 0px;
-  background: var(--turquoise);
+  background: var(--color_accent);
   border-radius: 3px;
 }

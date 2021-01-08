@@ -25,18 +25,6 @@ export const DisplayPOISettings = (props) => {
     }
   };
 
-  const handlePoiDisplay1 = (event) => {
-    // updating an object instead of a Map
-    props.setDisplayPOITypes({
-      ...props.displayPOITypes,
-      [event.target.name]: event.target.checked,
-    });
-
-    if (props.hideAllPois) {
-      props.setHideAllPois(false);
-    }
-  };
-
   function handlePoiDisplay(name, checked) {
     props.setDisplayPOITypes({
       ...props.displayPOITypes,

@@ -8,7 +8,7 @@ export const ToggleButton = (props) => {
 
   return (
     <div
-      className={"switch " + (props.checked ? "on" : "off")}
+      className={props.name + " switch " + (props.checked ? "on" : "off")}
       onClick={toggle}
     />
   );
