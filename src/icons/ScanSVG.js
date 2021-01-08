@@ -32,8 +32,8 @@ const ScanSVG = (props) => (
       style={{ fill: "var(--grey_3)" }}
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M10 4H4V10H10V4ZM6 6V8H8V6H6Z"
       style={
         props.selected
@@ -42,8 +42,8 @@ const ScanSVG = (props) => (
       }
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M10 14H4V20H10V14ZM6 16V18H8V16H6Z"
       style={
         props.selected
@@ -52,8 +52,8 @@ const ScanSVG = (props) => (
       }
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M20 4H14V10H20V4ZM16 6V8H18V6H16Z"
       style={
         props.selected

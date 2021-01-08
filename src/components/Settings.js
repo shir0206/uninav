@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import "./settings.css";
 
 import { DisplayPOISettings } from "./DisplayPOISettings";
+import POIsSVG from "../icons/POIsSVG.js";
+import getString from "../strings/strings";
 
 import settingsIcon from "../icons/settings.svg";
 
 export const Settings = (props) => {
   const [openSettings, setOpenSettings] = useState(false);
+
+  const handleChange = (event) => {
+    // updating an object instead of a Map
+    props.setDisplayPOITypes({
+      ...props.displayPOITypes,
+      [event.target.name]: event.target.checked,
+    });
+  };
 
   return (
     <>
@@ -21,6 +31,8 @@ export const Settings = (props) => {
 
       {openSettings && (
         <div className="settings">
+          <br />
+
           <DisplayPOISettings
             displayPOITypes={props.displayPOITypes}
             setDisplayPOITypes={props.setDisplayPOITypes}

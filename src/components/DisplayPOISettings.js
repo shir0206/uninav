@@ -7,7 +7,6 @@ import benchIcon from "../icons/bench.svg";
 import historyIcon from "../icons/history.svg";
 import tableIcon from "../icons/table.svg";
 import lookoutIcon from "../icons/lookout.svg";
-import POIsSVG from "../icons/POIsSVG.js";
 
 import getString from "../strings/strings";
 
@@ -18,6 +17,10 @@ export const DisplayPOISettings = (props) => {
       ...props.displayPOITypes,
       [event.target.name]: event.target.checked,
     });
+
+    if (props.hideAllPois) {
+      props.setHideAllPois(false);
+    }
   };
 
   useEffect(() => {
@@ -64,10 +67,9 @@ export const DisplayPOISettings = (props) => {
   ];
 
   return (
-    <div className="display-poi">
-      <lable>{getString("POI_SETTINGS_TITLE")}</lable> <br />
+    <ul className="display-poi">
       {checkboxes.map((item) => (
-        <label key={item.key}>
+        <li key={item.key}>
           {item.label}
           <img src={item.icon} alt={item.name} className="checkbox-icon"></img>
           <input
@@ -76,22 +78,8 @@ export const DisplayPOISettings = (props) => {
             checked={props.displayPOITypes[item.name]}
             onChange={handleChange}
           />
-        </label>
+        </li>
       ))}
-      <div class="toggle-switch">
-        <input
-          type="checkbox"
-          className="toggle-switch-checkbox"
-          name="toggleSwitch"
-          id="toggleSwitch"
-        />
-        <label className="toggle-switch-label" htmlFor="toggleSwitch">
-          <span className="toggle-switch-inner"></span>
-          <span className="toggle-switch-switch"></span>
-        </label>
-      </div>
-      <label>{getString("POI_HIDE_ALL")}</label>
-      <POIsSVG></POIsSVG>
-    </div>
+    </ul>
   );
 };

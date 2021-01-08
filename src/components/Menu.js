@@ -9,6 +9,23 @@ import "./settings.css";
 import { DisplayPOISettings } from "./DisplayPOISettings";
 
 export const Menu = (props) => {
+  const [hideAllPois, setHideAllPois] = useState(false);
+
+  const handleHideAllPois = (event) => {
+    setHideAllPois(event.target.checked);
+
+    // When it is checked, set the all the poi types flags to 'false'
+    if (event.target.checked) {
+      // Create a clone of the current state of poi type flags
+      let temp = JSON.parse(JSON.stringify(props.displayPOITypes));
+
+      // Set all the flags in the clone to false
+      Object.keys(temp).forEach((v) => (temp[v] = false));
+
+      props.setDisplayPOITypes(temp);
+    }
+  };
+
   return (
     <>
       <div className="menu">
@@ -60,10 +77,25 @@ export const Menu = (props) => {
 
       {props.selected.pois && (
         <div className="settings">
+          <h4>{getString("POI_SETTINGS_TITLE")}</h4>
+
           <DisplayPOISettings
             displayPOITypes={props.displayPOITypes}
             setDisplayPOITypes={props.setDisplayPOITypes}
+            hideAllPois={hideAllPois}
+            setHideAllPois={setHideAllPois}
           ></DisplayPOISettings>
+
+          <div>
+            {getString("POI_HIDE_ALL")}
+            <POIsSVG></POIsSVG>
+            <input
+              type="checkbox"
+              name={"hideall"}
+              checked={hideAllPois}
+              onChange={handleHideAllPois}
+            />
+          </div>
 
           <button
             className="save"
