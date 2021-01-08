@@ -6,7 +6,8 @@ export default function getString(string) {
   const allStrings = {
     PERMISSION_DENIED: {
       en: "User denied the request for Geolocation.",
-      iw: "לצערנו, לא נמצא המיקום שלך. בבקשה להדליק את ה- GPS או לתת הרשאות מיקום.",
+      iw:
+        "לצערנו, לא נמצא המיקום שלך. בבקשה להדליק את ה- GPS או לתת הרשאות מיקום.",
     },
     CHANGE_PERMISSIONS_LINK: {
       en: "XXX",
@@ -47,6 +48,45 @@ export default function getString(string) {
     OK: {
       en: "OK",
       iw: "אישור",
+    },
+
+    POI_SETTINGS_TITLE: {
+      en: "Which POIs do interest you today?",
+      iw: "אילו נקודות עניין מעניינות אותך היום?",
+    },
+
+    POI_BENCH: {
+      en: "Bench",
+      iw: "ספסלים",
+    },
+
+    POI_AREA: {
+      en: "Area",
+      iw: "מרחב",
+    },
+
+    POI_TABLE: {
+      en: "Table",
+      iw: "שולחנות",
+    },
+
+    POI_ART: {
+      en: "Art",
+      iw: "אומנות",
+    },
+    POI_LOOKOUT: {
+      en: "Lookout",
+      iw: "נקודת תצפית",
+    },
+
+    POI_HISTORY: {
+      en: "History",
+      iw: "אתר היסטורי",
+    },
+
+    POI_HIDE_ALL: {
+      en: "Hide all POIs",
+      iw: "הסתרת כל הנקודות",
     },
   };
 

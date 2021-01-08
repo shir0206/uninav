@@ -7,10 +7,11 @@ import benchIcon from "../icons/bench.svg";
 import historyIcon from "../icons/history.svg";
 import tableIcon from "../icons/table.svg";
 import lookoutIcon from "../icons/lookout.svg";
+import POIsSVG from "../icons/POIsSVG.js";
+
+import getString from "../strings/strings";
 
 export const DisplayPOISettings = (props) => {
-
-
   const handleChange = (event) => {
     // updating an object instead of a Map
     props.setDisplayPOITypes({
@@ -23,49 +24,48 @@ export const DisplayPOISettings = (props) => {
     console.log("props.displayPoiType: ", props.displayPOITypes);
   }, [props.displayPOITypes]);
 
-
   const checkboxes = [
     {
       name: "bench",
       key: "bench",
-      label: "ספסל",
+      label: getString("POI_BENCH"),
       icon: benchIcon,
     },
     {
       name: "area",
       key: "area",
-      label: "איזור",
+      label: getString("POI_AREA"),
       icon: areaIcon,
     },
     {
       name: "table",
       key: "table",
-      label: "שולחן",
+      label: getString("POI_TABLE"),
       icon: tableIcon,
     },
     {
       name: "art",
       key: "art",
-      label: "אומנות",
+      label: getString("POI_ART"),
       icon: artIcon,
     },
     {
       name: "lookout",
       key: "lookout",
-      label: "תצפית",
+      label: getString("POI_LOOKOUT"),
       icon: lookoutIcon,
     },
     {
       name: "history",
       key: "history",
-      label: "אתר היסטורי",
+      label: getString("POI_HISTORY"),
       icon: historyIcon,
     },
   ];
 
   return (
     <div className="display-poi">
-      <lable>מה יוצג במפה</lable> <br />
+      <lable>{getString("POI_SETTINGS_TITLE")}</lable> <br />
       {checkboxes.map((item) => (
         <label key={item.key}>
           {item.label}
@@ -78,6 +78,20 @@ export const DisplayPOISettings = (props) => {
           />
         </label>
       ))}
+      <div class="toggle-switch">
+        <input
+          type="checkbox"
+          className="toggle-switch-checkbox"
+          name="toggleSwitch"
+          id="toggleSwitch"
+        />
+        <label className="toggle-switch-label" htmlFor="toggleSwitch">
+          <span className="toggle-switch-inner"></span>
+          <span className="toggle-switch-switch"></span>
+        </label>
+      </div>
+      <label>{getString("POI_HIDE_ALL")}</label>
+      <POIsSVG></POIsSVG>
     </div>
   );
 };
