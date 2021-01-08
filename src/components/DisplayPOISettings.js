@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { ToggleButton } from "./ToggleButton";
+
 import "./displayPOISettings.css";
 
 import areaIcon from "../icons/area.svg";
@@ -23,6 +25,17 @@ export const DisplayPOISettings = (props) => {
     }
   };
 
+  const handleToggle = (event) => {
+    // updating an object instead of a Map
+    props.setDisplayPOITypes({
+      ...props.displayPOITypes,
+      [event.target.name]: event.target.checked,
+    });
+
+    if (props.hideAllPois) {
+      props.setHideAllPois(false);
+    }
+  };
   useEffect(() => {
     console.log("props.displayPoiType: ", props.displayPOITypes);
   }, [props.displayPOITypes]);
@@ -72,6 +85,15 @@ export const DisplayPOISettings = (props) => {
         <li key={item.key}>
           {item.label}
           <img src={item.icon} alt={item.name} className="checkbox-icon"></img>
+          <ToggleButton
+            checked={props.displayPOITypes[item.name]}
+            name={item.name}
+            displayPOITypes={props.displayPOITypes}
+            setDisplayPOITypes={props.setDisplayPOITypes}
+            hideAllPois={props.hideAllPois}
+            setHideAllPois={props.setHideAllPois}
+          ></ToggleButton>
+
           <input
             type="checkbox"
             name={item.name}
