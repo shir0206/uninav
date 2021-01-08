@@ -25,7 +25,7 @@ export const DisplayPOISettings = (props) => {
     }
   };
 
-  const handleToggle = (event) => {
+  const handlePoiDisplay1 = (event) => {
     // updating an object instead of a Map
     props.setDisplayPOITypes({
       ...props.displayPOITypes,
@@ -36,6 +36,18 @@ export const DisplayPOISettings = (props) => {
       props.setHideAllPois(false);
     }
   };
+
+  function handlePoiDisplay(name, checked) {
+    props.setDisplayPOITypes({
+      ...props.displayPOITypes,
+      [name]: checked,
+    });
+
+    if (props.hideAllPois) {
+      props.setHideAllPois(false);
+    }
+  }
+
   useEffect(() => {
     console.log("props.displayPoiType: ", props.displayPOITypes);
   }, [props.displayPOITypes]);
@@ -88,18 +100,8 @@ export const DisplayPOISettings = (props) => {
           <ToggleButton
             checked={props.displayPOITypes[item.name]}
             name={item.name}
-            displayPOITypes={props.displayPOITypes}
-            setDisplayPOITypes={props.setDisplayPOITypes}
-            hideAllPois={props.hideAllPois}
-            setHideAllPois={props.setHideAllPois}
+            handleToggle={handlePoiDisplay}
           ></ToggleButton>
-
-          <input
-            type="checkbox"
-            name={item.name}
-            checked={props.displayPOITypes[item.name]}
-            onChange={handleChange}
-          />
         </li>
       ))}
     </ul>

@@ -12,11 +12,11 @@ import { ToggleButton } from "./ToggleButton";
 export const Menu = (props) => {
   const [hideAllPois, setHideAllPois] = useState(false);
 
-  const handleHideAllPois = (event) => {
-    setHideAllPois(event.target.checked);
+  const handleHideAllPois = (name, checked) => {
+    setHideAllPois(checked);
 
     // When it is checked, set the all the poi types flags to 'false'
-    if (event.target.checked) {
+    if (checked) {
       // Create a clone of the current state of poi type flags
       let temp = JSON.parse(JSON.stringify(props.displayPOITypes));
 
@@ -90,15 +90,13 @@ export const Menu = (props) => {
           <div>
             {getString("POI_HIDE_ALL")}
             <POIsSVG></POIsSVG>
-            <input
-              type="checkbox"
-              name={"hideall"}
-              checked={hideAllPois}
-              onChange={handleHideAllPois}
-            />
-          </div>
 
-          <ToggleButton></ToggleButton>
+            <ToggleButton
+              checked={hideAllPois}
+              name={"hideall"}
+              handleToggle={handleHideAllPois}
+            ></ToggleButton>
+          </div>
 
           <button
             className="save"

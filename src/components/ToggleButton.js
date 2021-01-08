@@ -1,27 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ToggleButton.css";
 
 export const ToggleButton = (props) => {
-  const [toggleState, setToggleState] = useState(props.checked);
-
-  function toggle() {
-    props.setDisplayPOITypes({
-      ...props.displayPOITypes,
-      [props.name]: !toggleState,
-    });
-
-    setToggleState((toggleState) => {
-      return !toggleState;
-    });
-
-    if (props.hideAllPois) {
-      props.setHideAllPois(false);
-    }
-  }
+  const toggle = () => {
+    props.handleToggle(props.name, !props.checked);
+  };
 
   return (
     <div
-      className={"switch " + (toggleState ? "on" : "off")}
+      className={"switch " + (props.checked ? "on" : "off")}
       onClick={toggle}
     />
   );
