@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.f16ca093.chunk.css",
-    "main.js": "/uninav/static/js/main.6a7b9b17.chunk.js",
-    "main.js.map": "/uninav/static/js/main.6a7b9b17.chunk.js.map",
+    "main.css": "/uninav/static/css/main.b559acd2.chunk.css",
+    "main.js": "/uninav/static/js/main.4bd0ddac.chunk.js",
+    "main.js.map": "/uninav/static/js/main.4bd0ddac.chunk.js.map",
     "runtime-main.js": "/uninav/static/js/runtime-main.4ff32915.js",
     "runtime-main.js.map": "/uninav/static/js/runtime-main.4ff32915.js.map",
     "static/js/2.db871354.chunk.js": "/uninav/static/js/2.db871354.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.de85502a.chunk.js": "/uninav/static/js/3.de85502a.chunk.js",
     "static/js/3.de85502a.chunk.js.map": "/uninav/static/js/3.de85502a.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.f16ca093.chunk.css.map": "/uninav/static/css/main.f16ca093.chunk.css.map",
+    "static/css/main.b559acd2.chunk.css.map": "/uninav/static/css/main.b559acd2.chunk.css.map",
     "static/js/2.db871354.chunk.js.LICENSE.txt": "/uninav/static/js/2.db871354.chunk.js.LICENSE.txt",
     "static/media/1.72125605.jpeg": "/uninav/static/media/1.72125605.jpeg",
     "static/media/10.aea759ec.jpeg": "/uninav/static/media/10.aea759ec.jpeg",
@@ -57,7 +57,7 @@
   "entrypoints": [
     "static/js/runtime-main.4ff32915.js",
     "static/js/2.db871354.chunk.js",
-    "static/css/main.f16ca093.chunk.css",
-    "static/js/main.6a7b9b17.chunk.js"
+    "static/css/main.b559acd2.chunk.css",
+    "static/js/main.4bd0ddac.chunk.js"
   ]
 }
