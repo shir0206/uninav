@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import "./map.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 
-import mapPOIs from "./../mapPOIs/mapPOIs";
-
 import { AllRoutes } from "./AllRoutes";
 import { AllPOIs } from "./AllPOIs";
 import { HandleMapEvents } from "./HandleMapEvents";
@@ -21,31 +19,33 @@ import { mapZoom } from "../constants/mapZoom";
 import getAlert from "../alerts/alerts";
 
 export const Map = (props) => {
-  const [pois] = useState(mapPOIs);
-  const [markers] = useState([]);
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [isChangeMapView, setIsChangeMapView] = useState(!isFirstRender);
 
+  // Initiate geolocation & start following the user
   const currLocationOptions = useWatchLocation(
     props.isLocateUser,
     geolocationOptions
   );
 
-  useEffect(() => {
-    if (!currLocationOptions.location) return;
-  }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
-
-  useEffect(() => {
-    if (currLocationOptions.error) {
-      props.setIsLocationError(true);
-    }
-  }, [currLocationOptions]);
-
+  // Cancel geolocation & stop following the user
   function handleCancelLocationWatch() {
     currLocationOptions.cancelLocationWatch();
     props.setIsLocateUser(false);
     getAlert("cancelLocationWatch");
   }
+
+  // 
+  useEffect(() => {
+    if (!currLocationOptions.location) return;
+  }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
+
+  // 
+  useEffect(() => {
+    if (currLocationOptions.error) {
+      props.setIsLocationError(true);
+    }
+  }, [currLocationOptions]);
 
   return (
     <MapContainer
@@ -63,18 +63,25 @@ export const Map = (props) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
       />
 
+      <AllPOIs displayPOITypes={props.displayPOITypes}></AllPOIs>
+
+      <AllRoutes />
+
       <CurrUserPosition
         isLocateUser={props.isLocateUser}
         location={currLocationOptions.location}
         error={currLocationOptions.error}
       ></CurrUserPosition>
 
-      <AllRoutes />
-      <AllPOIs
-        markers={markers}
-        pois={pois}
-        displayPOITypes={props.displayPOITypes}
-      ></AllPOIs>
+      {currLocationOptions.location && (
+        <CheckCurrUserDistance
+          isFirstRender={isFirstRender}
+          setIsFirstRender={setIsFirstRender}
+          currLocationOptions={currLocationOptions}
+          setIsChangeMapView={setIsChangeMapView}
+          setIsCenterUserLocation={props.setIsCenterUserLocation}
+        ></CheckCurrUserDistance>
+      )}
 
       <HandleMapEvents
         isLocateUser={props.isLocateUser}
@@ -84,16 +91,6 @@ export const Map = (props) => {
         isCenterUserLocation={props.isCenterUserLocation}
         setIsCenterUserLocation={props.setIsCenterUserLocation}
       />
-
-      {currLocationOptions.location && (
-        <CheckCurrUserDistance
-          isFirstRender={isFirstRender}
-          currLocationOptions={currLocationOptions}
-          setIsChangeMapView={setIsChangeMapView}
-          setIsFirstRender={setIsFirstRender}
-          setIsCenterUserLocation={props.setIsCenterUserLocation}
-        ></CheckCurrUserDistance>
-      )}
 
       {isChangeMapView &&
         props.isCenterUserLocation &&

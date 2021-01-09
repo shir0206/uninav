@@ -6,6 +6,8 @@ import L from "leaflet";
 
 import { POIPopupContent } from "./POIPopupContent";
 
+import mapPOIs from "./../mapPOIs/mapPOIs";
+
 import areaIcon from "../icons/area.svg";
 import artIcon from "../icons/art.svg";
 import benchIcon from "../icons/bench.svg";
@@ -53,7 +55,7 @@ export const AllPOIs = (props) => {
 
   return (
     <>
-      {props.pois.map(
+      {mapPOIs.map(
         (poi) =>
           props.displayPOITypes[poi.type] && (
             <Marker
