@@ -35,13 +35,19 @@ export const Map = (props) => {
     getAlert("cancelLocationWatch");
   }
 
-  // 
-  useEffect(() => {
-    if (!currLocationOptions.location) return;
-  }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
+  // useEffect(() => {
+  //   if (!currLocationOptions.location) return;
+  // }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
 
-  // 
+  //
+  // useEffect(() => {
+  //   if (currLocationOptions.error) {
+  //     props.setIsLocationError(true);
+  //   }
+  // }, [currLocationOptions]);
+
   useEffect(() => {
+    alert("test");
     if (currLocationOptions.error) {
       props.setIsLocationError(true);
     }
