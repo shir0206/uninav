@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/uninav/static/css/main.a50028a9.chunk.css",
-    "main.js": "/uninav/static/js/main.2c38b908.chunk.js",
-    "main.js.map": "/uninav/static/js/main.2c38b908.chunk.js.map",
+    "main.js": "/uninav/static/js/main.746286af.chunk.js",
+    "main.js.map": "/uninav/static/js/main.746286af.chunk.js.map",
     "runtime-main.js": "/uninav/static/js/runtime-main.3b5e4929.js",
     "runtime-main.js.map": "/uninav/static/js/runtime-main.3b5e4929.js.map",
     "static/js/2.4a54f62b.chunk.js": "/uninav/static/js/2.4a54f62b.chunk.js",
@@ -57,6 +57,6 @@
     "static/js/runtime-main.3b5e4929.js",
     "static/js/2.4a54f62b.chunk.js",
     "static/css/main.a50028a9.chunk.css",
-    "static/js/main.2c38b908.chunk.js"
+    "static/js/main.746286af.chunk.js"
   ]
 }
