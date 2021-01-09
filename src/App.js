@@ -9,7 +9,6 @@ import { Routes } from "./components/Routes";
 import { Settings } from "./components/Settings";
 import { Menu } from "./components/Menu";
 import { Map } from "./components/Map";
-import RoutesSVG from "./icons/RoutesSVG";
 
 function App() {
   const [isLocateUser, setIsLocateUser] = useState(true);
@@ -33,7 +32,8 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2500);
+    const timer = setTimeout(() => setLoading(false), 2500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
