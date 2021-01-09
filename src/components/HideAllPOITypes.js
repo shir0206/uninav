@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./hideAllPOITypes.css";
 
 import { ToggleButton } from "./ToggleButton";
 
-import POIsSVG from "../icons/POIsSVG.js";
+import UniNavLogoSVG from "../icons/UniNavLogoSVG.js";
 
 import getString from "../strings/strings";
 
@@ -37,7 +37,7 @@ export const HideAllPOITypes = (props) => {
       <h4 className="poi-display-label">{getString("POI_HIDE_ALL")}</h4>
 
       <div className="poi-display-icon">
-        <POIsSVG></POIsSVG>
+        <UniNavLogoSVG width={24} height={23}></UniNavLogoSVG>
       </div>
     </div>
   );
