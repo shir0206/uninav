@@ -82,15 +82,21 @@ export const DisplayPOISettings = (props) => {
   return (
     <ul className="display-poi">
       {checkboxes.map((item) => (
-        <li key={item.key}>
-          {item.label}
-          <img src={item.icon} alt={item.name} className="checkbox-icon"></img>
-          <ToggleButton
-            checked={props.displayPOITypes[item.name]}
-            name={item.name}
-            handleToggle={handlePoiDisplay}
-          ></ToggleButton>
-        </li>
+        <div key={item.key} className="poi-display-switch">
+          <div className="poi-display-toggle">
+            <ToggleButton
+              checked={props.displayPOITypes[item.name]}
+              name={item.name}
+              handleToggle={handlePoiDisplay}
+            ></ToggleButton>
+          </div>
+
+          <h4 className="poi-display-label">{item.label}</h4>
+
+          <div className="poi-display-icon">
+            <img src={item.icon} alt={item.name}></img>
+          </div>
+        </div>
       ))}
     </ul>
   );

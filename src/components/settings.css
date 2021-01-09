@@ -12,16 +12,16 @@
 .settings {
   position: absolute;
   width: 80%;
-  height: 60%;
   background: rgba(255, 255, 255, 0.75);
-  top: 50%;
+  top: 45%;
   left: 50%;
   z-index: 10;
   transform: translate(-50%, -50%);
+  padding: 2%;
+  border-radius: 10px;
 }
 
 .save {
-  position: absolute;
   bottom: 1rem;
   left: 4rem;
   width: 3rem;
@@ -29,4 +29,58 @@
   border: none;
   z-index: 10;
   cursor: pointer;
+}
+
+.poi-display-switch {
+  width: 100%;
+  margin: 2px 0px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 10px;
+  grid-template-areas: "toggle  label icon";
+}
+
+.settings > .poi-display-switch {
+  margin: 8px 0px;
+}
+
+.poi-display-toggle {
+  grid-area: toggle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poi-display-label {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-weight: normal;
+  grid-area: label;
+  text-align: end;
+  color: var(--color_default_text);
+  font-size: var(--text_size_default_small);
+}
+
+.poi-display-icon {
+  grid-area: icon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poi-display-hr {
+  border-top: 1px solid var(--grey_7);
+  border-bottom: 1px solid var(--white);
+
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.poi-settings-title {
+  direction: rtl;
+  color: var(--color_default_text);
+  font-size: var(--text_size_default_small);
+  font-weight: 600;
 }

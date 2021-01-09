@@ -28,7 +28,9 @@ export const Settings = (props) => {
     <>
       {props.selected.pois && (
         <div className="settings">
-          <h4>{getString("POI_SETTINGS_TITLE")}</h4>
+          <h4 className="poi-settings-title">
+            {getString("POI_SETTINGS_TITLE")}
+          </h4>
 
           <DisplayPOISettings
             displayPOITypes={props.displayPOITypes}
@@ -37,16 +39,25 @@ export const Settings = (props) => {
             setHideAllPois={setHideAllPois}
           ></DisplayPOISettings>
 
-          <div>
-            {getString("POI_HIDE_ALL")}
-            <POIsSVG></POIsSVG>
+          <hr className="poi-display-hr"></hr>
 
-            <ToggleButton
-              checked={hideAllPois}
-              name={"hideall"}
-              handleToggle={handleHideAllPois}
-            ></ToggleButton>
+          <div className="poi-display-switch">
+            <div className="poi-display-toggle">
+              <ToggleButton
+                checked={hideAllPois}
+                name={"hideall"}
+                handleToggle={handleHideAllPois}
+              ></ToggleButton>
+            </div>
+
+            <h4 className="poi-display-label">{getString("POI_HIDE_ALL")}</h4>
+
+            <div className="poi-display-icon">
+              <POIsSVG></POIsSVG>
+            </div>
           </div>
+
+          <hr className="poi-display-hr"></hr>
 
           <button
             className="save"

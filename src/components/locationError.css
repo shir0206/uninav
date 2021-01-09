@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   text-align: right;
-  color: var(--grey_2);
+  color: var(--color_default_text);
 }
 .loccation-error-button {
   position: absolute;
