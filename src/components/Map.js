@@ -51,7 +51,7 @@ export const Map = (props) => {
     if (currLocationOptions.error) {
       props.setIsLocationError(true);
     }
-  }, [currLocationOptions]);
+  }, [currLocationOptions.error]);
 
   return (
     <MapContainer
