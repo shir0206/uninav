@@ -5,6 +5,8 @@ import { HeadingSettings } from "./HeadingSettings";
 import { DisplayPOITypesList } from "./DisplayPOITypesList";
 import { HideAllPOITypes } from "./HideAllPOITypes";
 
+import getString from "../strings/strings";
+
 export const Settings = (props) => {
   const [hideAllPois, setHideAllPois] = useState(false);
 
@@ -40,11 +42,8 @@ export const Settings = (props) => {
 
       <hr className="poi-display-hr"></hr>
 
-      <button className="save" onClick={handleCloseSettings}>
-        <img
-          src="https://www.flaticon.com/svg/static/icons/svg/190/190411.svg"
-          alt="OK"
-        ></img>
+      <button className="settings-button" onClick={handleCloseSettings}>
+        {getString("OK")}
       </button>
     </div>
   );

@@ -6,8 +6,6 @@ import L from "leaflet";
 
 import { POIPopupContent } from "./POIPopupContent";
 
-import getPOIImageDB from "./constants";
-
 import areaIcon from "../icons/area.svg";
 import artIcon from "../icons/art.svg";
 import benchIcon from "../icons/bench.svg";

@@ -13,32 +13,32 @@ const RoutesSVG = (props) => (
       style={
         props.selected
           ? { fill: "var(--color_accent)" }
-          : { fill: "var(--color_basic)" }
+          : { fill: "var(--color_default_btn)" }
       }
     />
-    <path d="M14 19H15.17V17H14V19Z" style={{ fill: "var(--color_basic)" }} />
+    <path d="M14 19H15.17V17H14V19Z" style={{ fill: "var(--color_default_btn)" }} />
     <path
       d="M10 17H8.83C8.53 16.15 7.85 15.47 7 15.17V14H5V15.17L8.83 19H10V17Z"
-      style={{ fill: "var(--color_basic)" }}
+      style={{ fill: "var(--color_default_btn)" }}
     />
     <path
       d="M7 9.99996V8.82996H5V9.99996H7Z"
-      style={{ fill: "var(--color_basic)" }}
+      style={{ fill: "var(--color_default_btn)" }}
     />
-    <path d="M11 17V19H13V17H11Z" style={{ fill: "var(--color_basic)" }} />
-    <path d="M5 13H7V11H5V13Z" style={{ fill: "var(--color_basic)" }} />
+    <path d="M11 17V19H13V17H11Z" style={{ fill: "var(--color_default_btn)" }} />
+    <path d="M5 13H7V11H5V13Z" style={{ fill: "var(--color_default_btn)" }} />
     <path
       d="M9 6C9 7.65685 7.65685 9 6 9C4.34315 9 3 7.65685 3 6C3 4.34315 4.34315 3 6 3C7.65685 3 9 4.34315 9 6ZM4.98257 6C4.98257 6.56191 5.43809 7.01743 6 7.01743C6.56191 7.01743 7.01743 6.56191 7.01743 6C7.01743 5.43809 6.56191 4.98257 6 4.98257C5.43809 4.98257 4.98257 5.43809 4.98257 6Z"
       fill="#AF1066"
-      style={{ fill: "var(--color_basic)" }}
+      style={{ fill: "var(--color_default_btn)" }}
     />
     <path
       d="M9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15C7.65685 15 9 16.3431 9 18ZM4.98257 18C4.98257 18.5619 5.43809 19.0174 6 19.0174C6.56191 19.0174 7.01743 18.5619 7.01743 18C7.01743 17.4381 6.56191 16.9826 6 16.9826C5.43809 16.9826 4.98257 17.4381 4.98257 18Z"
-      style={{ fill: "var(--color_basic)" }}
+      style={{ fill: "var(--color_default_btn)" }}
     />
     <path
       d="M21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18C15 16.3431 16.3431 15 18 15C19.6569 15 21 16.3431 21 18ZM16.9826 18C16.9826 18.5619 17.4381 19.0174 18 19.0174C18.5619 19.0174 19.0174 18.5619 19.0174 18C19.0174 17.4381 18.5619 16.9826 18 16.9826C17.4381 16.9826 16.9826 17.4381 16.9826 18Z"
-      style={{ fill: "var(--color_basic)" }}
+      style={{ fill: "var(--color_default_btn)" }}
     />
   </svg>
 );

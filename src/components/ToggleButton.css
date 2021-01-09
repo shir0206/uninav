@@ -120,5 +120,5 @@ li {
 }
 
 .hideall.switch.on:before {
-  background: var(--color_basic);
+  background: var(--color_default_btn);
 }

@@ -14,7 +14,7 @@
   justify-items: center;
   padding: 0 1rem 0 1rem;
   border-top-style: solid;
-  border-top-color: var(--grey_4);
+  border-top-color: var(--color_default_btn_text);
   border-top-width: 1px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 50fr 1fr;
@@ -47,7 +47,7 @@
   align-items: center;
   text-align: center;
   text-transform: capitalize;
-  color: var(--color_basic);
+  color: var(--color_default_btn);
 }
 
 .scan-menu-btn {

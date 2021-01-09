@@ -1,12 +1,50 @@
 .settings-button {
-  position: absolute;
-  top: 5rem;
-  right: 1rem;
-  width: 3rem;
-  background: none;
+  /* Controls / Button / Default */
+
+  /* Auto Layout */
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px 18px;
+
+  width: 76px;
+  height: 36px;
+
+  /* color/grey/grey_3 */
+  background: var(--color_default_btn);
+  border-radius: 4px;
+
+  /* PRESSED */
+
+  position: static;
+  left: 23.68%;
+  right: 23.68%;
+  top: 5px;
+  bottom: 7px;
+
+  /* Aassistent/utility/BUTTON 1/bold */
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* color/grey/color_default_btn_text */
+  color: var(--color_default_btn_text);
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 10px 0px;
   border: none;
-  z-index: 10;
-  cursor: pointer;
+
+  transform: translateX(20px);
 }
 
 .settings {
@@ -19,16 +57,6 @@
   transform: translate(-50%, -50%);
   padding: 0 0 10px 10px;
   border-radius: 10px;
-}
-
-.save {
-  bottom: 1rem;
-  left: 4rem;
-  width: 3rem;
-  background: none;
-  border: none;
-  z-index: 10;
-  cursor: pointer;
 }
 
 .poi-display-switch {

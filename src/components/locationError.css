@@ -32,7 +32,7 @@
 .loccation-error-button {
   position: absolute;
   width: 3rem;
-  background: var(--color_basic);
+  background: var(--color_default_btn);
   border: none;
   cursor: pointer;
   align-items: flex-start;
@@ -43,5 +43,5 @@
   font-family: Assistant;
   font-size: 18px;
   align-items: center;
-  color: var(--grey_4);
+  color: var(--color_default_btn_text);
 }
