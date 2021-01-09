@@ -14,3 +14,45 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
 
 :memo: **Wireframes & Drafts**: https://www.figma.com/file/x5Lc72YGd8bGvVQNEadRW4/UniNAV
 
+
+<hr>
+
+### Current structure
+```
+  App
+  |-- SplashScreen
+      |-- UniversityLogoSVG
+      |-- UniNavLogoSVG
+  |-- LocateUser
+      |-- LocateSVG
+  |-- Scan
+  |-- Routes
+  |-- Settings
+      |-- HeadingSettings
+          |-- UniNavLogoSVG
+      |-- DisplayPOITypesList
+          |-- ToggleButton
+      |-- HideAllPOITypes
+          |-- ToggleButton
+          |-- UniNavLogoSVG
+  |-- Menu
+      |-- ScanSVG
+      |-- RoutesSVG
+      |-- POIsSVG
+  |-- Map
+      |-- MapContainer
+          |-- TileLayer
+          |-- CurrUserPosition
+              |-- Marker
+              |-- LocationError
+          |-- AllRoutes
+              |-- Polyline
+                  |-- Popup
+          |-- AllPOIs
+              |-- Marker
+                  |-- Popup
+                      |-- POIPopupContent
+          |-- HandleMapEvents
+          |-- CheckCurrUserDistance
+          |-- ChangeMapView
+```
