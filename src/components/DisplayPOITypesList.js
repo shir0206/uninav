@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { ToggleButton } from "./ToggleButton";
 
-import "./displayPOISettings.css";
+import "./displayPOITypesList.css";
 
 import areaIcon from "../icons/area.svg";
 import artIcon from "../icons/art.svg";
@@ -12,19 +12,7 @@ import lookoutIcon from "../icons/lookout.svg";
 
 import getString from "../strings/strings";
 
-export const DisplayPOISettings = (props) => {
-  const handleChange = (event) => {
-    // updating an object instead of a Map
-    props.setDisplayPOITypes({
-      ...props.displayPOITypes,
-      [event.target.name]: event.target.checked,
-    });
-
-    if (props.hideAllPois) {
-      props.setHideAllPois(false);
-    }
-  };
-
+export const DisplayPOITypesList = (props) => {
   function handlePoiDisplay(name, checked) {
     props.setDisplayPOITypes({
       ...props.displayPOITypes,

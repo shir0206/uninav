@@ -58,12 +58,14 @@ function App() {
         setIsLocationError={setIsLocationError}
       ></Map>
 
-      <Settings
-        selected={selected}
-        setSelected={setSelected}
-        displayPOITypes={displayPOITypes}
-        setDisplayPOITypes={setDisplayPOITypes}
-      ></Settings>
+      {selected.pois && (
+        <Settings
+          selected={selected}
+          setSelected={setSelected}
+          displayPOITypes={displayPOITypes}
+          setDisplayPOITypes={setDisplayPOITypes}
+        ></Settings>
+      )}
     </>
   );
 }

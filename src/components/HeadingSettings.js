@@ -1,10 +1,10 @@
 import React from "react";
-import "./settingsHeading.css";
+import "./headingSettings.css";
 import UniNavLogoSVG from "../icons/UniNavLogoSVG.js";
 
 import getString from "../strings/strings";
 
-export const SettingsHeading = (props) => {
+export const HeadingSettings = (props) => {
   return (
     <div className="settings-heading">
       <h4 className="settings-title">{getString("POI_SETTINGS_TITLE")}</h4>

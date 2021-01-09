@@ -42,10 +42,6 @@
   grid-template-areas: "toggle  label icon";
 }
 
-.settings > .poi-display-switch {
-  margin: 8px 0px;
-}
-
 .poi-display-toggle {
   grid-area: toggle;
   display: flex;
@@ -73,6 +69,8 @@
 .poi-display-hr {
   border-top: 1px solid var(--grey_7);
   border-bottom: 1px solid var(--white);
+  border-left: 0px solid var(--grey_7);
+  border-right: 0px solid var(--white);
 
   margin-block-start: 0;
   margin-block-end: 0;
