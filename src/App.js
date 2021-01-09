@@ -4,9 +4,12 @@ import "./App.css";
 import "./styles/colors.css";
 import { SplashScreen } from "./components/SplashScreen";
 import { LocateUser } from "./components/LocateUser";
+import { Scan } from "./components/Scan";
+import { Routes } from "./components/Routes";
 import { Settings } from "./components/Settings";
 import { Menu } from "./components/Menu";
 import { Map } from "./components/Map";
+import RoutesSVG from "./icons/RoutesSVG";
 
 function App() {
   const [isLocateUser, setIsLocateUser] = useState(true);
@@ -57,6 +60,24 @@ function App() {
         setIsCenterUserLocation={setIsCenterUserLocation}
         setIsLocationError={setIsLocationError}
       ></Map>
+
+      {selected.scan && (
+        <Scan
+          selected={selected}
+          setSelected={setSelected}
+          displayPOITypes={displayPOITypes}
+          setDisplayPOITypes={setDisplayPOITypes}
+        ></Scan>
+      )}
+
+      {selected.routes && (
+        <Routes
+          selected={selected}
+          setSelected={setSelected}
+          displayPOITypes={displayPOITypes}
+          setDisplayPOITypes={setDisplayPOITypes}
+        ></Routes>
+      )}
 
       {selected.pois && (
         <Settings
