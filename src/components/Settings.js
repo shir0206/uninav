@@ -1,47 +1,61 @@
 import React, { useState } from "react";
 import "./settings.css";
-
 import { DisplayPOISettings } from "./DisplayPOISettings";
+import { ToggleButton } from "./ToggleButton";
+
 import POIsSVG from "../icons/POIsSVG.js";
 import getString from "../strings/strings";
 
-import settingsIcon from "../icons/settings.svg";
-
 export const Settings = (props) => {
-  const [openSettings, setOpenSettings] = useState(false);
+  const [hideAllPois, setHideAllPois] = useState(false);
 
-  const handleChange = (event) => {
-    // updating an object instead of a Map
-    props.setDisplayPOITypes({
-      ...props.displayPOITypes,
-      [event.target.name]: event.target.checked,
-    });
+  const handleHideAllPois = (name, checked) => {
+    setHideAllPois(checked);
+
+    // When it is checked, set the all the poi types flags to 'false'
+    if (checked) {
+      // Create a clone of the current state of poi type flags
+      let temp = JSON.parse(JSON.stringify(props.displayPOITypes));
+
+      // Set all the flags in the clone to false
+      Object.keys(temp).forEach((v) => (temp[v] = false));
+
+      props.setDisplayPOITypes(temp);
+    }
   };
 
   return (
     <>
-      <button
-        className="settings-button"
-        onClick={() => {
-          setOpenSettings(true);
-        }}
-      >
-        <img src={settingsIcon} alt="settings"></img>
-      </button>
-
-      {openSettings && (
+      {props.selected.pois && (
         <div className="settings">
-          <br />
+          <h4>{getString("POI_SETTINGS_TITLE")}</h4>
 
           <DisplayPOISettings
             displayPOITypes={props.displayPOITypes}
             setDisplayPOITypes={props.setDisplayPOITypes}
+            hideAllPois={hideAllPois}
+            setHideAllPois={setHideAllPois}
           ></DisplayPOISettings>
+
+          <div>
+            {getString("POI_HIDE_ALL")}
+            <POIsSVG></POIsSVG>
+
+            <ToggleButton
+              checked={hideAllPois}
+              name={"hideall"}
+              handleToggle={handleHideAllPois}
+            ></ToggleButton>
+          </div>
 
           <button
             className="save"
             onClick={() => {
-              setOpenSettings(false);
+              props.setSelected({
+                scan: false,
+                routes: false,
+                pois: false,
+              });
             }}
           >
             <img

@@ -45,12 +45,7 @@ function App() {
             isLocationError={isLocationError}
           ></LocateUser>
 
-          <Menu
-            selected={selected}
-            setSelected={setSelected}
-            displayPOITypes={displayPOITypes}
-            setDisplayPOITypes={setDisplayPOITypes}
-          ></Menu>
+          <Menu selected={selected} setSelected={setSelected}></Menu>
         </>
       )}
 
@@ -62,6 +57,13 @@ function App() {
         setIsCenterUserLocation={setIsCenterUserLocation}
         setIsLocationError={setIsLocationError}
       ></Map>
+
+      <Settings
+        selected={selected}
+        setSelected={setSelected}
+        displayPOITypes={displayPOITypes}
+        setDisplayPOITypes={setDisplayPOITypes}
+      ></Settings>
     </>
   );
 }

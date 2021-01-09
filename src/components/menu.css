@@ -38,20 +38,15 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: normal;
-
-  /* Assistent/utility/overline */
   font-family: Assistant;
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
   line-height: 11px;
-  /* identical to box height, or 110% */
   display: flex;
   align-items: center;
   text-align: center;
   text-transform: capitalize;
-
-  /* color/grey/grey_3 */
   color: var(--color_basic);
 }
 
