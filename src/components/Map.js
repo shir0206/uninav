@@ -35,19 +35,8 @@ export const Map = (props) => {
     getAlert("cancelLocationWatch");
   }
 
-  // useEffect(() => {
-  //   if (!currLocationOptions.location) return;
-  // }, [currLocationOptions.location, currLocationOptions.cancelLocationWatch]);
-
-  //
-  // useEffect(() => {
-  //   if (currLocationOptions.error) {
-  //     props.setIsLocationError(true);
-  //   }
-  // }, [currLocationOptions]);
-
+  // If there's an error in geolocation, set error state
   useEffect(() => {
-    alert("test");
     if (currLocationOptions.error) {
       props.setIsLocationError(true);
     }
