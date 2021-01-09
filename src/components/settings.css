@@ -17,7 +17,7 @@
   left: 50%;
   z-index: 10;
   transform: translate(-50%, -50%);
-  padding: 2%;
+  padding: 0 0 10px 10px;
   border-radius: 10px;
 }
 
@@ -76,11 +76,4 @@
 
   margin-block-start: 0;
   margin-block-end: 0;
-}
-
-.poi-settings-title {
-  direction: rtl;
-  color: var(--color_default_text);
-  font-size: var(--text_size_default_small);
-  font-weight: 600;
 }

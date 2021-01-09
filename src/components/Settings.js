@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./settings.css";
+
+import { SettingsHeading } from "./SettingsHeading";
 import { DisplayPOISettings } from "./DisplayPOISettings";
 import { ToggleButton } from "./ToggleButton";
 
 import POIsSVG from "../icons/POIsSVG.js";
+
 import getString from "../strings/strings";
 
 export const Settings = (props) => {
@@ -28,9 +31,7 @@ export const Settings = (props) => {
     <>
       {props.selected.pois && (
         <div className="settings">
-          <h4 className="poi-settings-title">
-            {getString("POI_SETTINGS_TITLE")}
-          </h4>
+          <SettingsHeading></SettingsHeading>
 
           <DisplayPOISettings
             displayPOITypes={props.displayPOITypes}

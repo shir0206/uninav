@@ -2,8 +2,8 @@ import React from "react";
 
 const UniNavLogoSVG = (props) => (
   <svg
-    width="478"
-    height="458"
+    width={props.width ? props.width.toString() : "478"}
+    height={props.height ? props.height.toString() : "458"}
     viewBox="0 0 478 458"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
