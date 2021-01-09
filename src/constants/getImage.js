@@ -31,8 +31,8 @@ import img30 from "../images/30.jpeg";
 import img31 from "../images/31.jpeg";
 import img32 from "../images/32.jpeg";
 
-export default function getAllMonsters(indexToReturn) {
-  var poiImageDB = [
+export default function getImage(indexToReturn) {
+  const poiImageDB = [
     img1,
     img2,
     img3,
