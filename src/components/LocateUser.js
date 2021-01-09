@@ -1,8 +1,13 @@
 import React from "react";
 import "./locateUser.css";
-import getAlert from "../alerts/alerts";
+
 import LocateSVG from "../icons/LocateSVG.js";
 
+/**
+ * A button that aims to find the user location and center the map according to its location.
+ * If there is an error receiving information about the user's location, the button is set to Inactive.
+ * @param {} props
+ */
 export const LocateUser = (props) => {
   const isActive = !props.isLocationError;
 

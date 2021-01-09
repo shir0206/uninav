@@ -3,22 +3,18 @@ import { ToggleButton } from "./ToggleButton";
 
 import "./displayPOITypesList.css";
 
-import areaIcon from "../icons/area.svg";
-import artIcon from "../icons/art.svg";
-import benchIcon from "../icons/bench.svg";
-import historyIcon from "../icons/history.svg";
-import tableIcon from "../icons/table.svg";
-import lookoutIcon from "../icons/lookout.svg";
-
-import getString from "../strings/strings";
+import poiTypes from "../constants/poiTypes";
 
 export const DisplayPOITypesList = (props) => {
   function handlePoiDisplay(name, checked) {
+    // Display the poi type on the map,
+    // by turning on the flag of the relevant key in the displayPOITypes state.
     props.setDisplayPOITypes({
       ...props.displayPOITypes,
       [name]: checked,
     });
 
+    // Turn off the flag of the state that hides all the types if it's on.
     if (props.hideAllPois) {
       props.setHideAllPois(false);
     }
@@ -28,48 +24,9 @@ export const DisplayPOITypesList = (props) => {
     console.log("props.displayPoiType: ", props.displayPOITypes);
   }, [props.displayPOITypes]);
 
-  const checkboxes = [
-    {
-      name: "bench",
-      key: "bench",
-      label: getString("POI_BENCH"),
-      icon: benchIcon,
-    },
-    {
-      name: "area",
-      key: "area",
-      label: getString("POI_AREA"),
-      icon: areaIcon,
-    },
-    {
-      name: "table",
-      key: "table",
-      label: getString("POI_TABLE"),
-      icon: tableIcon,
-    },
-    {
-      name: "art",
-      key: "art",
-      label: getString("POI_ART"),
-      icon: artIcon,
-    },
-    {
-      name: "lookout",
-      key: "lookout",
-      label: getString("POI_LOOKOUT"),
-      icon: lookoutIcon,
-    },
-    {
-      name: "history",
-      key: "history",
-      label: getString("POI_HISTORY"),
-      icon: historyIcon,
-    },
-  ];
-
   return (
     <ul className="display-poi">
-      {checkboxes.map((item) => (
+      {poiTypes.map((item) => (
         <div key={item.key} className="poi-display-switch">
           <div className="poi-display-toggle">
             <ToggleButton

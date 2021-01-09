@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./routes.css";
 
 import getString from "../strings/strings";

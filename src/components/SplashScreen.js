@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./splashScreen.css";
+
 import UniversityLogoSVG from "../icons/UniversityLogoSVG.js";
 import UniNavLogoSVG from "../icons/UniNavLogoSVG.js";
 
-export const SplashScreen = (props) => {
+export const SplashScreen = () => {
   return (
     <div className="splash-screen">
       <div className="university-logo">

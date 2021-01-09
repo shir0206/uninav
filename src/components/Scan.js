@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./scan.css";
 
 import getString from "../strings/strings";
@@ -16,7 +16,7 @@ export const Scan = (props) => {
 
   return (
     <div className="scan">
-        Scan
+      Scan
       <button onClick={handleCloseScan}>{getString("OK")}</button>
     </div>
   );
