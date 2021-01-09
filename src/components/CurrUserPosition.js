@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import L from "leaflet";
 
 import { Marker } from "react-leaflet";
-import currPositionIcon from "../icons/currPosition.svg";
 import { LocationError } from "./LocationError";
 
+import currPositionIcon from "../icons/currPosition.svg";
+
 export const CurrUserPosition = (props) => {
+  // User position icon settings
   const currPosition = new L.Icon({
     iconUrl: currPositionIcon,
     iconRetinaUrl: currPositionIcon,
