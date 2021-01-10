@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.a50028a9.chunk.css",
-    "main.js": "/uninav/static/js/main.e92c9e06.chunk.js",
-    "main.js.map": "/uninav/static/js/main.e92c9e06.chunk.js.map",
+    "main.css": "/uninav/static/css/main.2e290ac3.chunk.css",
+    "main.js": "/uninav/static/js/main.05c20771.chunk.js",
+    "main.js.map": "/uninav/static/js/main.05c20771.chunk.js.map",
     "runtime-main.js": "/uninav/static/js/runtime-main.3b5e4929.js",
     "runtime-main.js.map": "/uninav/static/js/runtime-main.3b5e4929.js.map",
     "static/js/2.4a54f62b.chunk.js": "/uninav/static/js/2.4a54f62b.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.b3fecbb1.chunk.js": "/uninav/static/js/3.b3fecbb1.chunk.js",
     "static/js/3.b3fecbb1.chunk.js.map": "/uninav/static/js/3.b3fecbb1.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.a50028a9.chunk.css.map": "/uninav/static/css/main.a50028a9.chunk.css.map",
+    "static/css/main.2e290ac3.chunk.css.map": "/uninav/static/css/main.2e290ac3.chunk.css.map",
     "static/js/2.4a54f62b.chunk.js.LICENSE.txt": "/uninav/static/js/2.4a54f62b.chunk.js.LICENSE.txt",
     "static/media/1.72125605.jpeg": "/uninav/static/media/1.72125605.jpeg",
     "static/media/10.aea759ec.jpeg": "/uninav/static/media/10.aea759ec.jpeg",
@@ -56,7 +56,7 @@
   "entrypoints": [
     "static/js/runtime-main.3b5e4929.js",
     "static/js/2.4a54f62b.chunk.js",
-    "static/css/main.a50028a9.chunk.css",
-    "static/js/main.e92c9e06.chunk.js"
+    "static/css/main.2e290ac3.chunk.css",
+    "static/js/main.05c20771.chunk.js"
   ]
 }
