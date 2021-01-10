@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { geoPropTypes } from "react-geolocated";
 
 import getString from "../strings/strings";
 
