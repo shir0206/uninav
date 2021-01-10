@@ -1,7 +1,7 @@
 import React from "react";
 import "./POIPopupContent.css";
 
-import getPOIImageDB from "../constants/getImage";
+import getPOIImageDB from "../../constants/getImage";
 
 export const POIPopupContent = ({ poi, getIconType }) => {
   return (

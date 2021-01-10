@@ -1,10 +1,10 @@
 import React from "react";
-import "./scan.css";
+import "./Routes.css";
 
-import getString from "../strings/strings";
+import getString from "../../strings/strings";
 
-export const Scan = (props) => {
-  const handleCloseScan = () => {
+export const Routes = (props) => {
+  const handleCloseRoutes = () => {
     // Create a clone of the current state of selected flags
     let temp = JSON.parse(JSON.stringify(props.selected));
 
@@ -15,9 +15,9 @@ export const Scan = (props) => {
   };
 
   return (
-    <div className="scan">
-      Scan
-      <button onClick={handleCloseScan}>{getString("OK")}</button>
+    <div className="routes">
+        Routes
+      <button onClick={handleCloseRoutes}>{getString("OK")}</button>
     </div>
   );
 };

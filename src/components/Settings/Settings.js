@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./settings.css";
+import "./Settings.css";
 
-import { HeadingSettings } from "./HeadingSettings";
-import { DisplayPOITypesList } from "./DisplayPOITypesList";
-import { HideAllPOITypes } from "./HideAllPOITypes";
+import { HeadingSettings } from "../HeadingSettings/HeadingSettings";
+import { DisplayPOITypesList } from "../DisplayPOITypesList/DisplayPOITypesList";
+import { HideAllPOITypes } from "../HideAllPOITypes/HideAllPOITypes";
 
-import getString from "../strings/strings";
+import getString from "../../strings/strings";
 
 export const Settings = (props) => {
   const [hideAllPois, setHideAllPois] = useState(false);

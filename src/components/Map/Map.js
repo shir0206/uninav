@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 
-import "./map.css";
+import "./Map.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 
-import { AllRoutes } from "./AllRoutes";
-import { AllPOIs } from "./AllPOIs";
-import { HandleMapEvents } from "./HandleMapEvents";
-import { ChangeMapView } from "./ChangeMapView";
-import { CheckCurrUserDistance } from "./CheckCurrUserDistance";
+import { AllRoutes } from "../AllRoutes/AllRoutes";
+import { AllPOIs } from "../AllPOIs/AllPOIs";
+import { HandleMapEvents } from "../HandleMapEvents/HandleMapEvents";
+import { ChangeMapView } from "../ChangeMapView/ChangeMapView";
+import { CheckCurrUserDistance } from "../CheckCurrUserDistance/CheckCurrUserDistance";
 
-import { CurrUserPosition } from "./CurrUserPosition";
+import { CurrUserPosition } from "../CurrUserPosition/CurrUserPosition";
 
-import useWatchLocation from "../hooks/useWatchLocation";
-import { geolocationOptions } from "../constants/geolocationOptions";
-import { mapCenter } from "../constants/mapCenter";
-import { mapZoom } from "../constants/mapZoom";
+import useWatchLocation from "../../hooks/useWatchLocation";
+import { geolocationOptions } from "../../constants/geolocationOptions";
+import { mapCenter } from "../../constants/mapCenter";
+import { mapZoom } from "../../constants/mapZoom";
 
-import getAlert from "../alerts/alerts";
+import getAlert from "../../alerts/alerts";
 
 export const Map = (props) => {
   const [isFirstRender, setIsFirstRender] = useState(true);

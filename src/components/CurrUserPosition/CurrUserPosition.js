@@ -2,9 +2,9 @@ import React from "react";
 import L from "leaflet";
 
 import { Marker } from "react-leaflet";
-import { LocationError } from "./LocationError";
+import { LocationError } from "../LocationError/LocationError";
 
-import currPositionIcon from "../icons/currPosition.svg";
+import currPositionIcon from "../../icons/currPosition.svg";
 
 export const CurrUserPosition = (props) => {
   // User position icon settings

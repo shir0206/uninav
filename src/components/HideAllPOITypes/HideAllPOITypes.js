@@ -1,10 +1,11 @@
 import React from "react";
-import "./hideAllPOITypes.css";
+import "./HideAllPOITypes.css";
 
-import { ToggleButton } from "./ToggleButton";
-import UniNavLogoSVG from "../icons/UniNavLogoSVG.js";
+import { ToggleButton } from "../ToggleButton/ToggleButton";
 
-import getString from "../strings/strings";
+import UniNavLogoSVG from "../../icons/UniNavLogoSVG.js";
+
+import getString from "../../strings/strings";
 
 export const HideAllPOITypes = (props) => {
 

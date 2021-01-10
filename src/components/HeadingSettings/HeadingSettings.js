@@ -1,8 +1,8 @@
 import React from "react";
-import "./headingSettings.css";
-import UniNavLogoSVG from "../icons/UniNavLogoSVG.js";
+import "./HeadingSettings.css";
+import UniNavLogoSVG from "../../icons/UniNavLogoSVG.js";
 
-import getString from "../strings/strings";
+import getString from "../../strings/strings";
 
 export const HeadingSettings = () => {
   return (

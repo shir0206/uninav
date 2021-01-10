@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { ToggleButton } from "./ToggleButton";
+import "./DisplayPOITypesList.css";
 
-import "./displayPOITypesList.css";
+import { ToggleButton } from "../ToggleButton/ToggleButton";
 
-import poiTypes from "../constants/poiTypes";
+import poiTypes from "../../constants/poiTypes";
 
 export const DisplayPOITypesList = (props) => {
   function handlePoiDisplay(name, checked) {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./locationError.css";
-import getString from "../strings/strings";
+import "./LocationError.css";
+import getString from "../../strings/strings";
 
 export const LocationError = (props) => {
   const [isDisplayErrorPopup, setIsDisplayErrorPopup] = useState(true);

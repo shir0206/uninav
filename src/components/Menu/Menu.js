@@ -1,11 +1,11 @@
 import React from "react";
-import "./menu.css";
+import "./Menu.css";
 
-import ScanSVG from "../icons/ScanSVG.js";
-import RoutesSVG from "../icons/RoutesSVG.js";
-import POIsSVG from "../icons/POIsSVG.js";
+import ScanSVG from "../../icons/ScanSVG.js";
+import RoutesSVG from "../../icons/RoutesSVG.js";
+import POIsSVG from "../../icons/POIsSVG.js";
 
-import getString from "../strings/strings";
+import getString from "../../strings/strings";
 
 export const Menu = (props) => {
   return (

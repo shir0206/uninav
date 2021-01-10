@@ -1,20 +1,20 @@
 import React from "react";
-import "./allPOIs.css";
+import "./AllPOIs.css";
 
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
-import { POIPopupContent } from "./POIPopupContent";
+import { POIPopupContent } from "../POIPopupContent/POIPopupContent";
 
-import mapPOIs from "./../mapPOIs/mapPOIs";
+import mapPOIs from "../../mapPOIs/mapPOIs";
 
-import areaIcon from "../icons/area.svg";
-import artIcon from "../icons/art.svg";
-import benchIcon from "../icons/bench.svg";
-import historyIcon from "../icons/history.svg";
-import tableIcon from "../icons/table.svg";
-import markerIcon from "../icons/marker.svg";
-import lookoutIcon from "../icons/lookout.svg";
+import areaIcon from "../../icons/area.svg";
+import artIcon from "../../icons/art.svg";
+import benchIcon from "../../icons/bench.svg";
+import historyIcon from "../../icons/history.svg";
+import tableIcon from "../../icons/table.svg";
+import markerIcon from "../../icons/marker.svg";
+import lookoutIcon from "../../icons/lookout.svg";
 
 export const AllPOIs = (props) => {
   function getIconType(type) {

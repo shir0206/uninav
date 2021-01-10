@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
 import { useMap } from "react-leaflet";
-import { mapCenter } from "../constants/mapCenter";
+import { mapCenter } from "../../constants/mapCenter";
 import L from "leaflet";
-import getString from "../strings/strings";
+import getString from "../../strings/strings";
 
 export const CheckCurrUserDistance = ({
   isFirstRender,

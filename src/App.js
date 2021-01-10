@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 
 import "./App.css";
 import "./styles/colors.css";
-import { SplashScreen } from "./components/SplashScreen";
-import { LocateUser } from "./components/LocateUser";
-import { Scan } from "./components/Scan";
-import { Routes } from "./components/Routes";
-import { Settings } from "./components/Settings";
-import { Menu } from "./components/Menu";
-import { Map } from "./components/Map";
+import { SplashScreen } from "./components/SplashScreen/SplashScreen";
+import { LocateUser } from "./components/LocateUser/LocateUser";
+import { Scan } from "./components/Scan/Scan";
+import { Routes } from "./components/Routes/Routes";
+import { Settings } from "./components/Settings/Settings";
+import { Menu } from "./components/Menu/Menu";
+import { Map } from "./components/Map/Map";
 
 function App() {
   const [isLocateUser, setIsLocateUser] = useState(true);

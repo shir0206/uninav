@@ -1,8 +1,8 @@
 import React from "react";
-import "./splashScreen.css";
+import "./SplashScreen.css";
 
-import UniversityLogoSVG from "../icons/UniversityLogoSVG.js";
-import UniNavLogoSVG from "../icons/UniNavLogoSVG.js";
+import UniversityLogoSVG from "../../icons/UniversityLogoSVG.js";
+import UniNavLogoSVG from "../../icons/UniNavLogoSVG.js";
 
 export const SplashScreen = () => {
   return (
