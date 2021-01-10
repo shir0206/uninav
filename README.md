@@ -23,7 +23,7 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
   |-- SplashScreen
       |-- UniversityLogoSVG
       |-- UniNavLogoSVG
-  |-- LocateUser
+  |-- LocateUserButton
       |-- LocateSVG
   |-- Scan
   |-- Routes
