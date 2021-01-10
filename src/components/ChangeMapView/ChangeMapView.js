@@ -1,6 +1,6 @@
 import { useMap } from "react-leaflet";
 
-export const ChangeMapView = ({ center, zoom }) => {
+export const ChangeMapView = (props) => {
   // Except for its children, MapContainer props are immutable:
   // changing them after they have been set a first time will have no effect
   // on the Map instance or its container. The Leaflet Map instance created by
@@ -9,9 +9,8 @@ export const ChangeMapView = ({ center, zoom }) => {
 
   const map = useMap();
 
-  if (center.lat && center.lng && zoom) {
-    map.flyTo(center, zoom);
-    console.log("update center");
+  if (props.center.lat && props.center.lng && props.zoom) {
+    map.flyTo(props.center, props.zoom);
   }
   return null;
 };

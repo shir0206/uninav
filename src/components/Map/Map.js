@@ -97,8 +97,6 @@ export const Map = (props) => {
               lng: currLocationOptions.location.longitude,
             }}
             zoom={mapZoom}
-            isFirstRender={isFirstRender}
-            setIsFirstRender={setIsFirstRender}
           />
         )}
     </MapContainer>
