@@ -1,0 +1,7 @@
+.console-demo {
+  z-index: 9999999999;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+}

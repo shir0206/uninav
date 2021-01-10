@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import "./styles/colors.css";
 import { SplashScreen } from "./components/SplashScreen/SplashScreen";
-import { LocateUser } from "./components/LocateUser/LocateUser";
+import { LocateUserButton } from "./components/LocateUserButton/LocateUserButton";
 import { Scan } from "./components/Scan/Scan";
 import { Routes } from "./components/Routes/Routes";
 import { Settings } from "./components/Settings/Settings";
@@ -42,11 +42,11 @@ function App() {
         <SplashScreen />
       ) : (
         <>
-          <LocateUser
+          <LocateUserButton
             setIsLocateUser={setIsLocateUser}
             setIsCenterUserLocation={setIsCenterUserLocation}
             isLocationError={isLocationError}
-          ></LocateUser>
+          ></LocateUserButton>
 
           <Menu selected={selected} setSelected={setSelected}></Menu>
         </>

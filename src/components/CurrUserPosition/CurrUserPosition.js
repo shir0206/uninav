@@ -1,4 +1,6 @@
 import React from "react";
+import "./CurrUserPosition.css";
+
 import L from "leaflet";
 
 import { Marker } from "react-leaflet";
@@ -23,24 +25,22 @@ export const CurrUserPosition = (props) => {
   return (
     <>
       {props.location ? (
-        <div>
-          <div className="location-console">
-            Latitude: {props.location.latitude}
-            Longitude:
-            {props.location.longitude}
-          </div>
+        <>
+          <p className="console-demo">
+            LAT: {props.location.latitude} LNG: {props.location.longitude}
+          </p>
 
           <Marker
             position={[props.location.latitude, props.location.longitude]}
             icon={currPosition}
           ></Marker>
-        </div>
+        </>
       ) : (
-        <p>Loading...</p>
+        <p className="console-demo">Loading...</p>
       )}
       {props.error && (
         <>
-          <p className="errorMessage">Location Error: {props.error}</p>
+          <p className="console-demo">Location Error: {props.error}</p>
           <LocationError error={props.error}></LocationError>
         </>
       )}
