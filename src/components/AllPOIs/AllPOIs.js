@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AllPOIs.css";
+
+import firebase from "../../firebase/Firebase";
 
 import { Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
 import { POIPopupContent } from "../POIPopupContent/POIPopupContent";
-
-import mapPOIs from "../../mapPOIs/mapPOIs";
 
 import areaIcon from "../../icons/area.svg";
 import artIcon from "../../icons/art.svg";
@@ -17,6 +17,25 @@ import markerIcon from "../../icons/marker.svg";
 import lookoutIcon from "../../icons/lookout.svg";
 
 export const AllPOIs = (props) => {
+  const [mapPOIs, setMapPOIs] = useState([]);
+
+  useEffect(
+    () => {
+      // DB Request, extract all the data from Firebase
+      firebase
+        .database()
+        .ref("mapPOIs")
+        .once("value", (querySnapShot) => {
+          let data = querySnapShot.val() ? querySnapShot.val() : {};
+          let dataArr = [...data];
+
+          // Initialize the state with all the data recieved from DB
+          setMapPOIs(dataArr);
+        });
+    },
+    [] // Occurs when the state within is changing (once)
+  );
+
   function getIconType(type) {
     switch (type) {
       case "area":
