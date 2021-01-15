@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Settings.css";
 
+import { useHistory } from "react-router-dom";
+
 import { HeadingSettings } from "../HeadingSettings/HeadingSettings";
 import { DisplayPOITypesList } from "../DisplayPOITypesList/DisplayPOITypesList";
 import { HideAllPOITypes } from "../HideAllPOITypes/HideAllPOITypes";
@@ -10,6 +12,8 @@ import getString from "../../strings/strings";
 export const Settings = (props) => {
   const [hideAllPois, setHideAllPois] = useState(false);
 
+  let history = useHistory();
+
   const handleCloseSettings = () => {
     // Create a clone of the current state of selected flags
     let temp = JSON.parse(JSON.stringify(props.selected));
@@ -18,6 +22,9 @@ export const Settings = (props) => {
     Object.keys(temp).forEach((v) => (temp[v] = false));
 
     props.setSelected(temp);
+
+    const path = `/`;
+    history.push(path);
   };
 
   return (

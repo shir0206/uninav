@@ -1,9 +1,13 @@
 import React from "react";
 import "./Scan.css";
 
+import { useHistory } from "react-router-dom";
+
 import getString from "../../strings/strings";
 
 export const Scan = (props) => {
+  let history = useHistory();
+
   const handleCloseScan = () => {
     // Create a clone of the current state of selected flags
     let temp = JSON.parse(JSON.stringify(props.selected));
@@ -12,6 +16,9 @@ export const Scan = (props) => {
     Object.keys(temp).forEach((v) => (temp[v] = false));
 
     props.setSelected(temp);
+
+    const path = `/`;
+    history.push(path);
   };
 
   return (
