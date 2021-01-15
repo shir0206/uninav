@@ -45,7 +45,6 @@ function App() {
             setIsCenterUserLocation={setIsCenterUserLocation}
             isLocationError={isLocationError}
           ></LocateUserButton>
-          <Menu selected={selected} setSelected={setSelected}></Menu>
 
           <MenuControl
             selected={selected}
