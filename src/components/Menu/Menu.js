@@ -12,7 +12,7 @@ import getString from "../../strings/strings";
 export const Menu = (props) => {
   return (
     <nav className="menu">
-      <NavLink activeClassName="active" to="/scan">
+      <NavLink activeClassName="active" to="/scan" className="scan-menu-btn">
         <>
           <button
             className="menu-btn scan-menu-btn"
@@ -32,7 +32,11 @@ export const Menu = (props) => {
           )}
         </>
       </NavLink>
-      <NavLink activeClassName="active" to="/routes">
+      <NavLink
+        activeClassName="active"
+        to="/routes"
+        className=" route-menu-btn"
+      >
         <>
           <button
             className="menu-btn route-menu-btn"
@@ -52,7 +56,11 @@ export const Menu = (props) => {
           )}
         </>
       </NavLink>
-      <NavLink activeClassName="active" to="/settings">
+      <NavLink
+        activeClassName="active"
+        to="/settings"
+        className=" pois-menu-btn"
+      >
         <>
           <button
             className="menu-btn pois-menu-btn"
