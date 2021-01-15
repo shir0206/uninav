@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.ce69dd23.chunk.css",
-    "main.js": "/uninav/static/js/main.3490a700.chunk.js",
-    "main.js.map": "/uninav/static/js/main.3490a700.chunk.js.map",
+    "main.css": "/uninav/static/css/main.e14dd007.chunk.css",
+    "main.js": "/uninav/static/js/main.c1bfa665.chunk.js",
+    "main.js.map": "/uninav/static/js/main.c1bfa665.chunk.js.map",
     "runtime-main.js": "/uninav/static/js/runtime-main.bdd4411b.js",
     "runtime-main.js.map": "/uninav/static/js/runtime-main.bdd4411b.js.map",
-    "static/js/2.0dd3fd76.chunk.js": "/uninav/static/js/2.0dd3fd76.chunk.js",
-    "static/js/2.0dd3fd76.chunk.js.map": "/uninav/static/js/2.0dd3fd76.chunk.js.map",
+    "static/js/2.9301c90a.chunk.js": "/uninav/static/js/2.9301c90a.chunk.js",
+    "static/js/2.9301c90a.chunk.js.map": "/uninav/static/js/2.9301c90a.chunk.js.map",
     "static/js/3.75254723.chunk.js": "/uninav/static/js/3.75254723.chunk.js",
     "static/js/3.75254723.chunk.js.map": "/uninav/static/js/3.75254723.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.ce69dd23.chunk.css.map": "/uninav/static/css/main.ce69dd23.chunk.css.map",
-    "static/js/2.0dd3fd76.chunk.js.LICENSE.txt": "/uninav/static/js/2.0dd3fd76.chunk.js.LICENSE.txt",
+    "static/css/main.e14dd007.chunk.css.map": "/uninav/static/css/main.e14dd007.chunk.css.map",
+    "static/js/2.9301c90a.chunk.js.LICENSE.txt": "/uninav/static/js/2.9301c90a.chunk.js.LICENSE.txt",
     "static/media/1.72125605.jpeg": "/uninav/static/media/1.72125605.jpeg",
     "static/media/10.aea759ec.jpeg": "/uninav/static/media/10.aea759ec.jpeg",
     "static/media/11.c5154433.jpeg": "/uninav/static/media/11.c5154433.jpeg",
@@ -55,8 +55,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bdd4411b.js",
-    "static/js/2.0dd3fd76.chunk.js",
-    "static/css/main.ce69dd23.chunk.css",
-    "static/js/main.3490a700.chunk.js"
+    "static/js/2.9301c90a.chunk.js",
+    "static/css/main.e14dd007.chunk.css",
+    "static/js/main.c1bfa665.chunk.js"
   ]
 }
