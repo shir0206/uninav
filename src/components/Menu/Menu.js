@@ -9,7 +9,7 @@ import getString from "../../strings/strings";
 
 export const Menu = (props) => {
   return (
-    <div className="menu">
+    <nav className="menu">
       <button
         className="menu-btn scan-menu-btn"
         onClick={() => {
@@ -39,7 +39,7 @@ export const Menu = (props) => {
         <h6 className="menu-btn-title">{getString("ROUTES_BTN")}</h6>
       </button>
       {props.selected.routes && <div className="menu-tab route-menu-tab"></div>}
-      
+
       <button
         className="menu-btn pois-menu-btn"
         onClick={() => {
@@ -53,7 +53,6 @@ export const Menu = (props) => {
         <POIsSVG></POIsSVG>
         <h6 className="menu-btn-title">{getString("POIS_BTN")}</h6>
       </button>
-
-    </div>
+    </nav>
   );
 };

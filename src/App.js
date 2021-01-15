@@ -10,7 +10,11 @@ import { Settings } from "./components/Settings/Settings";
 import { Menu } from "./components/Menu/Menu";
 import { Map } from "./components/Map/Map";
 
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+
 function App() {
+  const [state, setState] = useState("Hi");
+
   const [isLocateUser, setIsLocateUser] = useState(true);
   const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
   const [isLocationError, setIsLocationError] = useState(false);
@@ -47,8 +51,16 @@ function App() {
             setIsCenterUserLocation={setIsCenterUserLocation}
             isLocationError={isLocationError}
           ></LocateUserButton>
-
           <Menu selected={selected} setSelected={setSelected}></Menu>
+
+          <Router>
+            <div>
+              <Links />
+              <Route exact path="/aaa" render={() => <AAA aaa={state} />} />
+              <Route exact path="/bbb" render={() => <BBB bbb={state} />} />
+              <Route exact path="/ccc" render={() => <CCC ccc={state} />} />
+            </div>
+          </Router>
         </>
       )}
 
@@ -92,3 +104,24 @@ function App() {
 }
 
 export default App;
+
+const Links = () => (
+  <nav>
+    <NavLink activeClassName="active" to="/">
+      Home
+    </NavLink>
+    <NavLink activeClassName="active" to="/aaa">
+      AAA
+    </NavLink>
+    <NavLink activeClassName="active" to="/bbb">
+      BBB
+    </NavLink>
+    <NavLink activeClassName="active" to="/ccc">
+      CCC
+    </NavLink>
+  </nav>
+);
+
+const AAA = (props) => <h1>{props.aaa}</h1>;
+const BBB = (props) => <h1>{props.bbb}</h1>;
+const CCC = (props) => <h1>{props.ccc}</h1>;
