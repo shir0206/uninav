@@ -1,8 +1,8 @@
 import React from "react";
 import { Popup, Polyline } from "react-leaflet";
 
-export const AllRoutes = (props) => {
-  const routeA = [
+export const AllTracks = (props) => {
+  const trackA = [
     [32.76417757110419, 35.01561610924228],
     [32.76437183457819, 35.015948486647446],
     [32.76460223954432, 35.01621117201602],
@@ -39,7 +39,7 @@ export const AllRoutes = (props) => {
     [32.76150787822041, 35.02110563251827],
   ];
 
-  const routeB = [
+  const trackB = [
     [32.76469496883437, 35.0167490098387],
     [32.76471303976803, 35.016775814468176],
     [32.764762734816806, 35.016840145578854],
@@ -60,7 +60,7 @@ export const AllRoutes = (props) => {
     [32.76406700161002, 35.01774078112831],
   ];
 
-  const routeC = [
+  const trackC = [
     [32.76298060129735, 35.01708196501649],
     [32.76271465563579, 35.01739858943721],
     [32.762448709179864, 35.01773131340471],
@@ -94,7 +94,7 @@ export const AllRoutes = (props) => {
     [32.760163340011225, 35.02027246581516],
   ];
 
-  // Routes style
+  // Tracks style
   const styleRouteA = {
     color: "#00ff11",
     weight: "9",
@@ -114,37 +114,37 @@ export const AllRoutes = (props) => {
     <>
       <Polyline
         pathOptions={styleRouteA}
-        positions={routeA}
+        positions={trackA}
         eventHandlers={{
           click: () => {
-            console.log("routeA A clicked");
+            console.log("trackA A clicked");
           },
         }}
       >
-        <Popup>Hi route A~!</Popup>
+        <Popup>Hi track A~!</Popup>
       </Polyline>
       <Polyline
         pathOptions={styleRouteB}
-        positions={routeB}
+        positions={trackB}
         eventHandlers={{
           click: () => {
-            console.log("routeB B clicked");
+            console.log("trackB B clicked");
           },
         }}
       >
-        <Popup>Hi route B!!!</Popup>
+        <Popup>Hi track B!!!</Popup>
       </Polyline>
 
       <Polyline
         pathOptions={styleRouteC}
-        positions={routeC}
+        positions={trackC}
         eventHandlers={{
           click: () => {
-            console.log("routeC A clicked");
+            console.log("trackC A clicked");
           },
         }}
       >
-        <Popup>Hi route C~~!!!!</Popup>
+        <Popup>Hi track C~~!!!!</Popup>
       </Polyline>
     </>
   );

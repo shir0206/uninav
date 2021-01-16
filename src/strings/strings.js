@@ -33,8 +33,8 @@ export default function getString(string) {
       en: "Scan",
       iw: "סריקה",
     },
-    ROUTES_BTN: {
-      en: "Routes",
+    TRACKS_BTN: {
+      en: "Tracks",
       iw: "מסלולים",
     },
     POIS_BTN: {

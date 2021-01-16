@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Map.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 
-import { AllRoutes } from "../AllRoutes/AllRoutes";
+import { AllTracks } from "../AllTracks/AllTracks";
 import { AllPOIs } from "../AllPOIs/AllPOIs";
 import { HandleMapEvents } from "../HandleMapEvents/HandleMapEvents";
 import { ChangeMapView } from "../ChangeMapView/ChangeMapView";
@@ -60,7 +60,7 @@ export const Map = (props) => {
 
       <AllPOIs displayPOITypes={props.displayPOITypes}></AllPOIs>
 
-      <AllRoutes />
+      <AllTracks />
 
       <CurrUserPosition
         isLocateUser={props.isLocateUser}

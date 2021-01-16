@@ -23,7 +23,7 @@ function App() {
 
   const [selected, setSelected] = useState({
     scan: false,
-    routes: false,
+    tracks: false,
     pois: false,
   });
 

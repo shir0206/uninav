@@ -4,7 +4,7 @@ import "./Menu.css";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 import ScanSVG from "../../icons/ScanSVG.js";
-import RoutesSVG from "../../icons/RoutesSVG.js";
+import TracksSVG from "../../icons/TracksSVG.js";
 import POIsSVG from "../../icons/POIsSVG.js";
 
 import getString from "../../strings/strings";
@@ -19,7 +19,7 @@ export const Menu = (props) => {
             onClick={() => {
               props.setSelected({
                 scan: true,
-                routes: false,
+                tracks: false,
                 pois: false,
               });
             }}
@@ -34,25 +34,25 @@ export const Menu = (props) => {
       </NavLink>
       <NavLink
         activeClassName="active"
-        to="/routes"
-        className=" route-menu-btn"
+        to="/tracks"
+        className=" track-menu-btn"
       >
         <>
           <button
-            className="menu-btn route-menu-btn"
+            className="menu-btn track-menu-btn"
             onClick={() => {
               props.setSelected({
                 scan: false,
-                routes: true,
+                tracks: true,
                 pois: false,
               });
             }}
           >
-            <RoutesSVG selected={props.selected.routes}></RoutesSVG>
-            <h6 className="menu-btn-title">{getString("ROUTES_BTN")}</h6>
+            <TracksSVG selected={props.selected.tracks}></TracksSVG>
+            <h6 className="menu-btn-title">{getString("TRACKS_BTN")}</h6>
           </button>
-          {props.selected.routes && (
-            <div className="menu-tab route-menu-tab"></div>
+          {props.selected.tracks && (
+            <div className="menu-tab track-menu-tab"></div>
           )}
         </>
       </NavLink>
@@ -67,7 +67,7 @@ export const Menu = (props) => {
             onClick={() => {
               props.setSelected({
                 scan: false,
-                routes: false,
+                tracks: false,
                 pois: true,
               });
             }}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const RoutesSVG = (props) => (
+const TracksSVG = (props) => (
   <svg
     width="24"
     height="24"
@@ -42,4 +42,4 @@ const RoutesSVG = (props) => (
     />
   </svg>
 );
-export default RoutesSVG;
+export default TracksSVG;

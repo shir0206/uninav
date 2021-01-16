@@ -1,14 +1,14 @@
 import React from "react";
-import "./Routes.css";
+import "./Tracks.css";
 
 import { useHistory } from "react-router-dom";
 
 import getString from "../../strings/strings";
 
-export const Routes = (props) => {
+export const Tracks = (props) => {
   let history = useHistory();
 
-  const handleCloseRoutes = () => {
+  const handleCloseTracks = () => {
     // Create a clone of the current state of selected flags
     let temp = JSON.parse(JSON.stringify(props.selected));
 
@@ -22,9 +22,9 @@ export const Routes = (props) => {
   };
 
   return (
-    <div className="routes">
-      Routes
-      <button onClick={handleCloseRoutes}>{getString("OK")}</button>
+    <div className="tracks">
+      Tracks
+      <button onClick={handleCloseTracks}>{getString("OK")}</button>
     </div>
   );
 };
