@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menu.css";
+import "./NavbarLinks.css";
 
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
@@ -9,71 +9,61 @@ import POIsSVG from "../../icons/POIsSVG.js";
 
 import getString from "../../strings/strings";
 
-export const Menu = (props) => {
+export const NavbarLinks = (props) => {
   return (
-    <nav className="menu">
-      <NavLink activeClassName="active" to="/scan" className="scan-menu-btn">
+    <nav className="navbar">
+      <NavLink activeClassName="active" to="/scan" className="scan-navbar-btn">
         <>
           <button
-            className="menu-btn scan-menu-btn"
+            className="navbar-btn scan-navbar-btn"
             onClick={() => {
               props.setSelected({
                 scan: true,
                 tracks: false,
-                pois: false,
+                settings: false,
               });
             }}
           >
             <ScanSVG selected={props.selected.scan}></ScanSVG>
-            <h6 className="menu-btn-title">{getString("SCAN_BTN")}</h6>
+            <h6 className="navbar-btn-title">{getString("SCAN_BTN")}</h6>
           </button>
-          {props.selected.scan && (
-            <div className="menu-tab scan-menu-tab"></div>
-          )}
+          {props.selected.scan && <div className="navbar-tab scan-navbar-tab"></div>}
         </>
       </NavLink>
-      <NavLink
-        activeClassName="active"
-        to="/tracks"
-        className=" track-menu-btn"
-      >
+      <NavLink activeClassName="active" to="/tracks" className="track-navbar-btn">
         <>
           <button
-            className="menu-btn track-menu-btn"
+            className="navbar-btn track-navbar-btn"
             onClick={() => {
               props.setSelected({
                 scan: false,
                 tracks: true,
-                pois: false,
+                settings: false,
               });
             }}
           >
             <TracksSVG selected={props.selected.tracks}></TracksSVG>
-            <h6 className="menu-btn-title">{getString("TRACKS_BTN")}</h6>
+            <h6 className="navbar-btn-title">{getString("TRACKS_BTN")}</h6>
           </button>
           {props.selected.tracks && (
-            <div className="menu-tab track-menu-tab"></div>
+            <div className="navbar-tab track-navbar-tab"></div>
           )}
         </>
       </NavLink>
-      <NavLink
-        activeClassName="active"
-        to="/settings"
-        className=" pois-menu-btn"
-      >
+      <NavLink activeClassName="active" to="/settings" className="settings-navbar-btn">
         <>
           <button
-            className="menu-btn pois-menu-btn"
+            className="navbar-btn settings-navbar-btn"
             onClick={() => {
               props.setSelected({
                 scan: false,
                 tracks: false,
-                pois: true,
+                settings: true,
               });
             }}
           >
             <POIsSVG></POIsSVG>
-            <h6 className="menu-btn-title">{getString("POIS_BTN")}</h6>
+            <h6 className="navbar-btn-title">{getString("POIS_BTN")}</h6>
           </button>
         </>
       </NavLink>

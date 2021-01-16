@@ -4,9 +4,8 @@ import "./App.css";
 import "./styles/colors.css";
 import { SplashScreen } from "./components/SplashScreen/SplashScreen";
 import { LocateUserButton } from "./components/LocateUserButton/LocateUserButton";
-import { Menu } from "./components/Menu/Menu";
 import { Map } from "./components/Map/Map";
-import MenuControl from "./components/MenuControl/MenuControl";
+import NavbarRouter from "./components/NavbarRouter/NavbarRouter";
 
 function App() {
   const [isLocateUser, setIsLocateUser] = useState(true);
@@ -24,7 +23,7 @@ function App() {
   const [selected, setSelected] = useState({
     scan: false,
     tracks: false,
-    pois: false,
+    settings: false,
   });
 
   const [loading, setLoading] = useState(true);
@@ -46,12 +45,12 @@ function App() {
             isLocationError={isLocationError}
           ></LocateUserButton>
 
-          <MenuControl
+          <NavbarRouter
             selected={selected}
             setSelected={setSelected}
             displayPOITypes={displayPOITypes}
             setDisplayPOITypes={setDisplayPOITypes}
-          ></MenuControl>
+          ></NavbarRouter>
         </>
       )}
 

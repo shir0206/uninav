@@ -1,18 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
-import { Menu } from "../Menu/Menu";
+import { NavbarLinks } from "../NavbarLinks/NavbarLinks";
 import { Scan } from "../Scan/Scan";
 import { Tracks } from "../Tracks/Tracks";
 import { Settings } from "../Settings/Settings";
 
-import "../Menu/Menu.css";
-
-export const MenuControl = (props) => {
+export const NavbarRouter = (props) => {
   return (
     <Router>
       <div>
-        <Menu selected={props.selected} setSelected={props.setSelected}></Menu>
+        <NavbarLinks
+          selected={props.selected}
+          setSelected={props.setSelected}
+        ></NavbarLinks>
         <Route
           exact
           path="/scan"
@@ -54,5 +55,4 @@ export const MenuControl = (props) => {
   );
 };
 
-export default MenuControl;
-
+export default NavbarRouter;
