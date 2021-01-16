@@ -1,5 +1,6 @@
 import React from "react";
 import { Popup, Polyline } from "react-leaflet";
+import "./AllTracks.css";
 
 export const AllTracks = (props) => {
   const trackA = [
@@ -96,7 +97,6 @@ export const AllTracks = (props) => {
 
   // Tracks style
   const styleRouteA = {
-    color: "#00ff11",
     weight: "9",
     opacity: 0.8,
     lineCap: "round",
@@ -113,7 +113,7 @@ export const AllTracks = (props) => {
   return (
     <>
       <Polyline
-        pathOptions={styleRouteA}
+        className="track"
         positions={trackA}
         eventHandlers={{
           click: () => {
@@ -122,29 +122,6 @@ export const AllTracks = (props) => {
         }}
       >
         <Popup>Hi track A~!</Popup>
-      </Polyline>
-      <Polyline
-        pathOptions={styleRouteB}
-        positions={trackB}
-        eventHandlers={{
-          click: () => {
-            console.log("trackB B clicked");
-          },
-        }}
-      >
-        <Popup>Hi track B!!!</Popup>
-      </Polyline>
-
-      <Polyline
-        pathOptions={styleRouteC}
-        positions={trackC}
-        eventHandlers={{
-          click: () => {
-            console.log("trackC A clicked");
-          },
-        }}
-      >
-        <Popup>Hi track C~~!!!!</Popup>
       </Polyline>
     </>
   );

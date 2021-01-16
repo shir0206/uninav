@@ -1,0 +1,13 @@
+.track {
+  stroke: var(--color_path);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.leaflet-overlay-pane > svg {
+  filter: drop-shadow(2px 2px 1.5px var(--color_path_shadow))
+    drop-shadow(-2px 2px 1.5px var(--color_path_shadow))
+    drop-shadow(2px -2px 1.5px var(--color_path_shadow))
+    drop-shadow(-2px -2px 1.5px var(--color_path_shadow));
+}
