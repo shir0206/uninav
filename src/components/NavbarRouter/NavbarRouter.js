@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 import { NavbarLinks } from "../NavbarLinks/NavbarLinks";
@@ -7,20 +7,26 @@ import { Tracks } from "../Tracks/Tracks";
 import { Settings } from "../Settings/Settings";
 
 export const NavbarRouter = (props) => {
+  const [selected, setSelected] = useState({
+    scan: false,
+    tracks: false,
+    settings: false,
+  });
+
   return (
     <Router>
       <div>
         <NavbarLinks
-          selected={props.selected}
-          setSelected={props.setSelected}
+          selected={selected}
+          setSelected={setSelected}
         ></NavbarLinks>
         <Route
           exact
           path="/scan"
           render={() => (
             <Scan
-              selected={props.selected}
-              setSelected={props.setSelected}
+              selected={selected}
+              setSelected={setSelected}
               displayPOITypes={props.displayPOITypes}
               setDisplayPOITypes={props.setDisplayPOITypes}
             />
@@ -31,8 +37,8 @@ export const NavbarRouter = (props) => {
           path="/tracks"
           render={() => (
             <Tracks
-              selected={props.selected}
-              setSelected={props.setSelected}
+              selected={selected}
+              setSelected={setSelected}
               displayPOITypes={props.displayPOITypes}
               setDisplayPOITypes={props.setDisplayPOITypes}
             />
@@ -43,8 +49,8 @@ export const NavbarRouter = (props) => {
           path="/settings"
           render={() => (
             <Settings
-              selected={props.selected}
-              setSelected={props.setSelected}
+              selected={selected}
+              setSelected={setSelected}
               displayPOITypes={props.displayPOITypes}
               setDisplayPOITypes={props.setDisplayPOITypes}
             />

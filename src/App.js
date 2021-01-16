@@ -20,12 +20,6 @@ function App() {
     history: true,
   });
 
-  const [selected, setSelected] = useState({
-    scan: false,
-    tracks: false,
-    settings: false,
-  });
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -46,8 +40,6 @@ function App() {
           ></LocateUserButton>
 
           <NavbarRouter
-            selected={selected}
-            setSelected={setSelected}
             displayPOITypes={displayPOITypes}
             setDisplayPOITypes={setDisplayPOITypes}
           ></NavbarRouter>
