@@ -17,7 +17,7 @@ export const Tracks = (props) => {
 
     props.setSelected(temp);
 
-    const path = `/`;
+    const path = `/uninav/`;
     history.push(path);
   };
 
