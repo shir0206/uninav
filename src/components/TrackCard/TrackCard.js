@@ -11,18 +11,23 @@ export const TrackCard = (props) => {
   return (
     <div className="track-card">
       <h4 className="track-name">{props.item.name}</h4>
-      <button className="track-start-btn">
-        <StartSVG></StartSVG>
-      </button>
 
       <div className="track-content">
-        <InfoSVG></InfoSVG>
+        <button className="track-info-btn">
+          <InfoSVG></InfoSVG>
+        </button>
+
+        <hr className="track-hr track-hr-right"></hr>
+
+        <div className="track-length-cont">
+          <h3 className="track-length">{props.item.length}</h3>
+
+          <h6 className="track-length-title">{getString("TRACK_LENGTH")}</h6>
+        </div>
+
+        <hr className="track-hr track-hr-left"></hr>
 
         <h5 className="track-desc">{props.item.desc}</h5>
-
-        <h3 className="track-length">{props.item.length}</h3>
-
-        <h6 className="navbar-btn-title">{getString("TRACK_LENGTH")}</h6>
       </div>
 
       <ul className="track-tag-list">
@@ -32,6 +37,10 @@ export const TrackCard = (props) => {
           </li>
         ))}
       </ul>
+
+      <button className="track-start-btn">
+        <StartSVG></StartSVG>
+      </button>
     </div>
   );
 };
