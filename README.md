@@ -25,20 +25,28 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
       |-- UniNavLogoSVG
   |-- LocateUserButton
       |-- LocateSVG
-  |-- Scan
-  |-- Routes
-  |-- Settings
-      |-- HeadingSettings
-          |-- UniNavLogoSVG
-      |-- DisplayPOITypesList
-          |-- ToggleButton
-      |-- HideAllPOITypes
-          |-- ToggleButton
-          |-- UniNavLogoSVG
-  |-- Menu
-      |-- ScanSVG
-      |-- RoutesSVG
-      |-- POIsSVG
+  |-- NavbarRouter
+      |-- Router
+          |-- NavbarLinks
+              |-- NavLink
+                  |-- ScanSVG
+              |-- NavLink
+                  |-- TracksSVG
+              |-- NavLink
+                  |-- POIsSVG
+          |-- Route
+              |-- Scan
+          |-- Route
+              |-- Tracks
+          |-- Route
+              |-- Settings
+                |-- HeadingSettings
+                    |-- UniNavLogoSVG
+                |-- DisplayPOITypesList
+                    |-- ToggleButton
+                |-- HideAllPOITypes
+                    |-- ToggleButton
+                    |-- UniNavLogoSVG
   |-- Map
       |-- MapContainer
           |-- TileLayer
