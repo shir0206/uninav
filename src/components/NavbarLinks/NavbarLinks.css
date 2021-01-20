@@ -5,7 +5,7 @@
   right: 0px;
   bottom: 0px;
   background: var(--white);
-  z-index: 10;
+  z-index: 100;
   flex-direction: row;
   grid-gap: 0px 1rem;
   align-items: center;

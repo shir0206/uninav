@@ -1,12 +1,25 @@
 .tracks {
   position: absolute;
-  width: 80%;
-  height: 50%;
-  background: rgba(255, 255, 255, 0.75);
-  top: 45%;
-  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: var(--color_default_background);
   z-index: 10;
-  transform: translate(-50%, -50%);
-  padding: 0 0 10px 10px;
   border-radius: 10px;
+  direction: rtl;
+}
+
+.tracks-heading {
+  display: flex;
+  flex-direction: row;
+}
+
+.tracks-heading > h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  padding: 0;
 }

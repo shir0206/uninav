@@ -1,6 +1,12 @@
 import React from "react";
 import "./Tracks.css";
 
+import { TracksList } from "../TracksList/TracksList";
+
+
+import TracksSVG from "../../icons/TracksSVG.js";
+import CloseSVG from "../../icons/CloseSVG.js";
+
 import { useHistory } from "react-router-dom";
 
 import getString from "../../strings/strings";
@@ -23,8 +29,14 @@ export const Tracks = (props) => {
 
   return (
     <div className="tracks">
-      Tracks
-      <button onClick={handleCloseTracks}>{getString("OK")}</button>
+      <div className="tracks-heading">
+        <TracksSVG selected={true}></TracksSVG>
+        <h4>{getString("TRACKS_TITLE")}</h4>
+        <button className="close-btn" onClick={handleCloseTracks}>
+          <CloseSVG></CloseSVG>
+        </button>
+      </div>
+      <TracksList></TracksList>
     </div>
   );
 };

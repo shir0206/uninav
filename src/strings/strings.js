@@ -88,6 +88,10 @@ export default function getString(string) {
       en: "Hide all POIs",
       iw: "הסתרת כל הנקודות",
     },
+    TRACKS_TITLE: {
+      en: "Our Tracks",
+      iw: "המסלולים שלנו",
+    },
   };
 
   return allStrings[string][lang];
