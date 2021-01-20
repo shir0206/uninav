@@ -3,7 +3,6 @@ import "./Tracks.css";
 
 import { TracksList } from "../TracksList/TracksList";
 
-
 import TracksSVG from "../../icons/TracksSVG.js";
 import CloseSVG from "../../icons/CloseSVG.js";
 
@@ -31,7 +30,7 @@ export const Tracks = (props) => {
     <div className="tracks">
       <div className="tracks-heading">
         <TracksSVG selected={true}></TracksSVG>
-        <h4>{getString("TRACKS_TITLE")}</h4>
+        <h4 className="tracks-heading-title">{getString("TRACKS_TITLE")}</h4>
         <button className="close-btn" onClick={handleCloseTracks}>
           <CloseSVG></CloseSVG>
         </button>

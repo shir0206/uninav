@@ -12,15 +12,20 @@
 .tracks-heading {
   display: flex;
   flex-direction: row;
+  margin: 20px;
 }
 
-.tracks-heading > h4 {
+.tracks-heading-title {
   margin-block-start: 0;
   margin-block-end: 0;
+  margin: 0 5px;
 }
 
 .close-btn {
   border: none;
   background: none;
   padding: 0;
+  position: absolute;
+  left: 20px;
+  top: 10px;
 }
