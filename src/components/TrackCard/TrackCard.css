@@ -1,0 +1,44 @@
+.track-card {
+  width: min(80vw, 80vh);
+  height: min(40vw, 40vh);
+  background: var(--white);
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0px 3px 5px rgba(5, 16, 24, 0.1);
+  border-radius: 12px;
+}
+
+.track-card-desc {
+  font-weight: normal;
+}
+
+.track-card-length {
+  font-weight: normal;
+}
+
+.track-card-tag {
+  width: fit-content;
+  background: var(--white);
+  border: 1px solid #e1e5e6;
+  border-radius: 12px;
+}
+
+.track-card-tag-list {
+  align-self: start;
+  list-style: none;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  background: var(--color_background_darker);
+  display: flex;
+  box-shadow: 0 -1px var(--white);
+  border-top: 1px solid var(--color_background_darker);
+  border-radius: 0 0 12px 12px;
+}
+
+.track-card-tag-desc {
+  font-weight: normal;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 2px 8px;
+}

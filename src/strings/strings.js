@@ -92,6 +92,10 @@ export default function getString(string) {
       en: "Our Tracks",
       iw: "המסלולים שלנו",
     },
+    TRACK_LENGTH: {
+      en: "Length (km)",
+      iw: "אורך בק''מ",
+    },
   };
 
   return allStrings[string][lang];
