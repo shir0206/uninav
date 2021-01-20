@@ -20,9 +20,9 @@
   }
   
   .settings-title-hr {
-    border-left: 1px solid var(--grey_7);
+    border-left: 1px solid var(--color_default_frame);
     border-right: 1px solid var(--white);
-    border-top: 0px solid var(--grey_7);
+    border-top: 0px solid var(--color_default_frame);
     border-bottom: 0px solid var(--white);
     transform: translateX(10px);
     height: 50%;

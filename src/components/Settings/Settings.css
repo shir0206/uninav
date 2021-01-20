@@ -95,9 +95,9 @@
 }
 
 .poi-display-hr {
-  border-top: 1px solid var(--grey_7);
+  border-top: 1px solid var(--color_default_frame);
   border-bottom: 1px solid var(--white);
-  border-left: 0px solid var(--grey_7);
+  border-left: 0px solid var(--color_default_frame);
   border-right: 0px solid var(--white);
 
   margin-block-start: 0;

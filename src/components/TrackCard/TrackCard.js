@@ -10,21 +10,25 @@ import getString from "../../strings/strings";
 export const TrackCard = (props) => {
   return (
     <div className="track-card">
-      <h4>{props.item.name}</h4>
-      <InfoSVG></InfoSVG>
+      <h4 className="track-name">{props.item.name}</h4>
+      <button className="track-start-btn">
+        <StartSVG></StartSVG>
+      </button>
 
-      <h5 className="track-card-desc">{props.item.desc}</h5>
+      <div className="track-content">
+        <InfoSVG></InfoSVG>
 
-      <h3 className="track-card-length">{props.item.length}</h3>
+        <h5 className="track-desc">{props.item.desc}</h5>
 
-      <h6 className="navbar-btn-title">{getString("TRACK_LENGTH")}</h6>
+        <h3 className="track-length">{props.item.length}</h3>
 
-      <StartSVG></StartSVG>
+        <h6 className="navbar-btn-title">{getString("TRACK_LENGTH")}</h6>
+      </div>
 
-      <ul className="track-card-tag-list">
+      <ul className="track-tag-list">
         {props.item.tags.map((tag, index) => (
-          <li className="track-card-tag" key={index}>
-            <h5 className="track-card-tag-desc">{tag}</h5>
+          <li className="track-tag" key={index}>
+            <h5 className="track-tag-desc">{tag}</h5>
           </li>
         ))}
       </ul>
