@@ -5,34 +5,9 @@ import "./POIInfo.css";
 import BackSVG from "../../icons/BackSVG.js";
 
 import getTrackImageDB from "../../constants/getTrackImage";
-
-import areaIcon from "../../icons/area.svg";
-import artIcon from "../../icons/art.svg";
-import benchIcon from "../../icons/bench.svg";
-import historyIcon from "../../icons/history.svg";
-import tableIcon from "../../icons/table.svg";
-import markerIcon from "../../icons/marker.svg";
-import lookoutIcon from "../../icons/lookout.svg";
+import getIconType from "../../constants/getIconType";
 
 export const POIInfo = (props) => {
-  function getIconType(type) {
-    switch (type) {
-      case "area":
-        return areaIcon;
-      case "art":
-        return artIcon;
-      case "bench":
-        return benchIcon;
-      case "history":
-        return historyIcon;
-      case "table":
-        return tableIcon;
-      case "lookout":
-        return lookoutIcon;
-    }
-    return markerIcon;
-  }
-
   const handleCloseTracks = () => {
     props.setCurrPOIInfo(false);
   };
@@ -43,7 +18,7 @@ export const POIInfo = (props) => {
         <BackSVG></BackSVG>
       </button>
       <img
-        className="poi-img"
+        className="poi-info-img"
         src={getTrackImageDB(props.item.img)}
         alt={props.item.name}
       ></img>
@@ -55,7 +30,7 @@ export const POIInfo = (props) => {
         ></img>
 
         <div className="info-poi-title">
-          <h1 className="poi-name">{props.item.name}</h1>
+          <h1 className="info-poi-name">{props.item.name}</h1>
           <div className="poi-content">
             <hr
               className={"poi-hr poi-hr-desc poi-hr-type-" + props.item.type}

@@ -8,7 +8,7 @@
   direction: rtl;
 }
 
-.poi-img {
+.poi-info-img {
   width: 100%;
   display: block;
   object-fit: cover;
@@ -57,4 +57,13 @@ p {
 
 .info-poi-title {
   padding: 0 3%;
+}
+
+.info-poi-name {
+  margin: 0 0.65em 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--color_default_text);
 }
