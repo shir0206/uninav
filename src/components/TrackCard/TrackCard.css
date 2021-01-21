@@ -87,10 +87,13 @@
 
 .track-content {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 0.8fr 0.5fr 2fr;
+  width: 90%;
+  grid-template-columns: 0.5fr 0.3fr 0.7fr 0.3fr 2fr;
   grid-template-rows: 1fr;
+  grid-gap: 0px 0px;
   gap: 0px 0px;
   grid-template-areas: "info hr-right len hr-left desc";
+  margin: 5% 0;
 }
 
 .track-hr-right {
@@ -127,7 +130,6 @@
 
 .track-length-title {
   margin: 0;
-  margin-top: 6px;
   font-weight: 600;
 }
 .track-length {

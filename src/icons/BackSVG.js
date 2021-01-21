@@ -14,8 +14,8 @@ const BackSVG = () => (
         style={{ fill: "var(--color_default_btn)" }}
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M4 13L16.2 13L10.6 18.6L12 20L20 12L12 4L10.6 5.4L16.2 11L4 11L4 13Z"
         style={{ fill: "var(--color_default_background)" }}
       />
