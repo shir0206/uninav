@@ -1,0 +1,63 @@
+.track-info-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 56px);
+  background: var(--color_default_background);
+  z-index: 300;
+  direction: rtl;
+  /* overflow-y: scroll; */
+}
+
+.track-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 35vh;
+  /* position: absolute;
+  top: 0; */
+}
+
+.back-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.info-heading {
+  background: var(--white);
+  box-shadow: 0px 3px 5px rgba(5, 16, 24, 0.1);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute;
+  top: 35vh; */
+}
+
+.info-heading-title {
+  margin-block: 0;
+  margin: 0 5%;
+}
+
+.info-start-btn {
+  margin: 2% 5% 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.info-content {
+  text-align: start;
+  padding: 5%;
+  overflow-y: scroll;
+}
+
+p {
+  /* white-space: pre-wrap; */
+  white-space: pre-line;
+
+}
