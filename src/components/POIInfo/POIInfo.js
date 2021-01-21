@@ -1,15 +1,17 @@
 import React from "react";
 
-import "./TrackInfo.css";
+import "./POIInfo.css";
 
+import InfoSVG from "../../icons/InfoSVG.js";
 import StartSVG from "../../icons/StartSVG.js";
 import BackSVG from "../../icons/BackSVG.js";
 
 import { useHistory } from "react-router-dom";
 
+import getString from "../../strings/strings";
 import getTrackImageDB from "../../constants/getTrackImage";
 
-export const TrackInfo = (props) => {
+export const POIInfo = (props) => {
   let history = useHistory();
   const handleCloseTracks = () => {
     props.setInfo(false);
