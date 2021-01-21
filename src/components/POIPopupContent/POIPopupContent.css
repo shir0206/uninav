@@ -27,15 +27,15 @@
 }
 
 .leaflet-container a.leaflet-popup-close-button {
-  background: rgba(50, 67, 78, 0.2);
-  background: #c3c3c3;
+  background: var(--color_default_btn);
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  color: #fff;
+  color: var(--color_default_background);
   margin: 4px 0 0 4px;
   padding: 2px;
   left: 0;
+  font-weight: normal;
 }
 
 .poi-type {
