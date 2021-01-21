@@ -5,6 +5,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 
 import { CurrTrack } from "../CurrTrack/CurrTrack";
 import { AllPOIs } from "../AllPOIs/AllPOIs";
+import { POIInfo } from "../POIInfo/POIInfo";
 import { HandleMapEvents } from "../HandleMapEvents/HandleMapEvents";
 import { ChangeMapView } from "../ChangeMapView/ChangeMapView";
 import { CheckCurrUserDistance } from "../CheckCurrUserDistance/CheckCurrUserDistance";
@@ -19,6 +20,8 @@ import { mapZoom } from "../../constants/mapZoom";
 import getAlert from "../../alerts/alerts";
 
 export const Map = (props) => {
+  const [currPOIInfo, setCurrPOIInfo] = useState(false);
+
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [isChangeMapView, setIsChangeMapView] = useState(!isFirstRender);
 
@@ -41,6 +44,20 @@ export const Map = (props) => {
       props.setIsLocationError(true);
     }
   }, [currLocationOptions.error]);
+
+  const itemPOI = {
+    desc: "במת ישיבה",
+    id: "1",
+    img: "1",
+    location: {
+      lat: 32.759852654767,
+      lng: 35.0223930358948,
+    },
+    name: "במת ישיבה",
+    type: "area",
+    content:
+      "קליר קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף לורם איפסום דולור סיט אמט, לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. \n\n הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת יבש, כאנה ניצאחו נמרגי שהכים תוק, הדש שנרא התידם הכייר וקה. קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. ",
+  };
 
   return (
     <MapContainer
@@ -99,6 +116,14 @@ export const Map = (props) => {
             zoom={mapZoom}
           />
         )}
+
+      <button
+        className="btn-temp"
+        onClick={() => setCurrPOIInfo(true)}
+      ></button>
+      {currPOIInfo && (
+        <POIInfo item={itemPOI} setCurrPOIInfo={setCurrPOIInfo}></POIInfo>
+      )}
     </MapContainer>
   );
 };

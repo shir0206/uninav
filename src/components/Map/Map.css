@@ -3,6 +3,9 @@
   height: 100vh;
   z-index: 1;
   background: #efeae0;
+  font-family: "Assistant", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 .leaflet-div-icon {
@@ -21,4 +24,13 @@
 
 .location-console {
   z-index: 999999;
+}
+
+.btn-temp {
+  z-index: 9999999999;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
 }
