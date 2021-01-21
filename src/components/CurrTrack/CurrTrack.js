@@ -7,14 +7,7 @@ import mapTrackPoints from "../../mapTracks/mapTrackPoints";
 export const CurrTrack = (props) => {
   if (props.selectedTrack === 0) return null;
 
-  let currTrackPoints = [];
-
-  mapTrackPoints.map((item) => {
-    if (item.id == props.selectedTrack) {
-      currTrackPoints = item.track;
-    }
-  });
-
+  let currTrackPoints = mapTrackPoints[props.selectedTrack];
 
   return (
     <>
