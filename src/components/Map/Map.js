@@ -9,6 +9,7 @@ import { POIInfo } from "../POIInfo/POIInfo";
 import { HandleMapEvents } from "../HandleMapEvents/HandleMapEvents";
 import { ChangeMapView } from "../ChangeMapView/ChangeMapView";
 import { CheckCurrUserDistance } from "../CheckCurrUserDistance/CheckCurrUserDistance";
+import { LocateUserButton } from "../LocateUserButton/LocateUserButton";
 
 import { CurrUserPosition } from "../CurrUserPosition/CurrUserPosition";
 
@@ -21,27 +22,31 @@ import getAlert from "../../alerts/alerts";
 
 export const Map = (props) => {
   const [currPOIInfo, setCurrPOIInfo] = useState(false);
-
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [isChangeMapView, setIsChangeMapView] = useState(!isFirstRender);
+  const [isLocateUser, setIsLocateUser] = useState(true);
+  const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
+  const [isLocationError, setIsLocationError] = useState(false);
 
   // Initiate geolocation & start following the user
   const currLocationOptions = useWatchLocation(
-    props.isLocateUser,
+    isLocateUser,
+
     geolocationOptions
   );
 
   // Cancel geolocation & stop following the user
   function handleCancelLocationWatch() {
     currLocationOptions.cancelLocationWatch();
-    props.setIsLocateUser(false);
+    setIsLocateUser(false);
+
     getAlert("cancelLocationWatch");
   }
 
   // If there's an error in geolocation, set error state
   useEffect(() => {
     if (currLocationOptions.error) {
-      props.setIsLocationError(true);
+      setIsLocationError(true);
     }
   }, [currLocationOptions.error]);
 
@@ -80,7 +85,7 @@ export const Map = (props) => {
       <CurrTrack selectedTrack={props.selectedTrack} />
 
       <CurrUserPosition
-        isLocateUser={props.isLocateUser}
+        isLocateUser={isLocateUser}
         location={currLocationOptions.location}
         error={currLocationOptions.error}
       ></CurrUserPosition>
@@ -91,23 +96,23 @@ export const Map = (props) => {
           setIsFirstRender={setIsFirstRender}
           currLocationOptions={currLocationOptions}
           setIsChangeMapView={setIsChangeMapView}
-          setIsCenterUserLocation={props.setIsCenterUserLocation}
+          setIsCenterUserLocation={setIsCenterUserLocation}
         ></CheckCurrUserDistance>
       )}
 
       <HandleMapEvents
-        isLocateUser={props.isLocateUser}
-        setIsLocateUser={props.setIsLocateUser}
+        isLocateUser={isLocateUser}
+        setIsLocateUser={setIsLocateUser}
         handleCancelLocationWatch={handleCancelLocationWatch}
         error={currLocationOptions.error}
-        isCenterUserLocation={props.isCenterUserLocation}
-        setIsCenterUserLocation={props.setIsCenterUserLocation}
+        isCenterUserLocation={isCenterUserLocation}
+        setIsCenterUserLocation={setIsCenterUserLocation}
       />
 
       {isChangeMapView &&
-        props.isCenterUserLocation &&
+        isCenterUserLocation &&
         currLocationOptions.location &&
-        props.isLocateUser && (
+        isLocateUser && (
           <ChangeMapView
             center={{
               lat: currLocationOptions.location.latitude,
@@ -119,11 +124,20 @@ export const Map = (props) => {
 
       <button
         className="btn-temp"
-        onClick={() => setCurrPOIInfo(true)}
-      ></button>
+        onClick={() => {
+          console.log("click");
+          setCurrPOIInfo(true);
+        }}
+      >POI</button>
       {currPOIInfo && (
         <POIInfo item={itemPOI} setCurrPOIInfo={setCurrPOIInfo}></POIInfo>
       )}
+
+      <LocateUserButton
+        setIsLocateUser={setIsLocateUser}
+        setIsCenterUserLocation={setIsCenterUserLocation}
+        isLocationError={isLocationError}
+      ></LocateUserButton>
     </MapContainer>
   );
 };
