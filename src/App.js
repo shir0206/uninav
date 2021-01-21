@@ -20,6 +20,8 @@ function App() {
     history: true,
   });
 
+  const [selectedTrack, setSelectedTrack] = useState(0);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,6 +44,8 @@ function App() {
           <NavbarRouter
             displayPOITypes={displayPOITypes}
             setDisplayPOITypes={setDisplayPOITypes}
+            selectedTrack={selectedTrack}
+            setSelectedTrack={setSelectedTrack}
           ></NavbarRouter>
         </>
       )}
@@ -53,6 +57,8 @@ function App() {
         isCenterUserLocation={isCenterUserLocation}
         setIsCenterUserLocation={setIsCenterUserLocation}
         setIsLocationError={setIsLocationError}
+        selectedTrack={selectedTrack}
+        setSelectedTrack={setSelectedTrack}
       ></Map>
     </>
   );

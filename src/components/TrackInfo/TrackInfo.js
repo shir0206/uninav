@@ -20,6 +20,16 @@ export const TrackInfo = (props) => {
     history.push(path);
   };
 
+  const handleSelectTrack = () => {
+    let temp = JSON.parse(JSON.stringify(props.selected));
+    Object.keys(temp).forEach((v) => (temp[v] = false));
+    props.setSelected(temp);
+
+    props.setSelectedTrack(props.item.id);
+    const path = `/uninav/`;
+    history.push(path);
+  };
+
   return (
     <div className="track-info-content">
       <button className="back-btn" onClick={handleCloseTracks}>
@@ -32,7 +42,7 @@ export const TrackInfo = (props) => {
       ></img>
       <div className="info-heading">
         <h4 className="info-heading-title">{props.item.name}</h4>
-        <button className="info-start-btn">
+        <button className="info-start-btn" onClick={handleSelectTrack}>
           <StartSVG></StartSVG>
         </button>
       </div>

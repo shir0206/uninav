@@ -41,6 +41,8 @@ export const NavbarRouter = (props) => {
               setSelected={setSelected}
               displayPOITypes={props.displayPOITypes}
               setDisplayPOITypes={props.setDisplayPOITypes}
+              selectedTrack={props.selectedTrack}
+              setSelectedTrack={props.setSelectedTrack}
             />
           )}
         />

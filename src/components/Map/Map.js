@@ -60,7 +60,7 @@ export const Map = (props) => {
 
       <AllPOIs displayPOITypes={props.displayPOITypes}></AllPOIs>
 
-      <AllTracks />
+      <AllTracks selectedTrack={props.selectedTrack} />
 
       <CurrUserPosition
         isLocateUser={props.isLocateUser}

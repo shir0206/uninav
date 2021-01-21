@@ -35,7 +35,11 @@ export const Tracks = (props) => {
           <CloseSVG></CloseSVG>
         </button>
       </div>
-      <TracksList></TracksList>
+      <TracksList
+        selected={props.selected}
+        setSelected={props.setSelected}
+        setSelectedTrack={props.setSelectedTrack}
+      ></TracksList>
     </div>
   );
 };

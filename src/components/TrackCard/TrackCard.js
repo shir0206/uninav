@@ -14,6 +14,16 @@ export const TrackCard = (props) => {
   const [info, setInfo] = useState(false);
   let history = useHistory();
 
+  const handleSelectTrack = () => {
+    let temp = JSON.parse(JSON.stringify(props.selected));
+    Object.keys(temp).forEach((v) => (temp[v] = false));
+    props.setSelected(temp);
+
+    props.setSelectedTrack(props.item.id);
+    const path = `/uninav/`;
+    history.push(path);
+  };
+
   return (
     <>
       {!info ? (
@@ -56,12 +66,19 @@ export const TrackCard = (props) => {
             ))}
           </ul>
 
-          <button className="track-start-btn">
+          <button className="track-start-btn" onClick={handleSelectTrack}>
             <StartSVG></StartSVG>
           </button>
         </div>
       ) : (
-        <TrackInfo setInfo={setInfo} item={props.item}></TrackInfo>
+        <TrackInfo
+          setInfo={setInfo}
+          item={props.item}
+          selected={props.selected}
+          setSelected={props.setSelected}
+          selectedTrack={props.selectedTrack}
+          setSelectedTrack={props.setSelectedTrack}
+        ></TrackInfo>
       )}
     </>
   );

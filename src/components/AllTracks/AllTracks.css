@@ -1,4 +1,4 @@
-.track {
+.curr-track {
   stroke: var(--color_path);
   stroke-width: 3;
   stroke-linecap: round;
