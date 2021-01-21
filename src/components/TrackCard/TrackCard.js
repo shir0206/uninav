@@ -19,7 +19,7 @@ export const TrackCard = (props) => {
     Object.keys(temp).forEach((v) => (temp[v] = false));
     props.setSelected(temp);
 
-    props.setSelectedTrack(props.item.id);
+    props.setSelectedTrack(props.item);
     const path = `/uninav/`;
     history.push(path);
   };

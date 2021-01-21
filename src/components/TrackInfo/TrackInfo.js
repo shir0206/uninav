@@ -11,20 +11,21 @@ import getTrackImageDB from "../../constants/getTrackImage";
 
 export const TrackInfo = (props) => {
   let history = useHistory();
-  const handleCloseTracks = () => {
-    props.setInfo(false);
-
-    const path = `/tracks`;
-    history.push(path);
-  };
 
   const handleSelectTrack = () => {
     let temp = JSON.parse(JSON.stringify(props.selected));
     Object.keys(temp).forEach((v) => (temp[v] = false));
     props.setSelected(temp);
 
-    props.setSelectedTrack(props.item.id);
+    props.setSelectedTrack(props.item);
     const path = `/uninav/`;
+    history.push(path);
+  };
+
+  const handleCloseTracks = () => {
+    props.setInfo(false);
+
+    const path = `/tracks`;
     history.push(path);
   };
 

@@ -11,3 +11,34 @@
     drop-shadow(2px -2px 1.5px var(--color_path_shadow))
     drop-shadow(-2px -2px 1.5px var(--color_path_shadow));
 }
+
+.curr-track-btn {
+  z-index: 999999;
+  background: var(--white);
+  align-self: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  top: 5.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1% 3%;
+
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  text-transform: capitalize;
+  color: var(--color_default_btn);
+}
+
+.curr-track-name {
+  margin: 3%;
+  display: inline;
+}
