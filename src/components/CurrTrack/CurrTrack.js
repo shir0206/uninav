@@ -1,10 +1,10 @@
 import React from "react";
 import { Popup, Polyline } from "react-leaflet";
-import "./AllTracks.css";
+import "./CurrTrack.css";
 
 import mapTrackPoints from "../../mapTracks/mapTrackPoints";
 
-export const AllTracks = (props) => {
+export const CurrTrack = (props) => {
   if (props.selectedTrack === 0) return null;
 
   let currTrackPoints = [];
