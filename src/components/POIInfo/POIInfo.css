@@ -1,4 +1,4 @@
-.poi-info-content {
+.info-poi {
   position: absolute;
   top: 0;
   width: 100%;
@@ -8,7 +8,14 @@
   direction: rtl;
 }
 
-.poi-info-img {
+.info-poi-details {
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  margin: 0.5em 0 0 0;
+}
+
+.info-poi-img {
   width: 100%;
   display: block;
   object-fit: cover;
@@ -45,14 +52,15 @@
   outline: none;
 }
 
-.info-content {
+.info-poi-content {
   text-align: start;
   padding: 5%;
   overflow-y: scroll;
 }
 
-p {
+.info-poi-content-text {
   white-space: pre-line;
+  font-size: 16px;
 }
 
 .info-poi-title {

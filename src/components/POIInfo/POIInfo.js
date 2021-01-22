@@ -13,15 +13,17 @@ export const POIInfo = (props) => {
   };
 
   return (
-    <div className="poi-info-content">
+    <div className="info-poi">
       <button className="back-btn" onClick={handleCloseTracks}>
         <BackSVG></BackSVG>
       </button>
+
       <img
-        className="poi-info-img"
+        className="info-poi-img"
         src={getTrackImageDB(props.item.img)}
         alt={props.item.name}
       ></img>
+
       <div className="info-poi-heading">
         <img
           className="poi-type"
@@ -31,7 +33,7 @@ export const POIInfo = (props) => {
 
         <div className="info-poi-title">
           <h1 className="info-poi-name">{props.item.name}</h1>
-          <div className="poi-content">
+          <div className="info-poi-details">
             <hr
               className={"poi-hr poi-hr-desc poi-hr-type-" + props.item.type}
             ></hr>
@@ -42,8 +44,10 @@ export const POIInfo = (props) => {
         </div>
       </div>
 
-      <div className="info-content">
-        <p>{props.item.content.replaceAll("\\n", "\n")}</p>
+      <div className="info-poi-content">
+        <p className="info-poi-content-text">
+          {props.item.content.replaceAll("\\n", "\n")}
+        </p>
       </div>
     </div>
   );
