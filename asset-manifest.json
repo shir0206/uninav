@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.08de41e9.chunk.css",
-    "main.js": "/uninav/static/js/main.c5edf86d.chunk.js",
-    "main.js.map": "/uninav/static/js/main.c5edf86d.chunk.js.map",
-    "runtime-main.js": "/uninav/static/js/runtime-main.9ccea65b.js",
-    "runtime-main.js.map": "/uninav/static/js/runtime-main.9ccea65b.js.map",
-    "static/js/2.045baa65.chunk.js": "/uninav/static/js/2.045baa65.chunk.js",
-    "static/js/2.045baa65.chunk.js.map": "/uninav/static/js/2.045baa65.chunk.js.map",
-    "static/js/3.1c73780b.chunk.js": "/uninav/static/js/3.1c73780b.chunk.js",
-    "static/js/3.1c73780b.chunk.js.map": "/uninav/static/js/3.1c73780b.chunk.js.map",
+    "main.css": "/uninav/static/css/main.9c7d34a6.chunk.css",
+    "main.js": "/uninav/static/js/main.0b07c10a.chunk.js",
+    "main.js.map": "/uninav/static/js/main.0b07c10a.chunk.js.map",
+    "runtime-main.js": "/uninav/static/js/runtime-main.fe4cacb5.js",
+    "runtime-main.js.map": "/uninav/static/js/runtime-main.fe4cacb5.js.map",
+    "static/js/2.24cf7664.chunk.js": "/uninav/static/js/2.24cf7664.chunk.js",
+    "static/js/2.24cf7664.chunk.js.map": "/uninav/static/js/2.24cf7664.chunk.js.map",
+    "static/js/3.4c3bed53.chunk.js": "/uninav/static/js/3.4c3bed53.chunk.js",
+    "static/js/3.4c3bed53.chunk.js.map": "/uninav/static/js/3.4c3bed53.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.08de41e9.chunk.css.map": "/uninav/static/css/main.08de41e9.chunk.css.map",
-    "static/js/2.045baa65.chunk.js.LICENSE.txt": "/uninav/static/js/2.045baa65.chunk.js.LICENSE.txt",
+    "static/css/main.9c7d34a6.chunk.css.map": "/uninav/static/css/main.9c7d34a6.chunk.css.map",
+    "static/js/2.24cf7664.chunk.js.LICENSE.txt": "/uninav/static/js/2.24cf7664.chunk.js.LICENSE.txt",
     "static/media/1.72125605.jpeg": "/uninav/static/media/1.72125605.jpeg",
     "static/media/10.aea759ec.jpeg": "/uninav/static/media/10.aea759ec.jpeg",
     "static/media/11.c5154433.jpeg": "/uninav/static/media/11.c5154433.jpeg",
@@ -54,9 +54,9 @@
     "static/media/table.4166c88e.svg": "/uninav/static/media/table.4166c88e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9ccea65b.js",
-    "static/js/2.045baa65.chunk.js",
-    "static/css/main.08de41e9.chunk.css",
-    "static/js/main.c5edf86d.chunk.js"
+    "static/js/runtime-main.fe4cacb5.js",
+    "static/js/2.24cf7664.chunk.js",
+    "static/css/main.9c7d34a6.chunk.css",
+    "static/js/main.0b07c10a.chunk.js"
   ]
 }
