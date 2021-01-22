@@ -9,6 +9,7 @@ import { POIInfo } from "../POIInfo/POIInfo";
 import { HandleMapEvents } from "../HandleMapEvents/HandleMapEvents";
 import { ChangeMapView } from "../ChangeMapView/ChangeMapView";
 import { CheckCurrUserDistance } from "../CheckCurrUserDistance/CheckCurrUserDistance";
+import { CheckCurrUserDistanceFromPOI } from "../CheckCurrUserDistanceFromPOI/CheckCurrUserDistanceFromPOI";
 import { LocateUserButton } from "../LocateUserButton/LocateUserButton";
 
 import { CurrUserPosition } from "../CurrUserPosition/CurrUserPosition";
@@ -27,6 +28,7 @@ export const Map = (props) => {
   const [isLocateUser, setIsLocateUser] = useState(true);
   const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
   const [isLocationError, setIsLocationError] = useState(false);
+  const [mapPOIs, setMapPOIs] = useState([]);
 
   // Initiate geolocation & start following the user
   const currLocationOptions = useWatchLocation(
@@ -80,7 +82,11 @@ export const Map = (props) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
       />
 
-      <AllPOIs displayPOITypes={props.displayPOITypes}></AllPOIs>
+      <AllPOIs
+        displayPOITypes={props.displayPOITypes}
+        mapPOIs={mapPOIs}
+        setMapPOIs={setMapPOIs}
+      ></AllPOIs>
 
       <CurrTrack selectedTrack={props.selectedTrack} />
 
@@ -98,6 +104,16 @@ export const Map = (props) => {
           setIsChangeMapView={setIsChangeMapView}
           setIsCenterUserLocation={setIsCenterUserLocation}
         ></CheckCurrUserDistance>
+      )}
+
+      {currLocationOptions.location && (
+        <CheckCurrUserDistanceFromPOI
+          mapPOIs={mapPOIs}
+          setIsFirstRender={setIsFirstRender}
+          currLocationOptions={currLocationOptions}
+          setIsChangeMapView={setIsChangeMapView}
+          setIsCenterUserLocation={setIsCenterUserLocation}
+        ></CheckCurrUserDistanceFromPOI>
       )}
 
       <HandleMapEvents
@@ -128,7 +144,9 @@ export const Map = (props) => {
           console.log("click");
           setCurrPOIInfo(true);
         }}
-      >POI</button>
+      >
+        POI
+      </button>
       {currPOIInfo && (
         <POIInfo item={itemPOI} setCurrPOIInfo={setCurrPOIInfo}></POIInfo>
       )}

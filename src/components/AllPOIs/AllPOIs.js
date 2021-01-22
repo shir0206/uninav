@@ -11,7 +11,6 @@ import { POIPopupContent } from "../POIPopupContent/POIPopupContent";
 import getIconType from "../../constants/getIconType";
 
 export const AllPOIs = (props) => {
-  const [mapPOIs, setMapPOIs] = useState([]);
 
   useEffect(
     () => {
@@ -24,7 +23,7 @@ export const AllPOIs = (props) => {
           let dataArr = [...data];
 
           // Initialize the state with all the data recieved from DB
-          setMapPOIs(dataArr);
+          props.setMapPOIs(dataArr);
         });
     },
     [] // Occurs when the state within is changing (once)
@@ -50,7 +49,7 @@ export const AllPOIs = (props) => {
 
   return (
     <>
-      {mapPOIs.map(
+      {props.mapPOIs.map(
         (poi) =>
           props.displayPOITypes[poi.type] && (
             <Marker
