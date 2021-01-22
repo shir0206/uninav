@@ -22,7 +22,7 @@ export const NavbarRouter = (props) => {
         ></NavbarLinks>
         <Route
           exact
-          path="/scan"
+          path="/uninav/scan"
           render={() => (
             <Scan
               selected={selected}
@@ -34,7 +34,7 @@ export const NavbarRouter = (props) => {
         />
         <Route
           exact
-          path="/tracks"
+          path="/uninav/tracks"
           render={() => (
             <Tracks
               selected={selected}
@@ -48,7 +48,7 @@ export const NavbarRouter = (props) => {
         />
         <Route
           exact
-          path="/settings"
+          path="/uninav/settings"
           render={() => (
             <Settings
               selected={selected}

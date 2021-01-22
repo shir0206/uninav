@@ -25,7 +25,7 @@ export const TrackInfo = (props) => {
   const handleCloseTracks = () => {
     props.setInfo(false);
 
-    const path = `/tracks`;
+    const path = `/uninav/tracks`;
     history.push(path);
   };
 

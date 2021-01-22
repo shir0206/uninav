@@ -12,7 +12,7 @@ import getString from "../../strings/strings";
 export const NavbarLinks = (props) => {
   return (
     <nav className="navbar">
-      <NavLink activeClassName="active" to="/scan" className="scan-navbar-btn">
+      <NavLink activeClassName="active" to="/uninav/scan" className="scan-navbar-btn">
         <>
           <button
             className="navbar-btn scan-navbar-btn"
@@ -30,7 +30,7 @@ export const NavbarLinks = (props) => {
           {props.selected.scan && <div className="navbar-tab scan-navbar-tab"></div>}
         </>
       </NavLink>
-      <NavLink activeClassName="active" to="/tracks" className="track-navbar-btn">
+      <NavLink activeClassName="active" to="/uninav/tracks" className="track-navbar-btn">
         <>
           <button
             className="navbar-btn track-navbar-btn"
@@ -50,7 +50,7 @@ export const NavbarLinks = (props) => {
           )}
         </>
       </NavLink>
-      <NavLink activeClassName="active" to="/settings" className="settings-navbar-btn">
+      <NavLink activeClassName="active" to="/uninav/settings" className="settings-navbar-btn">
         <>
           <button
             className="navbar-btn settings-navbar-btn"
