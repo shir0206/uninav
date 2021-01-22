@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./LocationError.css";
+import "./LocationErrorAlert.css";
 import getString from "../../strings/strings";
 import LocateSVG from "../../icons/LocateSVG.js";
 
-export const LocationError = (props) => {
+export const LocationErrorAlert = (props) => {
   const [isDisplayErrorPopup, setIsDisplayErrorPopup] = useState(true);
 
   const handleLocationError = () => {

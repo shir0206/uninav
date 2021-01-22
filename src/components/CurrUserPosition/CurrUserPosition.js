@@ -4,7 +4,7 @@ import "./CurrUserPosition.css";
 import L from "leaflet";
 
 import { Marker } from "react-leaflet";
-import { LocationError } from "../LocationError/LocationError";
+import { LocationErrorAlert } from "../LocationErrorAlert/LocationErrorAlert";
 
 import currPositionIcon from "../../icons/currPosition.svg";
 
@@ -41,7 +41,7 @@ export const CurrUserPosition = (props) => {
       {props.error && (
         <>
           <p className="console-demo">Location Error: {props.error}</p>
-          <LocationError error={props.error}></LocationError>
+          <LocationErrorAlert error={props.error}></LocationErrorAlert>
         </>
       )}
     </>
