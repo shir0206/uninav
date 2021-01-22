@@ -19,7 +19,7 @@ export const CurrUserPosition = (props) => {
     shadowSize: null,
     shadowAnchor: null,
     iconSize: new L.Point(30, 45),
-    className: "leaflet-div-icon",
+    className: "leaflet-div-icon curr-user-position-icon",
   });
 
   return (

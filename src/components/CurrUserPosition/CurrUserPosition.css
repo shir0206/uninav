@@ -5,3 +5,7 @@
   padding: 10px;
   margin: 0;
 }
+
+.curr-user-position-icon {
+  z-index: 9999999999 !important;
+}
