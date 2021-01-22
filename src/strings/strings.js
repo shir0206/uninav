@@ -96,6 +96,11 @@ export default function getString(string) {
       en: "Length (km)",
       iw: "אורך בק''מ",
     },
+
+    LOCATION_ERROR_TITLE: {
+      en: "Oops... Location Error",
+      iw: "אופס... בעיית מיקום",
+    },
   };
 
   return allStrings[string][lang];
