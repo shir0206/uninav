@@ -101,6 +101,23 @@ export default function getString(string) {
       en: "Oops... Location Error",
       iw: "אופס... בעיית מיקום",
     },
+
+    NEAR_POI_TITLE: {
+      en: "XXX",
+      iw: "הגעת לנקודת עניין",
+    },
+    WANT_MORE_INTO: {
+      en: "XXX",
+      iw: "רוצה לדעת עוד?",
+    },
+    YES: {
+      en: "Yes, sure",
+      iw: "כן, בטח",
+    },
+    LATER: {
+      en: "Later",
+      iw: "מאוחר יותר",
+    },
   };
 
   return allStrings[string][lang];

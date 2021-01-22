@@ -4,8 +4,6 @@ import { useMap } from "react-leaflet";
 import L from "leaflet";
 
 export const CheckCurrUserDistanceFromPOI = (props) => {
-  const [nearPOI, setNearPOI] = useState(null);
-
   const map = useMap();
 
   useEffect(() => {
@@ -29,16 +27,17 @@ export const CheckCurrUserDistanceFromPOI = (props) => {
         // Check the distance of the user from the poi
         if (distance < 100) {
           // Set the curr poi as nearest (if hasn't set yet)
-          if (nearPOI !== poi) {
-            setNearPOI(poi);
+          if (props.nearPOI !== poi) {
+            props.setNearPOI(poi);
             console.log("arrived " + poi.id);
             window.alert("arrived " + poi.id);
+            props.setIsDisplayCurrPOINotif(true);
           }
           return;
         }
       }
 
-      setNearPOI(null);
+      props.setNearPOI(null);
       console.log("not arrived");
     }
   }, [props.currLocationOptions.location, props.mapPOIs]);

@@ -20,15 +20,18 @@ import { mapCenter } from "../../constants/mapCenter";
 import { mapZoom } from "../../constants/mapZoom";
 
 import getAlert from "../../alerts/alerts";
+import { NearPOINotification } from "../NearPOINotification/NearPOINotification";
 
 export const Map = (props) => {
-  const [currPOIInfo, setCurrPOIInfo] = useState(false);
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [isChangeMapView, setIsChangeMapView] = useState(!isFirstRender);
   const [isLocateUser, setIsLocateUser] = useState(true);
   const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
   const [isLocationError, setIsLocationError] = useState(false);
   const [mapPOIs, setMapPOIs] = useState([]);
+  const [isDisplayCurrPOINotif, setIsDisplayCurrPOINotif] = useState(false);
+  const [isDisplayCurrPOIInfo, setIsDisplayCurrPOIInfo] = useState(false);
+  const [nearPOI, setNearPOI] = useState(null);
 
   // Initiate geolocation & start following the user
   const currLocationOptions = useWatchLocation(
@@ -81,21 +84,17 @@ export const Map = (props) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
       />
-
       <AllPOIs
         displayPOITypes={props.displayPOITypes}
         mapPOIs={mapPOIs}
         setMapPOIs={setMapPOIs}
       ></AllPOIs>
-
       <CurrTrack selectedTrack={props.selectedTrack} />
-
       <CurrUserPosition
         isLocateUser={isLocateUser}
         location={currLocationOptions.location}
         error={currLocationOptions.error}
       ></CurrUserPosition>
-
       {currLocationOptions.location && (
         <CheckCurrUserDistance
           isFirstRender={isFirstRender}
@@ -105,7 +104,6 @@ export const Map = (props) => {
           setIsCenterUserLocation={setIsCenterUserLocation}
         ></CheckCurrUserDistance>
       )}
-
       {currLocationOptions.location && (
         <CheckCurrUserDistanceFromPOI
           mapPOIs={mapPOIs}
@@ -113,9 +111,12 @@ export const Map = (props) => {
           currLocationOptions={currLocationOptions}
           setIsChangeMapView={setIsChangeMapView}
           setIsCenterUserLocation={setIsCenterUserLocation}
+          isDisplayCurrPOINotif={isDisplayCurrPOINotif}
+          setIsDisplayCurrPOINotif={setIsDisplayCurrPOINotif}
+          nearPOI={nearPOI}
+          setNearPOI={setNearPOI}
         ></CheckCurrUserDistanceFromPOI>
       )}
-
       <HandleMapEvents
         isLocateUser={isLocateUser}
         setIsLocateUser={setIsLocateUser}
@@ -124,7 +125,6 @@ export const Map = (props) => {
         isCenterUserLocation={isCenterUserLocation}
         setIsCenterUserLocation={setIsCenterUserLocation}
       />
-
       {isChangeMapView &&
         isCenterUserLocation &&
         currLocationOptions.location &&
@@ -137,18 +137,28 @@ export const Map = (props) => {
             zoom={mapZoom}
           />
         )}
-
       <button
         className="btn-temp"
         onClick={() => {
           console.log("click");
-          setCurrPOIInfo(true);
+          setIsDisplayCurrPOIInfo(true);
         }}
       >
         POI
       </button>
-      {currPOIInfo && (
-        <POIInfo item={itemPOI} setCurrPOIInfo={setCurrPOIInfo}></POIInfo>
+      {isDisplayCurrPOIInfo && (
+        <POIInfo
+          nearPOI={nearPOI}
+          setIsDisplayCurrPOIInfo={setIsDisplayCurrPOIInfo}
+        ></POIInfo>
+      )}
+
+      {isDisplayCurrPOINotif && (
+        <NearPOINotification
+          isDisplayCurrPOINotif={isDisplayCurrPOINotif}
+          setIsDisplayCurrPOINotif={setIsDisplayCurrPOINotif}
+          setIsDisplayCurrPOIInfo={setIsDisplayCurrPOIInfo}
+        ></NearPOINotification>
       )}
 
       <LocateUserButton

@@ -9,7 +9,7 @@ import getIconType from "../../constants/getIconType";
 
 export const POIInfo = (props) => {
   const handleCloseTracks = () => {
-    props.setCurrPOIInfo(false);
+    props.setIsDisplayCurrPOIInfo(false);
   };
 
   return (
@@ -20,25 +20,25 @@ export const POIInfo = (props) => {
 
       <img
         className="info-poi-img"
-        src={getTrackImageDB(props.item.img)}
-        alt={props.item.name}
+        src={getTrackImageDB(props.nearPOI.img)}
+        alt={props.nearPOI.name}
       ></img>
 
       <div className="info-poi-heading">
         <img
           className="poi-type"
-          src={getIconType(props.item.type)}
-          alt={props.item.type}
+          src={getIconType(props.nearPOI.type)}
+          alt={props.nearPOI.type}
         ></img>
 
         <div className="info-poi-title">
-          <h1 className="info-poi-name">{props.item.name}</h1>
+          <h1 className="info-poi-name">{props.nearPOI.name}</h1>
           <div className="info-poi-details">
             <hr
-              className={"poi-hr poi-hr-desc poi-hr-type-" + props.item.type}
+              className={"poi-hr poi-hr-desc poi-hr-type-" + props.nearPOI.type}
             ></hr>
             <div>
-              <h2 className="poi-desc">{props.item.desc}</h2>
+              <h2 className="poi-desc">{props.nearPOI.desc}</h2>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ export const POIInfo = (props) => {
 
       <div className="info-poi-content">
         <p className="info-poi-content-text">
-          {props.item.content.replaceAll("\\n", "\n")}
+          {props.nearPOI.content.replaceAll("\\n", "\n")}
         </p>
       </div>
     </div>
