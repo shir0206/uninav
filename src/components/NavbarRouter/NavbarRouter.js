@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { NavbarLinks } from "../NavbarLinks/NavbarLinks";
 import { Scan } from "../Scan/Scan";
 import { Tracks } from "../Tracks/Tracks";
+import { TrackInfo } from "../TrackInfo/TrackInfo";
 import { Settings } from "../Settings/Settings";
 
 export const NavbarRouter = (props) => {
@@ -44,6 +45,17 @@ export const NavbarRouter = (props) => {
               selectedTrack={props.selectedTrack}
               setSelectedTrack={props.setSelectedTrack}
             />
+          )}
+        />
+        <Route
+          exact
+          path="/uninav/tracks/:trackId"
+          render={() => (
+            <TrackInfo
+              selected={selected}
+              setSelected={setSelected}
+              setSelectedTrack={props.setSelectedTrack}
+            ></TrackInfo>
           )}
         />
         <Route

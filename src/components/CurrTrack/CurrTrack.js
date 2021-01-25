@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Popup, Polyline } from "react-leaflet";
 
 import "./CurrTrack.css";

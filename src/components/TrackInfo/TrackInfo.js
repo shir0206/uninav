@@ -1,30 +1,26 @@
 import React from "react";
-
-import "./TrackInfo.css";
-
 import StartSVG from "../../icons/StartSVG.js";
 import BackSVG from "../../icons/BackSVG.js";
-
-import { useHistory } from "react-router-dom";
-
+import mapTracks from "../../mapTracks/mapTracks";
+import { useHistory, useParams } from "react-router-dom";
 import getTrackImageDB from "../../constants/getTrackImage";
+import "./TrackInfo.css";
 
-export const TrackInfo = (props) => {
+export const TrackInfo = ({ selected, setSelected, setSelectedTrack }) => {
   let history = useHistory();
+  const { trackId } = useParams();
+  const item = mapTracks.find((t) => t.id === trackId);
 
   const handleSelectTrack = () => {
-    let temp = JSON.parse(JSON.stringify(props.selected));
+    let temp = JSON.parse(JSON.stringify(selected));
     Object.keys(temp).forEach((v) => (temp[v] = false));
-    props.setSelected(temp);
-
-    props.setSelectedTrack(props.item);
+    setSelected(temp);
+    setSelectedTrack(item);
     const path = `/uninav/`;
     history.push(path);
   };
 
   const handleCloseTracks = () => {
-    props.setInfo(false);
-
     const path = `/uninav/tracks`;
     history.push(path);
   };
@@ -36,18 +32,18 @@ export const TrackInfo = (props) => {
       </button>
       <img
         className="track-img"
-        src={getTrackImageDB(props.item.img)}
-        alt={props.item.name}
+        src={getTrackImageDB(item.img)}
+        alt={item.name}
       ></img>
       <div className="info-heading">
-        <h4 className="info-heading-title">{props.item.name}</h4>
+        <h4 className="info-heading-title">{item.name}</h4>
         <button className="info-start-btn" onClick={handleSelectTrack}>
           <StartSVG></StartSVG>
         </button>
       </div>
 
       <div className="info-content">
-        <p>{props.item.content.replaceAll("\\n", "\n")}</p>
+        <p>{item.content.replaceAll("\\n", "\n")}</p>
       </div>
     </div>
   );
