@@ -1,62 +1,96 @@
 .settings-button {
-  /* Controls / Button / Default */
-
-  /* Auto Layout */
   flex-direction: row;
   justify-content: center;
   padding: 5px 18px;
-
-  width: 76px;
+  width: 80px;
   height: 36px;
-
-  /* color/grey/grey_3 */
   background: var(--color_default_btn);
   border-radius: 4px;
-
-  /* PRESSED */
-
-  position: static;
-  left: 23.68%;
-  right: 23.68%;
-  top: 5px;
-  bottom: 7px;
-
-  /* Aassistent/utility/BUTTON 1/bold */
+  position: absolute;
+  left: 10%;
+  bottom: 4%;
   font-family: Assistant;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-
-  /* identical to box height */
   display: flex;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-
-  /* color/grey/color_default_btn_text */
   color: var(--color_default_btn_text);
-
-  /* Inside Auto Layout */
   flex: none;
   order: 0;
   flex-grow: 0;
   margin: 10px 0px;
   border: none;
-
-  transform: translateX(20px);
 }
 
 .settings {
   position: absolute;
-  width: 80%;
-  background: rgba(255, 255, 255, 0.75);
-  top: 45%;
-  left: 50%;
-  z-index: 10;
-  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100vh;
+  top: 50%;
+  right: 0px;
+  z-index: 850;
+  transform: translate(0%, -50%);
   padding: 0 0 10px 10px;
-  border-radius: 10px;
+  border-radius: 12px 0px 0px 12px;
+  background: var(--color_default_background);
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+.settings-overlay {
+  width: 100%;
+  height: 100vh;
+  z-index: 800;
+  background: var(--color_background_overlay);
+  position: absolute;
+  animation: overlay-anim 0.5s forwards;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes overlay-anim {
+  0% {
+    background: none;
+  }
+
+  100% {
+    background: var(--color_background_overlay);
+  }
+}
+
+@keyframes overlay-anim {
+  0% {
+    background: none;
+  }
+
+  100% {
+    background: var(--color_background_overlay);
+  }
 }
 
 .poi-display-switch {

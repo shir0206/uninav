@@ -28,30 +28,32 @@ export const Settings = (props) => {
   };
 
   return (
-    <div className="settings">
-      <HeadingSettings></HeadingSettings>
+    <div className="settings-overlay">
+      <div className="settings">
+        <HeadingSettings></HeadingSettings>
 
-      <DisplayPOITypesList
-        displayPOITypes={props.displayPOITypes}
-        setDisplayPOITypes={props.setDisplayPOITypes}
-        hideAllPois={hideAllPois}
-        setHideAllPois={setHideAllPois}
-      ></DisplayPOITypesList>
+        <DisplayPOITypesList
+          displayPOITypes={props.displayPOITypes}
+          setDisplayPOITypes={props.setDisplayPOITypes}
+          hideAllPois={hideAllPois}
+          setHideAllPois={setHideAllPois}
+        ></DisplayPOITypesList>
 
-      <hr className="poi-display-hr"></hr>
+        <hr className="poi-display-hr"></hr>
 
-      <HideAllPOITypes
-        hideAllPois={hideAllPois}
-        setHideAllPois={setHideAllPois}
-        displayPOITypes={props.displayPOITypes}
-        setDisplayPOITypes={props.setDisplayPOITypes}
-      ></HideAllPOITypes>
+        <HideAllPOITypes
+          hideAllPois={hideAllPois}
+          setHideAllPois={setHideAllPois}
+          displayPOITypes={props.displayPOITypes}
+          setDisplayPOITypes={props.setDisplayPOITypes}
+        ></HideAllPOITypes>
 
-      <hr className="poi-display-hr"></hr>
+        <hr className="poi-display-hr"></hr>
 
-      <button className="settings-button" onClick={handleCloseSettings}>
-        {getString("OK")}
-      </button>
+        <button className="settings-button" onClick={handleCloseSettings}>
+          {getString("OK")}
+        </button>
+      </div>
     </div>
   );
 };
