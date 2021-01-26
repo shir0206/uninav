@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 import { NavbarLinks } from "../NavbarLinks/NavbarLinks";
 import { Scan } from "../Scan/Scan";
+import { Map } from "../Map/Map";
 import { Tracks } from "../Tracks/Tracks";
 import { TrackInfo } from "../TrackInfo/TrackInfo";
+import { POIInfo } from "../POIInfo/POIInfo";
 import { Settings } from "../Settings/Settings";
 
 export const NavbarRouter = (props) => {
@@ -58,6 +60,13 @@ export const NavbarRouter = (props) => {
             ></TrackInfo>
           )}
         />
+
+        <Route
+          exact
+          path="/uninav/pois/:poiId"
+          render={() => <POIInfo mapPOIs={props.mapPOIs}></POIInfo>}
+        />
+
         <Route
           exact
           path="/uninav/settings"
@@ -70,6 +79,13 @@ export const NavbarRouter = (props) => {
             />
           )}
         />
+        <Map
+          displayPOITypes={props.displayPOITypes}
+          selectedTrack={props.selectedTrack}
+          setSelectedTrack={props.setSelectedTrack}
+          mapPOIs={props.mapPOIs}
+          setMapPOIs={props.setMapPOIs}
+        ></Map>
       </div>
     </Router>
   );

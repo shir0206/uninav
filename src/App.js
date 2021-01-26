@@ -17,32 +17,27 @@ function App() {
   });
 
   const [selectedTrack, setSelectedTrack] = useState(0);
+  const [mapPOIs, setMapPOIs] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2500);
+    const timer = setTimeout(() => setLoading(false), 250000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      {loading ? (
-        <SplashScreen />
-      ) : (
-        <NavbarRouter
-          displayPOITypes={displayPOITypes}
-          setDisplayPOITypes={setDisplayPOITypes}
-          selectedTrack={selectedTrack}
-          setSelectedTrack={setSelectedTrack}
-        ></NavbarRouter>
-      )}
+      {loading && <SplashScreen />}
 
-      <Map
+      <NavbarRouter
         displayPOITypes={displayPOITypes}
+        setDisplayPOITypes={setDisplayPOITypes}
         selectedTrack={selectedTrack}
         setSelectedTrack={setSelectedTrack}
-      ></Map>
+        mapPOIs={mapPOIs}
+        setMapPOIs={setMapPOIs}
+      ></NavbarRouter>
     </>
   );
 }

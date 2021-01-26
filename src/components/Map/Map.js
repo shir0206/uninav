@@ -5,7 +5,6 @@ import { MapContainer, TileLayer } from "react-leaflet";
 
 import { CurrTrack } from "../CurrTrack/CurrTrack";
 import { AllPOIs } from "../AllPOIs/AllPOIs";
-import { POIInfo } from "../POIInfo/POIInfo";
 import { HandleMapEvents } from "../HandleMapEvents/HandleMapEvents";
 import { ChangeMapView } from "../ChangeMapView/ChangeMapView";
 import { CheckCurrUserDistance } from "../CheckCurrUserDistance/CheckCurrUserDistance";
@@ -28,9 +27,8 @@ export const Map = (props) => {
   const [isLocateUser, setIsLocateUser] = useState(true);
   const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
   const [isLocationError, setIsLocationError] = useState(false);
-  const [mapPOIs, setMapPOIs] = useState([]);
   const [isDisplayCurrPOINotif, setIsDisplayCurrPOINotif] = useState(false);
-  const [isDisplayCurrPOIInfo, setIsDisplayCurrPOIInfo] = useState(false);
+  // const [isDisplayCurrPOIInfo, setIsDisplayCurrPOIInfo] = useState(false);
   const [nearPOI, setNearPOI] = useState(null);
 
   // Initiate geolocation & start following the user
@@ -55,20 +53,6 @@ export const Map = (props) => {
     }
   }, [currLocationOptions.error]);
 
-  // const itemPOI = {
-  //   desc: "במת ישיבה",
-  //   id: "1",
-  //   img: "1",
-  //   location: {
-  //     lat: 32.759852654767,
-  //     lng: 35.0223930358948,
-  //   },
-  //   name: "במת ישיבה",
-  //   type: "area",
-  //   content:
-  //     "קליר קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף לורם איפסום דולור סיט אמט, לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. \n\n הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת יבש, כאנה ניצאחו נמרגי שהכים תוק, הדש שנרא התידם הכייר וקה. קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. ",
-  // };
-
   return (
     <MapContainer
       center={[mapCenter.lat, mapCenter.lng]}
@@ -86,8 +70,8 @@ export const Map = (props) => {
       />
       <AllPOIs
         displayPOITypes={props.displayPOITypes}
-        mapPOIs={mapPOIs}
-        setMapPOIs={setMapPOIs}
+        mapPOIs={props.mapPOIs}
+        setMapPOIs={props.setMapPOIs}
       ></AllPOIs>
       <CurrTrack selectedTrack={props.selectedTrack} />
       <CurrUserPosition
@@ -106,7 +90,7 @@ export const Map = (props) => {
       )}
       {currLocationOptions.location && (
         <CheckCurrUserDistanceFromPOI
-          mapPOIs={mapPOIs}
+          mapPOIs={props.mapPOIs}
           setIsFirstRender={setIsFirstRender}
           currLocationOptions={currLocationOptions}
           setIsChangeMapView={setIsChangeMapView}
@@ -137,27 +121,13 @@ export const Map = (props) => {
             zoom={mapZoom}
           />
         )}
-      <button
-        className="btn-temp"
-        onClick={() => {
-          console.log("click");
-          setIsDisplayCurrPOIInfo(true);
-        }}
-      >
-        POI
-      </button>
-      {isDisplayCurrPOIInfo && (
-        <POIInfo
-          nearPOI={nearPOI}
-          setIsDisplayCurrPOIInfo={setIsDisplayCurrPOIInfo}
-        ></POIInfo>
-      )}
 
       {isDisplayCurrPOINotif && (
         <NearPOINotification
           isDisplayCurrPOINotif={isDisplayCurrPOINotif}
           setIsDisplayCurrPOINotif={setIsDisplayCurrPOINotif}
-          setIsDisplayCurrPOIInfo={setIsDisplayCurrPOIInfo}
+          // setIsDisplayCurrPOIInfo={setIsDisplayCurrPOIInfo}
+          nearPOI={nearPOI}
         ></NearPOINotification>
       )}
 

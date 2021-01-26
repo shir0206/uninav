@@ -2,18 +2,24 @@ import React from "react";
 import "./NearPOINotification.css";
 import getString from "../../strings/strings";
 import NotificationSVG from "../../icons/NotificationSVG.js";
+import { useHistory } from "react-router-dom";
 
 export const NearPOINotification = (props) => {
+  let history = useHistory();
+
   const handlePOIMoreInfo = () => {
-    console.log("handlePOIMoreInfo");
-    props.setIsDisplayCurrPOIInfo(true);
     props.setIsDisplayCurrPOINotif(false);
+
+    const path = `/uninav/pois/` + props.nearPOI.id;
+
+    history.push(path);
   };
 
   const handlePOINoMoreInfo = () => {
-    console.log("handlePOIMoreInfo");
-    props.setIsDisplayCurrPOIInfo(false);
     props.setIsDisplayCurrPOINotif(false);
+
+    const path = `/uninav/`;
+    history.push(path);
   };
 
   return (

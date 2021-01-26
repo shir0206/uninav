@@ -25,12 +25,3 @@
 .location-console {
   z-index: 999999;
 }
-
-.btn-temp {
-  z-index: 999;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 40px;
-  height: 40px;
-}
