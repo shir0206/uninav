@@ -4,7 +4,7 @@
   width: 100%;
   height: calc(100vh - 56px);
   background: var(--color_default_background);
-  z-index: 300;
+  z-index: 50;
   direction: rtl;
 }
 
@@ -49,6 +49,7 @@
   text-align: start;
   padding: 5%;
   overflow-y: scroll;
+  height: calc(100vh - 35vh - 60px - 56px);
 }
 
 p {
