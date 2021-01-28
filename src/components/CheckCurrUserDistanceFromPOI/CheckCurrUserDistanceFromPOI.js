@@ -25,12 +25,12 @@ export const CheckCurrUserDistanceFromPOI = (props) => {
         const distance = map.distance(poiLatLng, currPositionLatLng);
 
         // Check the distance of the user from the poi
-        if (distance < 100) {
+        if (distance < 0.00001) {
           // Set the curr poi as nearest (if hasn't set yet)
           if (props.nearPOI !== poi) {
             props.setNearPOI(poi);
             console.log("arrived " + poi.id);
-            window.alert("arrived " + poi.id);
+            // window.alert("arrived " + poi.id);
             props.setIsDisplayCurrPOINotif(true);
           }
           return;
