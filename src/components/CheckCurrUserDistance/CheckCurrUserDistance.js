@@ -38,7 +38,7 @@ export const CheckCurrUserDistance = (props) => {
     const distance = map.distance(centerLatLng, currPositionLatLng);
 
     // Check the distance of the user from the university
-    if (distance > 100000000) {
+    if (distance > 10000) {
       // If the user isn't at the universy, center the map to the user location only if he confirmed
       const isFollowDistancedUser = window.confirm(getString("TOO_FAR"));
       props.setIsCenterUserLocation(isFollowDistancedUser);
