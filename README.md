@@ -19,12 +19,11 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
 
 ### Current structure
 ```
+
   App
   |-- SplashScreen
       |-- UniversityLogoSVG
       |-- UniNavLogoSVG
-  |-- LocateUserButton
-      |-- LocateSVG
   |-- NavbarRouter
       |-- Router
           |-- NavbarLinks
@@ -38,29 +37,47 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
               |-- Scan
           |-- Route
               |-- Tracks
+                  |-- TracksSVG
+                  |-- CloseSVG
+                  |-- TracksList
+                      |-- TrackCard
+                          |-- InfoSVG
+                          |-- StartSVG
+          |-- Route
+              |-- TrackInfo
+                  |-- BackSVG
+                  |-- StartSVG
+          |-- Route
+              |-- POIInfo
+                  |-- BackSVG
           |-- Route
               |-- Settings
-                |-- HeadingSettings
-                    |-- UniNavLogoSVG
-                |-- DisplayPOITypesList
-                    |-- ToggleButton
-                |-- HideAllPOITypes
-                    |-- ToggleButton
-                    |-- UniNavLogoSVG
-  |-- Map
-      |-- MapContainer
-          |-- TileLayer
-          |-- CurrUserPosition
-              |-- Marker
-              |-- LocationError
-          |-- AllRoutes
-              |-- Polyline
-                  |-- Popup
-          |-- AllPOIs
-              |-- Marker
-                  |-- Popup
-                      |-- POIPopupContent
-          |-- HandleMapEvents
-          |-- CheckCurrUserDistance
-          |-- ChangeMapView
+                  |-- HeadingSettings
+                      |-- UniNavLogoSVG
+                  |-- DisplayPOITypesList
+                      |-- ToggleButton
+                  |-- HideAllPOITypes
+                      |-- ToggleButton
+                      |-- UniNavLogoSVG
+          |-- Map
+              |-- MapContainer
+                  |-- TileLayer
+                  |-- AllPOIs
+                      |-- Marker
+                          |-- Popup
+                              |-- POIPopupContent
+                  |-- CurrTrack
+                      |-- Polyline
+                          |-- Popup
+                  |-- CurrUserPosition
+                      |-- Marker
+                      |-- LocationError
+                  |-- CheckCurrUserDistance
+                  |-- CheckCurrUserDistanceFromPOI
+                  |-- HandleMapEvents
+                  |-- ChangeMapView
+                  |-- NearPOINotification
+                      |-- NotificationSVG
+                  |-- LocateUserButton
+                      |-- LocateSVG
 ```
