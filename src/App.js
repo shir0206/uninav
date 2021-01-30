@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import "./styles/colors.css";
 import { SplashScreen } from "./components/SplashScreen/SplashScreen";
-import { Map } from "./components/Map/Map";
 import NavbarRouter from "./components/NavbarRouter/NavbarRouter";
 
 function App() {

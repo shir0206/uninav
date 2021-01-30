@@ -10,7 +10,6 @@ import { ChangeMapView } from "../ChangeMapView/ChangeMapView";
 import { CheckCurrUserDistance } from "../CheckCurrUserDistance/CheckCurrUserDistance";
 import { CheckCurrUserDistanceFromPOI } from "../CheckCurrUserDistanceFromPOI/CheckCurrUserDistanceFromPOI";
 import { LocateUserButton } from "../LocateUserButton/LocateUserButton";
-
 import { CurrUserPosition } from "../CurrUserPosition/CurrUserPosition";
 
 import useWatchLocation from "../../hooks/useWatchLocation";
@@ -28,7 +27,6 @@ export const Map = (props) => {
   const [isCenterUserLocation, setIsCenterUserLocation] = useState(false);
   const [isLocationError, setIsLocationError] = useState(false);
   const [isDisplayCurrPOINotif, setIsDisplayCurrPOINotif] = useState(false);
-  // const [isDisplayCurrPOIInfo, setIsDisplayCurrPOIInfo] = useState(false);
   const [nearPOI, setNearPOI] = useState(null);
 
   // Initiate geolocation & start following the user
@@ -126,7 +124,6 @@ export const Map = (props) => {
         <NearPOINotification
           isDisplayCurrPOINotif={isDisplayCurrPOINotif}
           setIsDisplayCurrPOINotif={setIsDisplayCurrPOINotif}
-          // setIsDisplayCurrPOIInfo={setIsDisplayCurrPOIInfo}
           nearPOI={nearPOI}
         ></NearPOINotification>
       )}

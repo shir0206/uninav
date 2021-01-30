@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import { useMap } from "react-leaflet";
 import L from "leaflet";
@@ -30,7 +30,7 @@ export const CheckCurrUserDistanceFromPOI = (props) => {
           if (props.nearPOI !== poi) {
             props.setNearPOI(poi);
             console.log("arrived " + poi.id);
-            // window.alert("arrived " + poi.id);
+            window.alert("arrived " + poi.id);
             props.setIsDisplayCurrPOINotif(true);
           }
           return;

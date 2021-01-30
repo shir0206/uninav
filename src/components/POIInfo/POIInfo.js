@@ -1,9 +1,7 @@
 import React from "react";
 
 import "./POIInfo.css";
-
 import BackSVG from "../../icons/BackSVG.js";
-
 import getTrackImageDB from "../../constants/getTrackImage";
 import getIconType from "../../constants/getIconType";
 import { useHistory, useParams } from "react-router-dom";

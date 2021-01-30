@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./TrackCard.css";
 
@@ -6,7 +6,6 @@ import InfoSVG from "../../icons/InfoSVG.js";
 import StartSVG from "../../icons/StartSVG.js";
 
 import getString from "../../strings/strings";
-import { TrackInfo } from "../TrackInfo/TrackInfo";
 
 import { useHistory } from "react-router-dom";
 

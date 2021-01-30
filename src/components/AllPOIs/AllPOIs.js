@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./AllPOIs.css";
 
 import firebase from "../../firebase/Firebase";
@@ -11,7 +11,6 @@ import { POIPopupContent } from "../POIPopupContent/POIPopupContent";
 import getIconType from "../../constants/getIconType";
 
 export const AllPOIs = (props) => {
-
   useEffect(
     () => {
       // DB Request, extract all the data from Firebase
