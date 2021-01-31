@@ -22,7 +22,6 @@ const firebaseConfig = {
 //   measurementId: process.env.REACT_APP_FIREBASE_MEASURE_ID,
 // };
 
-//= process.env.FIREBASE_CONFIG;
 
 // Initialize Firebase
 try {
