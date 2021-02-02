@@ -2,8 +2,8 @@ import React from "react";
 
 import "./POIInfo.css";
 import BackSVG from "../../icons/BackSVG.js";
-import getTrackImageDB from "../../constants/getTrackImage";
-import getIconType from "../../constants/getIconType";
+import getTrackImageDB from "../../data/getTrackImage";
+import getIconByType from "../../data/getIconByType";
 import { useHistory, useParams } from "react-router-dom";
 
 export const POIInfo = (props) => {
@@ -31,7 +31,7 @@ export const POIInfo = (props) => {
       <div className="info-poi-heading">
         <img
           className="poi-type"
-          src={getIconType(nearPOI.type)}
+          src={getIconByType(nearPOI.type)}
           alt={nearPOI.type}
         ></img>
 

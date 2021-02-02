@@ -13,13 +13,14 @@ export const TrackCard = (props) => {
   let history = useHistory();
 
   const handleSelectTrack = () => {
-    let temp = JSON.parse(JSON.stringify(props.selected));
-    Object.keys(temp).forEach((v) => (temp[v] = false));
-    props.setSelected(temp);
+    // Create a clone of the current state of selected flags & Set all the flags to false
+    const selectedNew = {};
+    Object.keys(props.selected).forEach((key) => (selectedNew[key] = false));
+    props.setSelected(selectedNew);
 
     props.setSelectedTrack(props.item);
-    const path = `/uninav/`;
-    history.push(path);
+
+    history.push("/uninav/");
   };
 
   return (

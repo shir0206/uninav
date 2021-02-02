@@ -8,20 +8,17 @@ import UniNavLogoSVG from "../../icons/UniNavLogoSVG.js";
 import getString from "../../strings/strings";
 
 export const HideAllPOITypes = (props) => {
-
   const handleHideAllPois = (name, checked) => {
-
     props.setHideAllPois(checked);
 
     // When it is checked, set the all the poi types flags to 'false'
     if (checked) {
-      // Create a clone of the current state of poi type flags
-      let temp = JSON.parse(JSON.stringify(props.displayPOITypes));
-
-      // Set all the flags in the clone to false
-      Object.keys(temp).forEach((v) => (temp[v] = false));
-
-      props.setDisplayPOITypes(temp);
+      // Create a clone of the current state of poi type flags & Set all the flags to false
+      const displayPOITypesNew = {};
+      Object.keys(props.displayPOITypes).forEach(
+        (key) => (displayPOITypesNew[key] = false)
+      );
+      props.setDisplayPOITypes(displayPOITypesNew);
     }
   };
 

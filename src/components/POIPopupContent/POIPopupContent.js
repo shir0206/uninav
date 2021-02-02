@@ -1,9 +1,9 @@
 import React from "react";
 import "./POIPopupContent.css";
 
-import getPOIImageDB from "../../constants/getImage";
+import getPOIImageDB from "../../data/getImage";
 
-export const POIPopupContent = ({ poi, getIconType }) => {
+export const POIPopupContent = ({ poi, getIconByType }) => {
   return (
     <>
       {poi.img && (
@@ -17,7 +17,7 @@ export const POIPopupContent = ({ poi, getIconType }) => {
       <hr className="poi-hr poi-img-hr-bottom"></hr>
       <img
         className="poi-type"
-        src={getIconType(poi.type)}
+        src={getIconByType(poi.type)}
         alt={poi.type}
       ></img>
 

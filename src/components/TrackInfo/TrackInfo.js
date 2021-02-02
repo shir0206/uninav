@@ -3,7 +3,7 @@ import StartSVG from "../../icons/StartSVG.js";
 import BackSVG from "../../icons/BackSVG.js";
 import mapTracks from "../../mapTracks/mapTracks";
 import { useHistory, useParams } from "react-router-dom";
-import getTrackImageDB from "../../constants/getTrackImage";
+import getTrackImageDB from "../../data/getTrackImage";
 import "./TrackInfo.css";
 
 export const TrackInfo = ({ selected, setSelected, setSelectedTrack }) => {
@@ -12,12 +12,14 @@ export const TrackInfo = ({ selected, setSelected, setSelectedTrack }) => {
   const item = mapTracks.find((t) => t.id === trackId);
 
   const handleSelectTrack = () => {
-    let temp = JSON.parse(JSON.stringify(selected));
-    Object.keys(temp).forEach((v) => (temp[v] = false));
-    setSelected(temp);
+    // Create a clone of the current state of selected flags & Set all the flags to false
+    const selectedNew = {};
+    Object.keys(selected).forEach((key) => (selectedNew[key] = false));
+    setSelected(selectedNew);
+
     setSelectedTrack(item);
-    const path = `/uninav/`;
-    history.push(path);
+
+    history.push("/uninav/");
   };
 
   const handleCloseTracks = () => {

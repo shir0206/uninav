@@ -8,7 +8,7 @@ import L from "leaflet";
 
 import { POIPopupContent } from "../POIPopupContent/POIPopupContent";
 
-import getIconType from "../../constants/getIconType";
+import getIconByType from "../../data/getIconByType";
 
 export const AllPOIs = (props) => {
   useEffect(
@@ -29,7 +29,7 @@ export const AllPOIs = (props) => {
   );
 
   function buildIcon(type) {
-    const iconType = getIconType(type);
+    const iconType = getIconByType(type);
 
     const myIcon = new L.Icon({
       iconUrl: iconType,
@@ -64,7 +64,7 @@ export const AllPOIs = (props) => {
               <Popup>
                 <POIPopupContent
                   poi={poi}
-                  getIconType={getIconType}
+                  getIconByType={getIconByType}
                 ></POIPopupContent>
               </Popup>
             </Marker>

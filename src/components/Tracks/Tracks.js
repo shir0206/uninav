@@ -14,16 +14,13 @@ export const Tracks = (props) => {
   let history = useHistory();
 
   const handleCloseTracks = () => {
-    // Create a clone of the current state of selected flags
-    let temp = JSON.parse(JSON.stringify(props.selected));
+    // Create a clone of the current state of selected flags & Set all the flags to false
+    const selectedNew = {};
+    Object.keys(props.selected).forEach((key) => (selectedNew[key] = false));
+    props.setSelected(selectedNew);
 
-    // Set all the flags in the clone to false
-    Object.keys(temp).forEach((v) => (temp[v] = false));
+    history.push("/uninav/");
 
-    props.setSelected(temp);
-
-    const path = `/uninav/`;
-    history.push(path);
   };
 
   return (

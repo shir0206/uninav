@@ -3,7 +3,7 @@ import "./DisplayPOITypesList.css";
 
 import { ToggleButton } from "../ToggleButton/ToggleButton";
 
-import poiTypes from "../../constants/poiTypes";
+import poiTypes from "../../data/poiTypes";
 
 export const DisplayPOITypesList = (props) => {
   function handlePoiDisplay(name, checked) {

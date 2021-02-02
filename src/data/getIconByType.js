@@ -3,10 +3,9 @@ import artIcon from "../icons/art.svg";
 import benchIcon from "../icons/bench.svg";
 import historyIcon from "../icons/history.svg";
 import tableIcon from "../icons/table.svg";
-import markerIcon from "../icons/marker.svg";
 import lookoutIcon from "../icons/lookout.svg";
 
-export default function getIconType(type) {
+export default function getIconByType(type) {
   switch (type) {
     case "area":
       return areaIcon;
@@ -20,6 +19,7 @@ export default function getIconType(type) {
       return tableIcon;
     case "lookout":
       return lookoutIcon;
+    default:
+      return null;
   }
-  return markerIcon;
 }
