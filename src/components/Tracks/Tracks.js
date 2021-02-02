@@ -8,7 +8,7 @@ import CloseSVG from "../../icons/CloseSVG.js";
 
 import { useHistory } from "react-router-dom";
 
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 
 export const Tracks = (props) => {
   let history = useHistory();
@@ -27,7 +27,7 @@ export const Tracks = (props) => {
     <div className="tracks">
       <div className="tracks-heading">
         <TracksSVG selected={true}></TracksSVG>
-        <h4 className="tracks-heading-title">{getString("TRACKS_TITLE")}</h4>
+        <h4 className="tracks-heading-title">{getLocaleString("TRACKS_TITLE")}</h4>
         <button className="close-btn" onClick={handleCloseTracks}>
           <CloseSVG></CloseSVG>
         </button>

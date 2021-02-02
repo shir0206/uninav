@@ -1,6 +1,6 @@
 import React from "react";
 import "./NearPOINotification.css";
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 import NotificationSVG from "../../icons/NotificationSVG.js";
 import { useHistory } from "react-router-dom";
 
@@ -32,9 +32,9 @@ export const NearPOINotification = (props) => {
             <hr className="near-poi-hr"></hr>
             <div>
               <h3 className="near-poi-heading-title">
-                {getString("NEAR_POI_TITLE")}
+                {getLocaleString("NEAR_POI_TITLE")}
               </h3>
-              <h2 className="near-poi-text"> {getString("WANT_MORE_INTO")}</h2>
+              <h2 className="near-poi-text"> {getLocaleString("WANT_MORE_INTO")}</h2>
             </div>
           </div>
 
@@ -43,10 +43,10 @@ export const NearPOINotification = (props) => {
               className="near-poi-button-later"
               onClick={handlePOINoMoreInfo}
             >
-              {getString("LATER")}
+              {getLocaleString("LATER")}
             </button>
             <button className="near-poi-button-ok" onClick={handlePOIMoreInfo}>
-              {getString("YES")}
+              {getLocaleString("YES")}
             </button>
           </div>
         </div>

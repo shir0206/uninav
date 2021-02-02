@@ -1,4 +1,4 @@
-export default function getString(stringKey) {
+export default function getLocaleString(stringKey) {
   const allStrings = {
     PERMISSION_DENIED: "User denied the request for Geolocation.",
 

@@ -1,4 +1,4 @@
-export default function getString(stringKey) {
+export default function getLocaleString(stringKey) {
   const allStrings = {
     PERMISSION_DENIED:
       "לצערנו, לא נמצא המיקום שלך. בבקשה להדליק את ה- GPS או לתת הרשאות מיקום.",

@@ -7,7 +7,7 @@ import ScanSVG from "../../icons/ScanSVG.js";
 import TracksSVG from "../../icons/TracksSVG.js";
 import POIsSVG from "../../icons/POIsSVG.js";
 
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 
 export const NavbarLinks = (props) => {
   return (
@@ -28,7 +28,7 @@ export const NavbarLinks = (props) => {
           }}
         >
           <ScanSVG selected={props.selected.scan}></ScanSVG>
-          <h6 className="navbar-btn-title">{getString("SCAN_BTN")}</h6>
+          <h6 className="navbar-btn-title">{getLocaleString("SCAN_BTN")}</h6>
         </button>
         {props.selected.scan && (
           <div className="navbar-tab scan-navbar-tab"></div>
@@ -50,7 +50,7 @@ export const NavbarLinks = (props) => {
           }}
         >
           <TracksSVG selected={props.selected.tracks}></TracksSVG>
-          <h6 className="navbar-btn-title">{getString("TRACKS_BTN")}</h6>
+          <h6 className="navbar-btn-title">{getLocaleString("TRACKS_BTN")}</h6>
         </button>
         {props.selected.tracks && (
           <div className="navbar-tab track-navbar-tab"></div>
@@ -72,7 +72,7 @@ export const NavbarLinks = (props) => {
           }}
         >
           <POIsSVG></POIsSVG>
-          <h6 className="navbar-btn-title">{getString("POIS_BTN")}</h6>
+          <h6 className="navbar-btn-title">{getLocaleString("POIS_BTN")}</h6>
         </button>
       </NavLink>
     </nav>

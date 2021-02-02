@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LocationErrorAlert.css";
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 import LocateSVG from "../../icons/LocateSVG.js";
 
 export const LocationErrorAlert = (props) => {
@@ -20,7 +20,7 @@ export const LocationErrorAlert = (props) => {
 
             <hr className="location-error-hr"></hr>
             <h2 className="location-error-heading-title">
-              {getString("LOCATION_ERROR_TITLE")}
+              {getLocaleString("LOCATION_ERROR_TITLE")}
             </h2>
           </div>
 
@@ -29,7 +29,7 @@ export const LocationErrorAlert = (props) => {
             className="loccation-error-button"
             onClick={handleLocationError}
           >
-            {getString("OK")}
+            {getLocaleString("OK")}
           </button>
         </div>
       ) : null}

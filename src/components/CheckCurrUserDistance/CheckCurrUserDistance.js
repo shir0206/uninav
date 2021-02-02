@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useMap } from "react-leaflet";
 import { mapCenter } from "../../constants/mapCenter";
 import L from "leaflet";
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 
 export const CheckCurrUserDistance = (props) => {
   const map = useMap();
@@ -40,7 +40,7 @@ export const CheckCurrUserDistance = (props) => {
     // Check the distance of the user from the university
     if (distance > 10000) {
       // If the user isn't at the universy, center the map to the user location only if he confirmed
-      const isFollowDistancedUser = window.confirm(getString("TOO_FAR"));
+      const isFollowDistancedUser = window.confirm(getLocaleString("TOO_FAR"));
       props.setIsCenterUserLocation(isFollowDistancedUser);
     } else {
       // center the map to the user location

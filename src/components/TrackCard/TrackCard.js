@@ -5,7 +5,7 @@ import "./TrackCard.css";
 import InfoSVG from "../../icons/InfoSVG.js";
 import StartSVG from "../../icons/StartSVG.js";
 
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 
 import { useHistory } from "react-router-dom";
 
@@ -43,7 +43,7 @@ export const TrackCard = (props) => {
         <div className="track-length-cont">
           <h3 className="track-length">{props.item.length}</h3>
 
-          <h6 className="track-length-title">{getString("TRACK_LENGTH")}</h6>
+          <h6 className="track-length-title">{getLocaleString("TRACK_LENGTH")}</h6>
         </div>
 
         <hr className="track-hr track-hr-left"></hr>

@@ -3,7 +3,7 @@ import "./Scan.css";
 
 import { useHistory } from "react-router-dom";
 
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 
 export const Scan = (props) => {
   let history = useHistory();
@@ -20,7 +20,7 @@ export const Scan = (props) => {
   return (
     <div className="scan">
       Scan
-      <button onClick={handleCloseScan}>{getString("OK")}</button>
+      <button onClick={handleCloseScan}>{getLocaleString("OK")}</button>
     </div>
   );
 };

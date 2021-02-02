@@ -3,7 +3,7 @@ import { langOptions } from "../constants/langOptions";
 import iw from "./languages/iw";
 import en from "./languages/en";
 
-export default function getString(stringKey) {
+export default function getLocaleString(stringKey) {
   const language = langOptions.toString();
 
   switch (language) {

@@ -7,7 +7,7 @@ import { HeadingSettings } from "../HeadingSettings/HeadingSettings";
 import { DisplayPOITypesList } from "../DisplayPOITypesList/DisplayPOITypesList";
 import { HideAllPOITypes } from "../HideAllPOITypes/HideAllPOITypes";
 
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 
 export const Settings = (props) => {
   const [hideAllPois, setHideAllPois] = useState(false);
@@ -47,7 +47,7 @@ export const Settings = (props) => {
         <hr className="poi-display-hr"></hr>
 
         <button className="settings-button" onClick={handleCloseSettings}>
-          {getString("OK")}
+          {getLocaleString("OK")}
         </button>
       </div>
     </div>

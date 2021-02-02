@@ -5,7 +5,7 @@ import { ToggleButton } from "../ToggleButton/ToggleButton";
 
 import UniNavLogoSVG from "../../icons/UniNavLogoSVG.js";
 
-import getString from "../../strings/strings";
+import getLocaleString from "../../locale/locale";
 
 export const HideAllPOITypes = (props) => {
   const handleHideAllPois = (name, checked) => {
@@ -32,7 +32,7 @@ export const HideAllPOITypes = (props) => {
         ></ToggleButton>
       </div>
 
-      <h4 className="poi-display-label">{getString("POI_HIDE_ALL")}</h4>
+      <h4 className="poi-display-label">{getLocaleString("POI_HIDE_ALL")}</h4>
 
       <div className="poi-display-icon">
         <UniNavLogoSVG width={24} height={23}></UniNavLogoSVG>

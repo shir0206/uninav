@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-import getString from "../strings/strings";
+import getLocaleString from "../locale/locale";
 
 const useWatchLocation = (isLocateUser, options = {}) => {
   // store location in state
@@ -24,7 +24,7 @@ const useWatchLocation = (isLocateUser, options = {}) => {
 
   // Error handler for geolocation's `watchPosition` method
   const handleError = (error) => {
-    const errorMsg = getString(showErrorMsg(error));
+    const errorMsg = getLocaleString(showErrorMsg(error));
     setError(errorMsg);
   };
 
@@ -37,6 +37,8 @@ const useWatchLocation = (isLocateUser, options = {}) => {
       case error.TIMEOUT:
         return "TIMEOUT";
       case error.UNKNOWN_ERROR:
+        return "UNKNOWN_ERROR";
+      default:
         return "UNKNOWN_ERROR";
     }
   }
@@ -53,7 +55,7 @@ const useWatchLocation = (isLocateUser, options = {}) => {
 
     // If the geolocation is not defined in the used browser we handle it as an error
     if (!navigator.geolocation) {
-      setError(getString("GEOLOCATION_NOT_SUPPORTED"));
+      setError(getLocaleString("GEOLOCATION_NOT_SUPPORTED"));
       return;
     }
 
