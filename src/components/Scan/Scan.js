@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 import getLocaleString from "../../locale/locale";
 
-import { Test } from "../Test/Test";
+import { QRReader } from "../QRReader/QRReader";
 
 export const Scan = (props) => {
   let history = useHistory();
@@ -25,7 +25,7 @@ export const Scan = (props) => {
     <div className="scan">
       Scan
       <button onClick={handleCloseScan}>{getLocaleString("OK")}</button>
-      <Test></Test>
+      <QRReader></QRReader>
     </div>
   );
 };
