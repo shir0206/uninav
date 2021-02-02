@@ -49,7 +49,9 @@ export const NavbarLinks = (props) => {
             });
           }}
         >
-          <TracksSVG selectedNavButton={props.selectedNavButton.tracks}></TracksSVG>
+          <TracksSVG
+            selectedNavButton={props.selectedNavButton.tracks}
+          ></TracksSVG>
           <h6 className="navbar-btn-title">{getLocaleString("TRACKS_BTN")}</h6>
         </button>
         {props.selectedNavButton.tracks && (
