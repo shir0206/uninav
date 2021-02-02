@@ -10,7 +10,7 @@ import { POIInfo } from "../POIInfo/POIInfo";
 import { Settings } from "../Settings/Settings";
 
 export const NavbarRouter = (props) => {
-  const [selected, setSelected] = useState({
+  const [selectedNavButton, setSelectedNavButton] = useState({
     scan: false,
     tracks: false,
     settings: false,
@@ -20,16 +20,16 @@ export const NavbarRouter = (props) => {
     <Router>
       <div>
         <NavbarLinks
-          selected={selected}
-          setSelected={setSelected}
+          selectedNavButton={selectedNavButton}
+          setSelectedNavButton={setSelectedNavButton}
         ></NavbarLinks>
         <Route
           exact
           path="/uninav/scan"
           render={() => (
             <Scan
-              selected={selected}
-              setSelected={setSelected}
+              selectedNavButton={selectedNavButton}
+              setSelectedNavButton={setSelectedNavButton}
               displayPOITypes={props.displayPOITypes}
               setDisplayPOITypes={props.setDisplayPOITypes}
             />
@@ -40,8 +40,8 @@ export const NavbarRouter = (props) => {
           path="/uninav/tracks"
           render={() => (
             <Tracks
-              selected={selected}
-              setSelected={setSelected}
+              selectedNavButton={selectedNavButton}
+              setSelectedNavButton={setSelectedNavButton}
               displayPOITypes={props.displayPOITypes}
               setDisplayPOITypes={props.setDisplayPOITypes}
               selectedTrack={props.selectedTrack}
@@ -54,8 +54,8 @@ export const NavbarRouter = (props) => {
           path="/uninav/tracks/:trackId"
           render={() => (
             <TrackInfo
-              selected={selected}
-              setSelected={setSelected}
+              selectedNavButton={selectedNavButton}
+              setSelectedNavButton={setSelectedNavButton}
               setSelectedTrack={props.setSelectedTrack}
             ></TrackInfo>
           )}
@@ -72,8 +72,8 @@ export const NavbarRouter = (props) => {
           path="/uninav/settings"
           render={() => (
             <Settings
-              selected={selected}
-              setSelected={setSelected}
+              selectedNavButton={selectedNavButton}
+              setSelectedNavButton={setSelectedNavButton}
               displayPOITypes={props.displayPOITypes}
               setDisplayPOITypes={props.setDisplayPOITypes}
             />

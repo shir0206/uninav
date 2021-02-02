@@ -13,8 +13,8 @@ export const TracksList = (props) => {
         <div key={item.id}>
           <TrackCard
             item={item}
-            selected={props.selected}
-            setSelected={props.setSelected}
+            selectedNavButton={props.selectedNavButton}
+            setSelectedNavButton={props.setSelectedNavButton}
             setSelectedTrack={props.setSelectedTrack}
           ></TrackCard>
         </div>

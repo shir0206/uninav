@@ -15,10 +15,10 @@ export const Settings = (props) => {
   let history = useHistory();
 
   const handleCloseSettings = () => {
-    // Create a clone of the current state of selected flags & Set all the flags to false
+    // Create a clone of the current state of selectedNavButton flags & Set all the flags to false
     const selectedNew = {};
-    Object.keys(props.selected).forEach((key) => (selectedNew[key] = false));
-    props.setSelected(selectedNew);
+    Object.keys(props.selectedNavButton).forEach((key) => (selectedNew[key] = false));
+    props.setSelectedNavButton(selectedNew);
 
     history.push("/uninav/");
   };

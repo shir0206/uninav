@@ -20,17 +20,17 @@ export const NavbarLinks = (props) => {
         <button
           className="navbar-btn scan-navbar-btn"
           onClick={() => {
-            props.setSelected({
+            props.setSelectedNavButton({
               scan: true,
               tracks: false,
               settings: false,
             });
           }}
         >
-          <ScanSVG selected={props.selected.scan}></ScanSVG>
+          <ScanSVG selectedNavButton={props.selectedNavButton.scan}></ScanSVG>
           <h6 className="navbar-btn-title">{getLocaleString("SCAN_BTN")}</h6>
         </button>
-        {props.selected.scan && (
+        {props.selectedNavButton.scan && (
           <div className="navbar-tab scan-navbar-tab"></div>
         )}
       </NavLink>
@@ -42,17 +42,17 @@ export const NavbarLinks = (props) => {
         <button
           className="navbar-btn track-navbar-btn"
           onClick={() => {
-            props.setSelected({
+            props.setSelectedNavButton({
               scan: false,
               tracks: true,
               settings: false,
             });
           }}
         >
-          <TracksSVG selected={props.selected.tracks}></TracksSVG>
+          <TracksSVG selectedNavButton={props.selectedNavButton.tracks}></TracksSVG>
           <h6 className="navbar-btn-title">{getLocaleString("TRACKS_BTN")}</h6>
         </button>
-        {props.selected.tracks && (
+        {props.selectedNavButton.tracks && (
           <div className="navbar-tab track-navbar-tab"></div>
         )}
       </NavLink>
@@ -64,7 +64,7 @@ export const NavbarLinks = (props) => {
         <button
           className="navbar-btn settings-navbar-btn"
           onClick={() => {
-            props.setSelected({
+            props.setSelectedNavButton({
               scan: false,
               tracks: false,
               settings: true,

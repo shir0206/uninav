@@ -6,16 +6,16 @@ import { useHistory, useParams } from "react-router-dom";
 import getTrackImageDB from "../../data/getTrackImage";
 import "./TrackInfo.css";
 
-export const TrackInfo = ({ selected, setSelected, setSelectedTrack }) => {
+export const TrackInfo = ({ selectedNavButton, setSelectedNavButton, setSelectedTrack }) => {
   let history = useHistory();
   const { trackId } = useParams();
   const item = mapTracks.find((t) => t.id === trackId);
 
   const handleSelectTrack = () => {
-    // Create a clone of the current state of selected flags & Set all the flags to false
+    // Create a clone of the current state of selectedNavButton flags & Set all the flags to false
     const selectedNew = {};
-    Object.keys(selected).forEach((key) => (selectedNew[key] = false));
-    setSelected(selectedNew);
+    Object.keys(selectedNavButton).forEach((key) => (selectedNew[key] = false));
+    setSelectedNavButton(selectedNew);
 
     setSelectedTrack(item);
 
