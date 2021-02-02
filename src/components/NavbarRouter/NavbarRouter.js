@@ -64,7 +64,12 @@ export const NavbarRouter = (props) => {
         <Route
           exact
           path="/uninav/pois/:poiId"
-          render={() => <POIInfo mapPOIs={props.mapPOIs}></POIInfo>}
+          render={() => (
+            <POIInfo
+              mapPOIs={props.mapPOIs}
+              setMapPOIs={props.setMapPOIs}
+            ></POIInfo>
+          )}
         />
 
         <Route

@@ -5,13 +5,17 @@ import { useHistory } from "react-router-dom";
 
 import getLocaleString from "../../locale/locale";
 
+import { Test } from "../Test/Test";
+
 export const Scan = (props) => {
   let history = useHistory();
 
   const handleCloseScan = () => {
     // Create a clone of the current state of selectedNavButton flags & Set all the flags to false
     const selectedNew = {};
-    Object.keys(props.selectedNavButton).forEach((key) => (selectedNew[key] = false));
+    Object.keys(props.selectedNavButton).forEach(
+      (key) => (selectedNew[key] = false)
+    );
     props.setSelectedNavButton(selectedNew);
 
     history.push("/uninav/");
@@ -21,6 +25,7 @@ export const Scan = (props) => {
     <div className="scan">
       Scan
       <button onClick={handleCloseScan}>{getLocaleString("OK")}</button>
+      <Test></Test>
     </div>
   );
 };
