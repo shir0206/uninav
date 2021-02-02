@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.4786ab79.chunk.css",
-    "main.js": "/uninav/static/js/main.2d34cbae.chunk.js",
-    "main.js.map": "/uninav/static/js/main.2d34cbae.chunk.js.map",
-    "runtime-main.js": "/uninav/static/js/runtime-main.fe4cacb5.js",
-    "runtime-main.js.map": "/uninav/static/js/runtime-main.fe4cacb5.js.map",
-    "static/js/2.34c2e0b7.chunk.js": "/uninav/static/js/2.34c2e0b7.chunk.js",
-    "static/js/2.34c2e0b7.chunk.js.map": "/uninav/static/js/2.34c2e0b7.chunk.js.map",
-    "static/js/3.4c3bed53.chunk.js": "/uninav/static/js/3.4c3bed53.chunk.js",
-    "static/js/3.4c3bed53.chunk.js.map": "/uninav/static/js/3.4c3bed53.chunk.js.map",
+    "main.css": "/uninav/static/css/main.71f7e9ac.chunk.css",
+    "main.js": "/uninav/static/js/main.bc2b0c25.chunk.js",
+    "main.js.map": "/uninav/static/js/main.bc2b0c25.chunk.js.map",
+    "runtime-main.js": "/uninav/static/js/runtime-main.3c0f41f6.js",
+    "runtime-main.js.map": "/uninav/static/js/runtime-main.3c0f41f6.js.map",
+    "static/js/2.0019fcda.chunk.js": "/uninav/static/js/2.0019fcda.chunk.js",
+    "static/js/2.0019fcda.chunk.js.map": "/uninav/static/js/2.0019fcda.chunk.js.map",
+    "static/js/3.ebd40d82.chunk.js": "/uninav/static/js/3.ebd40d82.chunk.js",
+    "static/js/3.ebd40d82.chunk.js.map": "/uninav/static/js/3.ebd40d82.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.4786ab79.chunk.css.map": "/uninav/static/css/main.4786ab79.chunk.css.map",
-    "static/js/2.34c2e0b7.chunk.js.LICENSE.txt": "/uninav/static/js/2.34c2e0b7.chunk.js.LICENSE.txt",
+    "static/css/main.71f7e9ac.chunk.css.map": "/uninav/static/css/main.71f7e9ac.chunk.css.map",
+    "static/js/2.0019fcda.chunk.js.LICENSE.txt": "/uninav/static/js/2.0019fcda.chunk.js.LICENSE.txt",
     "static/media/1.72125605.jpeg": "/uninav/static/media/1.72125605.jpeg",
     "static/media/10.aea759ec.jpeg": "/uninav/static/media/10.aea759ec.jpeg",
     "static/media/11.c5154433.jpeg": "/uninav/static/media/11.c5154433.jpeg",
@@ -50,13 +50,12 @@
     "static/media/currPosition.236edd3e.svg": "/uninav/static/media/currPosition.236edd3e.svg",
     "static/media/history.010e6bf3.svg": "/uninav/static/media/history.010e6bf3.svg",
     "static/media/lookout.c795b376.svg": "/uninav/static/media/lookout.c795b376.svg",
-    "static/media/marker.218b2e3e.svg": "/uninav/static/media/marker.218b2e3e.svg",
     "static/media/table.4166c88e.svg": "/uninav/static/media/table.4166c88e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fe4cacb5.js",
-    "static/js/2.34c2e0b7.chunk.js",
-    "static/css/main.4786ab79.chunk.css",
-    "static/js/main.2d34cbae.chunk.js"
+    "static/js/runtime-main.3c0f41f6.js",
+    "static/js/2.0019fcda.chunk.js",
+    "static/css/main.71f7e9ac.chunk.css",
+    "static/js/main.bc2b0c25.chunk.js"
   ]
 }
