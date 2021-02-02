@@ -1,124 +1,17 @@
 import { langOptions } from "../constants/langOptions";
 
-export default function getString(string) {
-  const lang = langOptions.toString();
+import iw from "./languages/iw";
+import en from "./languages/en";
 
-  const allStrings = {
-    PERMISSION_DENIED: {
-      en: "User denied the request for Geolocation.",
-      iw:
-        "לצערנו, לא נמצא המיקום שלך. בבקשה להדליק את ה- GPS או לתת הרשאות מיקום.",
-    },
-    CHANGE_PERMISSIONS_LINK: {
-      en: "XXX",
-      iw: "בקישור הבא אפשר לקרוא הסבר איך לשנות זאת:",
-    },
-    POSITION_UNAVAILABLE: {
-      en: "Location information is unavailable.",
-      iw: "המיקום אינו זמין",
-    },
-    TIMEOUT: {
-      en: "The request to get user location timed out.",
-      iw: "תם משך הזמן של בקשת המיקום",
-    },
-    UNKNOWN_ERROR: {
-      en: "An unknown error occurred.",
-      iw: "התרחשה תקלה בלתי צפויה.",
-    },
-    GEOLOCATION_NOT_SUPPORTED: {
-      en: "Geolocation is not supported.",
-      iw: "נתוני מיקום אינם נתמכים.",
-    },
-    SCAN_BTN: {
-      en: "Scan",
-      iw: "סריקה",
-    },
-    TRACKS_BTN: {
-      en: "Tracks",
-      iw: "מסלולים",
-    },
-    POIS_BTN: {
-      en: "POIs",
-      iw: "נקודות עניין",
-    },
-    TOO_FAR: {
-      en: "You're too far away! Wanna me to follow you?",
-      iw: "לא מצאתי אותך באוניברסיטה! לאתר אותך?",
-    },
-    OK: {
-      en: "OK",
-      iw: "אישור",
-    },
+export default function getString(stringKey) {
+  const language = langOptions.toString();
 
-    POI_SETTINGS_TITLE: {
-      en: "Which POIs do interest you today?",
-      iw: "אילו נקודות עניין מעניינות אותך היום?",
-    },
-
-    POI_BENCH: {
-      en: "Bench",
-      iw: "ספסלים",
-    },
-
-    POI_AREA: {
-      en: "Area",
-      iw: "מרחב",
-    },
-
-    POI_TABLE: {
-      en: "Table",
-      iw: "שולחנות",
-    },
-
-    POI_ART: {
-      en: "Art",
-      iw: "אומנות",
-    },
-    POI_LOOKOUT: {
-      en: "Lookout",
-      iw: "נקודת תצפית",
-    },
-
-    POI_HISTORY: {
-      en: "History",
-      iw: "אתר היסטורי",
-    },
-
-    POI_HIDE_ALL: {
-      en: "Hide all POIs",
-      iw: "הסתרת כל הנקודות",
-    },
-    TRACKS_TITLE: {
-      en: "Our Tracks",
-      iw: "המסלולים שלנו",
-    },
-    TRACK_LENGTH: {
-      en: "Length (km)",
-      iw: "אורך בק''מ",
-    },
-
-    LOCATION_ERROR_TITLE: {
-      en: "Oops... Location Error",
-      iw: "אופס... בעיית מיקום",
-    },
-
-    NEAR_POI_TITLE: {
-      en: "XXX",
-      iw: "הגעת לנקודת עניין",
-    },
-    WANT_MORE_INTO: {
-      en: "XXX",
-      iw: "רוצה לדעת עוד?",
-    },
-    YES: {
-      en: "Yes, sure",
-      iw: "כן, בטח",
-    },
-    LATER: {
-      en: "Later",
-      iw: "מאוחר יותר",
-    },
-  };
-
-  return allStrings[string][lang];
+  switch (language) {
+    case "iw":
+      return iw(stringKey);
+    case "en":
+      return en(stringKey);
+    default:
+      return iw(stringKey);
+  }
 }
