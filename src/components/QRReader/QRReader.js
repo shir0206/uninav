@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import QrReader from "react-qr-scanner";
+// import QrReader from "react-qr-scanner";
+import QrReader from "react-qr-reader";
+
+
 import "./QRReader.css";
 import { useHistory } from "react-router-dom";
 
