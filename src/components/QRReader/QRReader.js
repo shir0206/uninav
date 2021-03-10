@@ -2,7 +2,6 @@ import React, { useState } from "react";
 // import QrReader from "react-qr-scanner";
 import QrReader from "react-qr-reader";
 
-
 import "./QRReader.css";
 import { useHistory } from "react-router-dom";
 
@@ -27,7 +26,6 @@ export const QRReader = (props) => {
   const handleError = (err) => {
     console.error(err);
   };
-  // facingMode={"rear"}
 
   return (
     <div>
@@ -36,6 +34,7 @@ export const QRReader = (props) => {
         onError={handleError}
         onScan={handleScan}
         className={"qr-reader"}
+        facingMode={"environment"}
       />
       <p>{scannedText.result}</p>
     </div>
