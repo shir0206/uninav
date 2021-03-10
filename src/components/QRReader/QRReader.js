@@ -32,6 +32,7 @@ export const QRReader = (props) => {
         onError={handleError}
         onScan={handleScan}
         className={"qr-reader"}
+        facingMode={"rear"}
       />
       <p>{scannedText.result}</p>
     </div>
