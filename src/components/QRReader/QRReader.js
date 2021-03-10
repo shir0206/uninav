@@ -27,7 +27,7 @@ export const QRReader = (props) => {
   };
 
   return (
-    <div>
+    <div className="qr-reader-container">
       <QrReader
         delay={scannedText.delay}
         onError={handleError}

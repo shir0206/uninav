@@ -2,9 +2,7 @@ import React from "react";
 import "./Scan.css";
 
 import { useHistory } from "react-router-dom";
-
-import getLocaleString from "../../locale/locale";
-
+import CloseSVG from "../../icons/CloseSVG.js";
 import { QRReader } from "../QRReader/QRReader";
 
 export const Scan = (props) => {
@@ -23,8 +21,9 @@ export const Scan = (props) => {
 
   return (
     <div className="scan">
-      Scan
-      <button onClick={handleCloseScan}>{getLocaleString("OK")}</button>
+      <button className="close-btn" onClick={handleCloseScan}>
+        <CloseSVG></CloseSVG>
+      </button>
       <QRReader></QRReader>
     </div>
   );
