@@ -24,6 +24,7 @@ export const QRReader = (props) => {
   const handleError = (err) => {
     console.error(err);
   };
+  // facingMode={"rear"}
 
   return (
     <div>
@@ -32,7 +33,6 @@ export const QRReader = (props) => {
         onError={handleError}
         onScan={handleScan}
         className={"qr-reader"}
-        facingMode={"rear"}
       />
       <p>{scannedText.result}</p>
     </div>
