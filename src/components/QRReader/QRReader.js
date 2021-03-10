@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import QrReader from "react-qr-scanner";
 import QrReader from "react-qr-reader";
 
 import "./QRReader.css";
@@ -13,12 +12,12 @@ export const QRReader = (props) => {
     result: "No result",
   });
 
-  const handleScan = (data) => {
-    if (data) {
-      console.log(data);
+  const handleScan = (scannedCode) => {
+    if (scannedCode) {
+      console.log(scannedCode);
 
-      setScannedText(data.text);
-      const path = "/uninav/pois/" + data.text;
+      setScannedText(scannedCode);
+      const path = "/uninav/pois/" + scannedCode;
       history.push(path);
     }
   };
