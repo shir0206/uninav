@@ -127,7 +127,17 @@
   z-index: 200;
   outline: none;
 }
-
+.track-stop-btn {
+  border: none;
+  background: none;
+  position: absolute;
+  height: calc(40% + 20px);
+  display: flex;
+  bottom: 0;
+  left: 3%;
+  z-index: 200;
+  outline: none;
+}
 .track-length-title {
   margin: 0;
   font-weight: 600;
@@ -139,4 +149,17 @@
 .track-hr {
   border: 0px solid var(--color_default_frame);
   border-right: 1px solid var(--color_default_frame);
+}
+
+.selected-card * {
+  color: var(--color_accent_dark);
+}
+.selected-card .track-hr {
+  border-right: 1px solid var(--color_accent_frame);
+}
+.selected-card .track-tag {
+  border: 1px solid var(--color_accent_frame);
+}
+.selected-card .track-tag-list{
+  background: var(--color_accent_bright);
 }

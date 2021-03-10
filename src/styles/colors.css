@@ -31,8 +31,9 @@
 
   --color_accent: #49c0c8;
   --color_accent_rgb: 73 192 200;
-
-  --color_accent_dark: #49cbd3;
-
+  --color_accent_bright: #F4F9FA;
+  --color_accent_dark: #2E999F;
+  --color_accent_frame:#DAE7E8;
+  
   --text_size_default_small: 18px;
 }

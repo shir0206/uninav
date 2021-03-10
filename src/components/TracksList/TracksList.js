@@ -16,6 +16,7 @@ export const TracksList = (props) => {
             selectedNavButton={props.selectedNavButton}
             setSelectedNavButton={props.setSelectedNavButton}
             setSelectedTrack={props.setSelectedTrack}
+            isSelected={props.selectedTrack.id === item.id}
           ></TrackCard>
         </div>
       ))}

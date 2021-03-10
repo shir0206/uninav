@@ -36,6 +36,7 @@ export const Tracks = (props) => {
         selectedNavButton={props.selectedNavButton}
         setSelectedNavButton={props.setSelectedNavButton}
         setSelectedTrack={props.setSelectedTrack}
+        selectedTrack={props.selectedTrack}
       ></TracksList>
     </div>
   );
