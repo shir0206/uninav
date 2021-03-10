@@ -35,7 +35,6 @@ export const QRReader = (props) => {
         className={"qr-reader"}
         facingMode={"environment"}
       />
-      <p>{scannedText.result}</p>
     </div>
   );
 };
