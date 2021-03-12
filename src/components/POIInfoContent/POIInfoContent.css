@@ -1,78 +1,78 @@
 .info-poi {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: calc(100vh - 56px);
-    background: var(--color_default_background);
-    z-index: 99999999;
-    direction: rtl;
-  }
-  
-  .info-poi-details {
-    display: flex;
-    flex-direction: row;
-    direction: rtl;
-    margin: 0.5em 0 0 0;
-  }
-  
-  .info-poi-img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    height: 35vh;
-  }
-  
-  .back-btn {
-    border: none;
-    background: none;
-    padding: 0;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    outline: none;
-  }
-  
-  .info-poi-heading {
-    background: var(--white);
-    box-shadow: 0px 3px 5px rgba(5, 16, 24, 0.1);
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
-  }
-  
-  .info-heading-title {
-    margin: 0 5%;
-  }
-  
-  .info-start-btn {
-    margin: 2% 5% 0;
-    border: none;
-    background: none;
-    outline: none;
-  }
-  
-  .info-poi-content {
-    text-align: start;
-    padding: 5%;
-    overflow-y: scroll;
-  }
-  
-  .info-poi-content-text {
-    white-space: pre-line;
-    font-size: 16px;
-  }
-  
-  .info-poi-title {
-    padding: 0 3%;
-  }
-  
-  .info-poi-name {
-    margin: 0 0.65em 0 0;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: var(--color_default_text);
-  }
-  
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 56px);
+  background: var(--color_default_background);
+  z-index: 99999999;
+  direction: rtl;
+}
+
+.info-poi-details {
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  margin: 0.5em 0 0 0;
+}
+
+.info-poi-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 35vh;
+  height: calc(var(--vh, 1vh) * 35);
+}
+
+.back-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  outline: none;
+}
+
+.info-poi-heading {
+  background: var(--white);
+  box-shadow: 0px 3px 5px rgba(5, 16, 24, 0.1);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.info-heading-title {
+  margin: 0 5%;
+}
+
+.info-start-btn {
+  margin: 2% 5% 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.info-poi-content {
+  text-align: start;
+  padding: 5%;
+  overflow-y: scroll;
+}
+
+.info-poi-content-text {
+  white-space: pre-line;
+  font-size: 16px;
+}
+
+.info-poi-title {
+  padding: 0 3%;
+}
+
+.info-poi-name {
+  margin: 0 0.65em 0 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--color_default_text);
+}

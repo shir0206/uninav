@@ -20,6 +20,7 @@
   display: block;
   object-fit: cover;
   height: 35vh;
+  height: calc(var(--vh, 1vh) * 35);
 }
 
 .back-btn {

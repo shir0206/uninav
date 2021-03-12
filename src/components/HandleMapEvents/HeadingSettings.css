@@ -12,6 +12,7 @@
     flex-direction: row;
     overflow: hidden;
     height: 20vh;
+    height: calc(var(--vh, 1vh) * 20);
     align-self: center;
   }
   

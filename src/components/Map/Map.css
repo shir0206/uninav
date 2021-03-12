@@ -1,6 +1,7 @@
 .leaflet-container {
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 0;
   background: #efeae0;
   font-family: "Assistant", -apple-system, BlinkMacSystemFont, "Segoe UI",

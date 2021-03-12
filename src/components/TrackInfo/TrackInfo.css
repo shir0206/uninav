@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   height: calc(100vh - 56px);
+  height: calc((var(--vh, 1vh) * 100) - 56px);
   background: var(--color_default_background);
   z-index: 50;
   direction: rtl;
@@ -13,6 +14,7 @@
   display: block;
   object-fit: cover;
   height: 35vh;
+  height: calc(var(--vh, 1vh) * 35);
 }
 
 .back-btn {
