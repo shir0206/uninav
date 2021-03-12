@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/uninav/static/css/main.947007e0.chunk.css",
-    "main.js": "/uninav/static/js/main.29241f27.chunk.js",
-    "main.js.map": "/uninav/static/js/main.29241f27.chunk.js.map",
+    "main.css": "/uninav/static/css/main.6d1ef0e0.chunk.css",
+    "main.js": "/uninav/static/js/main.ecd4418f.chunk.js",
+    "main.js.map": "/uninav/static/js/main.ecd4418f.chunk.js.map",
     "runtime-main.js": "/uninav/static/js/runtime-main.c363be39.js",
     "runtime-main.js.map": "/uninav/static/js/runtime-main.c363be39.js.map",
-    "static/js/2.1f40e53d.chunk.js": "/uninav/static/js/2.1f40e53d.chunk.js",
-    "static/js/2.1f40e53d.chunk.js.map": "/uninav/static/js/2.1f40e53d.chunk.js.map",
+    "static/js/2.b5a23c8f.chunk.js": "/uninav/static/js/2.b5a23c8f.chunk.js",
+    "static/js/2.b5a23c8f.chunk.js.map": "/uninav/static/js/2.b5a23c8f.chunk.js.map",
     "static/js/3.e73d8037.chunk.js": "/uninav/static/js/3.e73d8037.chunk.js",
     "static/js/3.e73d8037.chunk.js.map": "/uninav/static/js/3.e73d8037.chunk.js.map",
     "index.html": "/uninav/index.html",
-    "static/css/main.947007e0.chunk.css.map": "/uninav/static/css/main.947007e0.chunk.css.map",
-    "static/js/2.1f40e53d.chunk.js.LICENSE.txt": "/uninav/static/js/2.1f40e53d.chunk.js.LICENSE.txt",
+    "static/css/main.6d1ef0e0.chunk.css.map": "/uninav/static/css/main.6d1ef0e0.chunk.css.map",
+    "static/js/2.b5a23c8f.chunk.js.LICENSE.txt": "/uninav/static/js/2.b5a23c8f.chunk.js.LICENSE.txt",
     "static/media/1.72125605.jpeg": "/uninav/static/media/1.72125605.jpeg",
     "static/media/10.aea759ec.jpeg": "/uninav/static/media/10.aea759ec.jpeg",
     "static/media/11.c5154433.jpeg": "/uninav/static/media/11.c5154433.jpeg",
@@ -54,8 +54,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c363be39.js",
-    "static/js/2.1f40e53d.chunk.js",
-    "static/css/main.947007e0.chunk.css",
-    "static/js/main.29241f27.chunk.js"
+    "static/js/2.b5a23c8f.chunk.js",
+    "static/css/main.6d1ef0e0.chunk.css",
+    "static/js/main.ecd4418f.chunk.js"
   ]
 }
