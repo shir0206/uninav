@@ -17,6 +17,7 @@ function App() {
 
   const [selectedTrack, setSelectedTrack] = useState(0);
   const [mapPOIs, setMapPOIs] = useState([]);
+  const [mapTracks, setMapTracks] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
@@ -42,6 +43,8 @@ function App() {
         setSelectedTrack={setSelectedTrack}
         mapPOIs={mapPOIs}
         setMapPOIs={setMapPOIs}
+        mapTracks={mapTracks}
+        setMapTracks={setMapTracks}
       ></NavbarRouter>
     </>
   );
