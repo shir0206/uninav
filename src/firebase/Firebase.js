@@ -1,14 +1,14 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCNBo_uYAaTiPKlK6JcuNdw8kxaK269tyI",
-  authDomain: "uninav-30080.firebaseapp.com",
-  databaseURL: "https://uninav-30080.firebaseio.com",
-  projectId: "uninav-30080",
-  storageBucket: "uninav-30080.appspot.com",
-  messagingSenderId: "662958231812",
-  appId: "1:662958231812:web:127bf2d07b291077f40051",
-  measurementId: "G-C7TR96X7EH",
+  apiKey: "AIzaSyDrPnhwjMxtPlIabjl-OvNxN0Q1gJeCPWE",
+  authDomain: "uninav-406f7.firebaseapp.com",
+  databaseURL: "https://uninav-406f7-default-rtdb.firebaseio.com",
+  projectId: "uninav-406f7",
+  storageBucket: "uninav-406f7.appspot.com",
+  messagingSenderId: "125201920992",
+  appId: "1:125201920992:web:a26c1f216b2e2a559c7185",
+  measurementId: "G-5C9C2128QX",
 };
 
 // const firebaseConfig = {
@@ -21,7 +21,6 @@ const firebaseConfig = {
 //   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 //   measurementId: process.env.REACT_APP_FIREBASE_MEASURE_ID,
 // };
-
 
 // Initialize Firebase
 try {
