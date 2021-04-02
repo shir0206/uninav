@@ -1,5 +1,5 @@
 import React from "react";
-import { Popup, Polyline } from "react-leaflet";
+import { Polyline } from "react-leaflet";
 
 import "./CurrTrack.css";
 
@@ -13,14 +13,7 @@ export const CurrTrack = (props) => {
       <Polyline
         className="curr-track"
         positions={props.selectedTrack.points}
-        eventHandlers={{
-          click: () => {
-            console.log("trackA A clicked");
-          },
-        }}
-      >
-        <Popup>Hi track A~!</Popup>
-      </Polyline>
+      ></Polyline>
     </>
   );
 };
