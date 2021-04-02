@@ -19,8 +19,6 @@ export default function getLocaleString(stringKey) {
 
     POIS_BTN: "נקודות עניין",
 
-    TOO_FAR: "לא מצאתי אותך באוניברסיטה! לאתר אותך?",
-
     OK: "אישור",
 
     POI_SETTINGS_TITLE: "אילו נקודות עניין מעניינות אותך היום?",

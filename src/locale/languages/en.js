@@ -18,8 +18,6 @@ export default function getLocaleString(stringKey) {
 
     POIS_BTN: "POIs",
 
-    TOO_FAR: "You're too far away! Wanna me to follow you?",
-
     OK: "OK",
 
     POI_SETTINGS_TITLE: "Which POIs do interest you today?",
