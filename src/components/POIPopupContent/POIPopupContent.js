@@ -1,18 +1,10 @@
 import React from "react";
 import "./POIPopupContent.css";
 
-import getPOIImageDB from "../../data/getImage";
-
 export const POIPopupContent = ({ poi, getIconByType }) => {
   return (
     <>
-      {poi.img && (
-        <img
-          src={getPOIImageDB(poi.img)}
-          alt={poi.desc}
-          className="poi-img"
-        ></img>
-      )}
+      {poi.img && <img src={poi.img} alt={poi.desc} className="poi-img"></img>}
       <hr className="poi-hr poi-img-hr-top "></hr>
       <hr className="poi-hr poi-img-hr-bottom"></hr>
       <img

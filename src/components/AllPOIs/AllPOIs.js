@@ -61,12 +61,14 @@ export const AllPOIs = (props) => {
                 },
               }}
             >
-              <Popup>
-                <POIPopupContent
-                  poi={poi}
-                  getIconByType={getIconByType}
-                ></POIPopupContent>
-              </Popup>
+              {poi.type !== "bench" && poi.type !== "table" && (
+                <Popup>
+                  <POIPopupContent
+                    poi={poi}
+                    getIconByType={getIconByType}
+                  ></POIPopupContent>
+                </Popup>
+              )}
             </Marker>
           )
       )}
