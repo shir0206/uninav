@@ -3,7 +3,6 @@ import StartSVG from "../../icons/StartSVG.js";
 import BackSVG from "../../icons/BackSVG.js";
 import mapTracks from "../../mapTracks/mapTracks";
 import { useHistory, useParams } from "react-router-dom";
-import getTrackImageDB from "../../data/getTrackImage";
 import "./TrackInfo.css";
 
 export const TrackInfo = ({ selectedNavButton, setSelectedNavButton, setSelectedTrack }) => {
@@ -34,7 +33,7 @@ export const TrackInfo = ({ selectedNavButton, setSelectedNavButton, setSelected
       </button>
       <img
         className="track-img"
-        src={getTrackImageDB(item.img)}
+        src={item.img}
         alt={item.name}
       ></img>
       <div className="info-heading">

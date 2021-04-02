@@ -2,7 +2,6 @@ import React from "react";
 
 import "./POIInfoContent.css";
 import BackSVG from "../../icons/BackSVG.js";
-import getTrackImageDB from "../../data/getTrackImage";
 import getIconByType from "../../data/getIconByType";
 import { useHistory } from "react-router-dom";
 
@@ -22,7 +21,7 @@ export const POIInfoContent = (props) => {
 
       <img
         className="info-poi-img"
-        src={getTrackImageDB(props.poi.img)}
+        src={props.poi.img}
         alt={props.poi.name}
       ></img>
 
