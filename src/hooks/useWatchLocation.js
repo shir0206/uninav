@@ -66,6 +66,17 @@ const useWatchLocation = (isLocateUser, options = {}) => {
       options
     );
 
+    const interval = setInterval(() => {
+      setLocation((pervLocation) => {
+        if (pervLocation) {
+          return {
+            latitude: pervLocation.latitude + 0.0001,
+            longitude: pervLocation.longitude + 0.0001,
+          };
+        }
+      });
+    }, 1000);
+
     console.log("updating user location");
 
     // Clear the location watch instance when React unmounts the used component
