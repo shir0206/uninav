@@ -19,7 +19,6 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
 
 ### Current structure
 ```
-
   App
   |-- SplashScreen
       |-- UniversityLogoSVG
@@ -35,6 +34,9 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
                   |-- POIsSVG
           |-- Route
               |-- Scan
+                  |-- CloseSVG
+                  |-- QRReader
+                      |-- QrReader
           |-- Route
               |-- Tracks
                   |-- TracksSVG
@@ -42,6 +44,7 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
                   |-- TracksList
                       |-- TrackCard
                           |-- InfoSVG
+                          |-- StopSVG
                           |-- StartSVG
           |-- Route
               |-- TrackInfo
@@ -49,7 +52,8 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
                   |-- StartSVG
           |-- Route
               |-- POIInfo
-                  |-- BackSVG
+                  |-- POIInfoContent
+                      |-- BackSVG
           |-- Route
               |-- Settings
                   |-- HeadingSettings
@@ -68,10 +72,10 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
                               |-- POIPopupContent
                   |-- CurrTrack
                       |-- Polyline
-                          |-- Popup
                   |-- CurrUserPosition
                       |-- Marker
-                      |-- LocationError
+                      |-- LocationErrorAlert
+                          |-- LocateSVG
                   |-- CheckCurrUserDistance
                   |-- CheckCurrUserDistanceFromPOI
                   |-- HandleMapEvents
@@ -80,4 +84,5 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
                       |-- NotificationSVG
                   |-- LocateUserButton
                       |-- LocateSVG
+
 ```
