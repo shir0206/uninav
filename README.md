@@ -86,3 +86,5 @@ The map is provided and manipulated via `OpenStreetMap` & `Leaflet` API's.
                       |-- LocateSVG
 
 ```
+
+![Picture6](https://user-images.githubusercontent.com/40990488/124381926-96b85000-dccd-11eb-9078-ece0b0adac35.png)
